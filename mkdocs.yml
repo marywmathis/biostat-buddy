@@ -1,0 +1,69 @@
+site_name: BioStat Buddy
+site_description: Biostatistics in plain English for undergraduate public health majors
+
+theme:
+  name: material
+  features:
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+nav:
+  - Home: index.md
+  - Track 0 - Foundations:
+      - Parameter vs. Statistic: foundations/parameter-vs-statistic.md
+      - Population vs. Sample: foundations/population-vs-sample.md
+      - Variable Types: foundations/variable-types.md
+      - Greek Letter Decoder: foundations/greek-decoder.md
+      - Math Refresher: foundations/math-refresher.md
+      - JMP Quick Reference: foundations/jmp-quick-reference.md
+  - Track 1 - Studies & Data:
+      - Ch 2 - Study Designs: track-1-studies-and-data/ch2-study-designs.md
+      - Ch 3 - Quantifying Disease: track-1-studies-and-data/ch3-disease-extent.md
+      - Ch 4 - Summary Statistics: track-1-studies-and-data/ch4-summary-stats.md
+      - Ch 12 - Data Visualization: track-1-studies-and-data/ch12-data-viz.md
+  - Track 2 - Probability:
+      - Ch 5 - Probability: track-2-probability/ch5-probability.md
+  - Track 3 - Drawing Conclusions:
+      - Ch 6 - Confidence Intervals: track-3-conclusions/ch6-confidence-intervals.md
+      - Ch 7 - Hypothesis Testing: track-3-conclusions/ch7-hypothesis-testing.md
+      - Ch 8 - Power & Sample Size: track-3-conclusions/ch8-power-sample-size.md
+      - Ch 10 - Nonparametric Tests: track-3-conclusions/ch10-nonparametric.md
+  - Track 4 - Real-World Research:
+      - Ch 9 - Multivariable Methods: track-4-real-world/ch9-multivariable.md
+      - Ch 11 - Survival Analysis: track-4-real-world/ch11-survival.md
+  - Decision Helpers:
+      - Which Study Design?: decision-helpers/which-study-design.md
+      - Which Summary Statistic?: decision-helpers/which-summary-stat.md
+      - Which Hypothesis Test?: decision-helpers/which-test.md
+  - The Translator: translator.md
+  - Going Further: going-further.md
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+      
