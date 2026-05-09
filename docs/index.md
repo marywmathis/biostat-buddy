@@ -1,17 +1,35 @@
-# Welcome to MkDocs
+# Welcome to BioStat Buddy
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+**Biostatistics in plain English for undergraduate public health majors.**
 
-## Commands
+This site is your companion for biostatistics — designed to clear up the confusion most textbooks leave behind. Every concept is explained three ways:
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+- **Expert sentence** — the technically correct version
+- **Analogy** — a real-world picture of what's going on
+- **Plain words** — what you'd tell a friend
 
-## Project layout
+You'll also find honest "why students miss this" notes for the ideas that trip people up most often, plus the full list of synonyms for every term so you stop feeling stupid when your textbook, the article, and your professor all use a different word for the same thing.
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+## How to use this site
+
+Use the left sidebar to navigate. The site is organized into five tracks:
+
+- **Track 0 — Foundations.** Start here. Parameter vs. statistic, variable types, the Greek letter decoder, and a quick JMP reference.
+- **Track 1 — Studies & Data.** How studies are designed and how to describe what you collected.
+- **Track 2 — Probability.** The toolkit chapter every later track depends on.
+- **Track 3 — Drawing Conclusions.** Confidence intervals, hypothesis tests, sample size, and nonparametric methods.
+- **Track 4 — Real-World Research.** Multivariable methods and survival analysis.
+
+If you're stuck on *which method to use*, head to **Decision Helpers** for interactive flowcharts. If you're tangled up in terms that mean the same thing, **The Translator** has you covered.
+
+## What software you'll need
+
+This course uses **JMP Student Edition**. Every worked example shows the menu path and includes downloadable data files so you can follow along.
+
+## A note on the writing style
+
+I assume you are smart and just under-served by typical biostatistics textbooks. The math is here when it helps and gets out of the way when it doesn't. If something is confusing, the issue is the explanation, not you.
+
+---
+
+*Last updated: May 2026*
