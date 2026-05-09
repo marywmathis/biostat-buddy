@@ -22,7 +22,8 @@ The statistic is your **best guess** at the parameter. It's not the truth — it
 
 That's the whole idea. Greek letters tell you "this is the truth out there in the population." Roman letters with hats or bars tell you "this is what we calculated from our sample."
 
-Every test, every interval, every regression in this course is fundamentally answering one question: *based on what we saw in our sample, what can we say about the population?*
+!!! important "The one-sentence purpose of this whole course"
+    Every test, every interval, every regression in this course is fundamentally answering one question: *based on what we saw in our sample, what can we say about the population?*
 
 ## Also called
 
@@ -42,19 +43,20 @@ Every test, every interval, every regression in this course is fundamentally ans
 | Correlation | $\rho$ (rho) | $r$ |
 | Regression slope | $\beta$ (beta) | $b$ or $\hat{\beta}$ (beta-hat) |
 
-The pattern: **Greek = population. Roman with a hat or bar = sample.**
+!!! tip "The single pattern to remember"
+    **Greek = population. Roman with a hat or bar = sample.**
 
 ## ⚠️ Why students miss this
 
 Textbooks tend to switch between $\mu$ and $\bar{x}$ without ever stopping to explain that *one is the unknown truth and the other is your sample's attempt at it*. Students see "$\mu = 70$" in one example and "$\bar{x} = 70$" in the next, assume they're interchangeable, and never quite recover from the confusion.
 
-They are not interchangeable.
+!!! danger "These symbols are NOT interchangeable"
+    When you see $\mu$, the textbook is talking about a hypothetical world in which we somehow know the population truth. When you see $\bar{x}$, the textbook is talking about real data — what we actually got from our sample. The whole job of a confidence interval or a hypothesis test is to bridge the gap between these two — to use what we saw ($\bar{x}$) to make a careful, honest claim about what we don't know ($\mu$).
 
-When you see $\mu$, the textbook is talking about a hypothetical world in which we somehow know the population truth. When you see $\bar{x}$, the textbook is talking about real data — what we actually got from our sample. The whole job of a confidence interval or a hypothesis test is to bridge the gap between these two — to use what we saw ($\bar{x}$) to make a careful, honest claim about what we don't know ($\mu$).
+!!! important "A study habit to build right now"
+    If you ever feel lost in a stats problem, ask: **"Am I being asked about the population or the sample?"** That single question resolves more confusion than any formula.
 
-If you ever feel lost in a stats problem, ask: **"Am I being asked about the population or the sample?"** That single question resolves more confusion than any formula.
-
-## In a JMP output
+## In JMP
 
 When you [run](stats-vocabulary.md#run) a basic analysis in JMP (e.g., **Analyze → Distribution**), the [output](stats-vocabulary.md#output) shows your *statistics* — what JMP calculated from the data you loaded.
 
@@ -62,7 +64,8 @@ When you [run](stats-vocabulary.md#run) a basic analysis in JMP (e.g., **Analyze
 - The "Std Dev" is $s$, not $\sigma$.
 - The proportion shown for a dichotomous variable is $\hat{p}$, not $\pi$.
 
-JMP will never show you parameters directly, because parameters live in the population — and JMP only sees the sample you fed it. Every number on a JMP output is a statistic. Always. It's our best guess at the truth, never the truth itself.
+!!! important "What JMP can and can't show you"
+    JMP will never show you parameters directly, because parameters live in the population — and JMP only sees the sample you fed it. **Every number on a JMP output is a statistic. Always.** It's our best guess at the truth, never the truth itself.
 
 ## What to do when you're stuck on a problem
 
@@ -73,4 +76,3 @@ JMP will never show you parameters directly, because parameters live in the popu
 ---
 
 *See also: [Population vs. Sample](population-vs-sample.md) · [Greek Letter Decoder](greek-decoder.md)*
-

@@ -15,7 +15,8 @@ The **population** is *every college student in the state of Georgia*. That's hu
 
 The **sample** is the 300 students you actually surveyed across five campuses. That's the group you *measured*.
 
-The whole point of statistics is using the 300 students you actually talked to make honest, careful claims about the hundreds of thousands you didn't.
+!!! important "The whole point of statistics, in one sentence"
+    The whole point of statistics is using the 300 students you actually talked to to make honest, careful claims about the hundreds of thousands you didn't.
 
 ## Plain words
 
@@ -35,7 +36,8 @@ The sample is a *stand-in* for the population. If we picked it well, the sample 
 | The population we *can* actually access | Sampling frame, accessible population, source population |
 | The population we *want* conclusions about | Target population |
 
-⚠️ **Warning on terminology drift:** "Study population" is sometimes used to mean *sample* and sometimes used to mean *population* — depending on the textbook. When in doubt, ask: *"Are they talking about the people they studied, or the people they want to learn about?"* That distinction is what matters, regardless of what the words call it.
+!!! warning "Watch out for terminology drift"
+    "Study population" is sometimes used to mean *sample* and sometimes used to mean *population* — depending on the textbook. When in doubt, ask: *"Are they talking about the people they studied, or the people they want to learn about?"* That distinction is what matters, regardless of what the words call it.
 
 ## Why we sample (instead of measuring everyone)
 
@@ -45,17 +47,23 @@ Three honest reasons:
 2. **Measuring everyone is too expensive.** Even if you could find them, equipment, staff, and time costs money.
 3. **Sometimes the population is hypothetical.** "Every patient who *could* be treated with this drug" includes people who don't exist yet. You can't measure them — they haven't been born.
 
-Sampling lets us learn about populations we can never fully access. The price we pay is *uncertainty* — our sample answer won't perfectly match the true population answer. Almost everything else in this course (confidence intervals, hypothesis tests, sample size calculations) exists to *measure and manage* that uncertainty.
+!!! important "Why this section is on the page"
+    Sampling lets us learn about populations we can never fully access. The price we pay is *uncertainty* — our sample answer won't perfectly match the true population answer. Almost everything else in this course (confidence intervals, hypothesis tests, sample size calculations) exists to *measure and manage* that uncertainty.
 
 ## ⚠️ Why students miss this
 
 The two big traps:
 
-**Trap 1: Confusing "population" with "people."** A population doesn't have to be people. It can be hospitals, cities, mosquitoes, blood samples, school districts, or doctor visits. Anything you can count and study has a population. Don't let the word "population" trick you into thinking only humans count.
+!!! warning "Trap 1: Confusing 'population' with 'people'"
+    A population doesn't have to be people. It can be hospitals, cities, mosquitoes, blood samples, school districts, or doctor visits. Anything you can count and study has a population. Don't let the word "population" trick you into thinking only humans count.
 
-**Trap 2: Confusing the sample with the population.** This one is sneakier. When you analyze data in JMP, every number you see describes your *sample* — the 300 students you surveyed. It does **not** describe the population — the hundreds of thousands you didn't. Students will read a JMP output that says "Mean age = 19.4" and confidently report that *all college students in Georgia have an average age of 19.4*. They don't. *Your sample* did. The whole job of inference is to bridge that gap honestly.
+!!! warning "Trap 2: Confusing the sample with the population"
+    This one is sneakier. When you analyze data in JMP, every number you see describes your *sample* — the 300 students you surveyed. It does **not** describe the population — the hundreds of thousands you didn't.
 
-If you ever find yourself making a confident claim about an entire population based on a sample of 300, pause. The right phrasing is: *"In our sample, the average was 19.4. We estimate the population average is roughly between 19.1 and 19.7."* That second sentence is what statistics buys you.
+    Students will read a JMP output that says "Mean age = 19.4" and confidently report that *all college students in Georgia have an average age of 19.4*. They don't. *Your sample* did. The whole job of inference is to bridge that gap honestly.
+
+!!! danger "If you take only one thing from this section..."
+    If you ever find yourself making a confident claim about an entire population based on a sample of 300, **pause**. The right phrasing is: *"In our sample, the average was 19.4. We estimate the population average is roughly between 19.1 and 19.7."* That second sentence is what statistics buys you.
 
 ## In JMP
 
@@ -67,7 +75,8 @@ This means:
 - Every [statistic](stats-vocabulary.md#statistic) JMP calculates (means, proportions, standard deviations) is a *sample statistic*.
 - JMP cannot, by itself, tell you anything about the population. *You* make that leap, using inference.
 
-To make a population claim from your sample, you'll need a confidence interval, a hypothesis test, or another inferential method. Those are the tools that bridge sample → population. We'll meet them in Track 3.
+!!! important "How to bridge sample to population"
+    To make a population claim from your sample, you'll need a confidence interval, a hypothesis test, or another inferential method. Those are the tools that bridge sample → population. We'll meet them in Track 3.
 
 ## What to do when you're stuck
 
