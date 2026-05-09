@@ -56,7 +56,7 @@ If you ever feel lost in a stats problem, ask: **"Am I being asked about the pop
 
 ## In a JMP output
 
-When you run a basic analysis in JMP (e.g., **Analyze → Distribution**), the output shows your *statistics* — what JMP calculated from the data you loaded.
+When you [run](stats-vocabulary.md#run) a basic analysis in JMP (e.g., **Analyze → Distribution**), the [output](stats-vocabulary.md#output) shows your *statistics* — what JMP calculated from the data you loaded.
 
 - The "Mean" in the Summary Statistics panel is $\bar{x}$, not $\mu$.
 - The "Std Dev" is $s$, not $\sigma$.
@@ -73,3 +73,4 @@ JMP will never show you parameters directly, because parameters live in the popu
 ---
 
 *See also: [Population vs. Sample](population-vs-sample.md) · [Greek Letter Decoder](greek-decoder.md)*
+
