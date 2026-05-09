@@ -55,6 +55,9 @@ nav:
   - The Translator: translator.md
   - Going Further: going-further.md
 
+extra_javascript:
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
 markdown_extensions:
   - admonition
   - pymdownx.details
@@ -66,4 +69,5 @@ markdown_extensions:
   - tables
   - toc:
       permalink: true
-      
+  - pymdownx.arithmatex:
+      generic: true
