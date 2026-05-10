@@ -1,7 +1,7 @@
 # Parameter vs. Statistic
 
 !!! abstract "The most important card in this entire site"
-    If you only remember one thing from Foundations, remember this. The whole point of inferential statistics — every confidence interval, every hypothesis test, every regression — is using **statistics** (from your sample) to make claims about **parameters** (in the population). Once this clicks, the rest of the course makes a lot more sense.
+    If you only remember one thing from this whole site, remember this. The whole point of inferential statistics — every confidence interval, every hypothesis test, every regression — is using **statistics** (from your sample) to make claims about **parameters** (in the population). Once you understand this distinction, the rest of the course has a logic to it.
 
 ## As you'll see it in published research and textbooks
 
@@ -48,10 +48,10 @@ That's the whole idea. Greek letters tell you "this is the truth out there in th
 
 ## ⚠️ Why students miss this
 
-Textbooks tend to switch between $\mu$ and $\bar{x}$ without ever stopping to explain that *one is the unknown truth and the other is your sample's attempt at it*. Students see "$\mu = 70$" in one example and "$\bar{x} = 70$" in the next, assume they're interchangeable, and never quite recover from the confusion.
+Textbooks and journal articles tend to switch between $\mu$ and $\bar{x}$ without ever stopping to explain that *one is the unknown truth and the other is your sample's attempt at it*. Students see "$\mu = 70$" in one example and "$\bar{x} = 70$" in the next, assume they're interchangeable, and never quite recover from the confusion.
 
 !!! danger "These symbols are NOT interchangeable"
-    When you see $\mu$, the textbook is talking about a hypothetical world in which we somehow know the population truth. When you see $\bar{x}$, the textbook is talking about real data — what we actually got from our sample. The whole job of a confidence interval or a hypothesis test is to bridge the gap between these two — to use what we saw ($\bar{x}$) to make a careful, honest claim about what we don't know ($\mu$).
+    When you see $\mu$, the source is talking about a hypothetical world in which we somehow know the population truth. When you see $\bar{x}$, the source is talking about real data — what we actually got from our sample. The whole job of a confidence interval or a hypothesis test is to bridge the gap between these two — to use what we saw ($\bar{x}$) to make a careful, honest claim about what we don't know ($\mu$).
 
 !!! important "A study habit to build right now"
     If you ever feel lost in a stats problem, ask: **"Am I being asked about the population or the sample?"** That single question resolves more confusion than any formula.
@@ -71,7 +71,7 @@ When you [run](stats-vocabulary.md#run) a basic analysis in JMP (e.g., **Analyze
 
 1. Identify whether the problem is asking about the **population** (parameters, Greek letters, "the true mean") or the **sample** (statistics, Roman letters, "the observed mean").
 2. If it involves both — and most problems do — figure out *which one is given* and *which one you're trying to estimate or test*.
-3. The bridge between them is always probability. That's why Track 2 (Probability) sits right between describing data and drawing conclusions.
+3. The bridge between them is always probability. That's why Track 2 (Probability) sits between describing data and drawing conclusions.
 
 ---
 

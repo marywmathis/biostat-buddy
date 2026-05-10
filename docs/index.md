@@ -12,7 +12,15 @@ You'll also find honest "why students miss this" notes for the ideas that trip p
 
 ## How to use this site
 
-Use the left sidebar to navigate. The site is organized into five tracks:
+## How to use this site
+
+Use the left sidebar to navigate.
+
+The site is built around **tracks** (the five big sections of the course) and **modules** (the individual lessons inside each track). Each module covers one topic and includes the same elements: an introduction, key concepts, common pitfalls, JMP examples, and "what to do when you're stuck" advice.
+
+The site is organized into five tracks:
+
+- **Track 0 — Foundations.** Start here...
 
 - **Track 0 — Foundations.** Start here. Parameter vs. statistic, variable types, the Greek letter decoder, and a quick JMP reference.
 - **Track 1 — Studies & Data.** How studies are designed and how to describe what you collected.

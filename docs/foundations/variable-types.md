@@ -47,7 +47,7 @@ The variable type tells you **what kind of math is allowed**.
 | Categorical | Nominal, qualitative, unordered factor, factor |
 | Ordinal | Ordered categorical, ranked, ordered factor |
 
-!!! warning "Words that mean different things in different textbooks"
+!!! warning "Words that mean different things in different sources"
     The words *categorical* and *qualitative* are sometimes used as umbrella terms covering both ordinal and nominal. Other textbooks reserve "categorical" for nominal-only. When in doubt, see the next section to figure out whether your variable is ordinal or nominal.
 
 ## How to tell ordinal from nominal (this trips up almost everyone)

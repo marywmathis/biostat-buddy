@@ -1,7 +1,7 @@
 # Population vs. Sample
 
 !!! abstract "The companion to Parameter vs. Statistic"
-    Where [Parameter vs. Statistic](parameter-vs-statistic.md) explains the *numbers*, this card explains the *groups themselves*. A **population** is the whole group you want to know about. A **sample** is the slice you actually studied. Once these two ideas click together, the whole structure of biostatistics makes sense.
+    Where [Parameter vs. Statistic](parameter-vs-statistic.md) explains the *numbers*, this card explains the *groups themselves*. A **population** is the whole group you want to know about. A **sample** is the slice you actually studied. Once you understand both ideas, the whole structure of biostatistics has a logic to it.
 
 ## As you'll see it in published research and textbooks
 
@@ -47,7 +47,7 @@ Three honest reasons:
 2. **Measuring everyone is too expensive.** Even if you could find them, equipment, staff, and time costs money.
 3. **Sometimes the population is hypothetical.** "Every patient who *could* be treated with this drug" includes people who don't exist yet. You can't measure them — they haven't been born.
 
-!!! important "Why this section is on the page"
+!!! important "Why this matters"
     Sampling lets us learn about populations we can never fully access. The price we pay is *uncertainty* — our sample answer won't perfectly match the true population answer. Almost everything else in this course (confidence intervals, hypothesis tests, sample size calculations) exists to *measure and manage* that uncertainty.
 
 ## ⚠️ Why students miss this
@@ -76,7 +76,7 @@ This means:
 - JMP cannot, by itself, tell you anything about the population. *You* make that leap, using inference.
 
 !!! important "How to bridge sample to population"
-    To make a population claim from your sample, you'll need a confidence interval, a hypothesis test, or another inferential method. Those are the tools that bridge sample → population. We'll meet them in Track 3.
+    To make a population claim from your sample, you'll need a confidence interval, a hypothesis test, or another inferential method. Those are the tools that bridge sample → population. We'll meet them in Track 3 (Drawing Conclusions).
 
 ## What to do when you're stuck
 
