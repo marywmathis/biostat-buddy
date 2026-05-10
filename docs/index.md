@@ -34,7 +34,12 @@ This course uses **JMP Student Edition**. Every worked example shows the menu pa
 
 ## A note on the writing style
 
-I assume you are smart and just under-served by typical biostatistics textbooks. The math is here when it helps and gets out of the way when it doesn't. If something is confusing, the issue is the explanation, not you.
+!!! tip "Read this before you doubt yourself"
+    I assume you are smart and just under-served by typical biostatistics textbooks. The math is here when it helps and gets out of the way when it doesn't.
+
+    **If something is confusing, the issue is the explanation, not you.**
+
+    Come back here as often as you need to. The site won't run out of patience, and neither will the analogies.
 
 ---
 
