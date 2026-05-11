@@ -35,20 +35,20 @@ nav:
       - JMP Quick Reference: foundations/jmp-quick-reference.md
       - Stats Vocabulary: foundations/stats-vocabulary.md
   - Track 1 - Studies & Data:
-      - Ch 2 - Study Designs: track-1-studies-and-data/ch2-study-designs.md
-      - Ch 3 - Quantifying Disease: track-1-studies-and-data/ch3-disease-extent.md
-      - Ch 4 - Summary Statistics: track-1-studies-and-data/ch4-summary-stats.md
-      - Ch 12 - Data Visualization: track-1-studies-and-data/ch12-data-viz.md
+      - Module 2 - Study Designs: track-1-studies-and-data/ch2-study-designs.md
+      - Module 3 - Quantifying Disease: track-1-studies-and-data/ch3-disease-extent.md
+      - Module 4 - Summary Statistics: track-1-studies-and-data/ch4-summary-stats.md
+      - Module 12 - Data Visualization: track-1-studies-and-data/ch12-data-viz.md
   - Track 2 - Probability:
-      - Ch 5 - Probability: track-2-probability/ch5-probability.md
+      - Module 5 - Probability: track-2-probability/ch5-probability.md
   - Track 3 - Drawing Conclusions:
-      - Ch 6 - Confidence Intervals: track-3-conclusions/ch6-confidence-intervals.md
-      - Ch 7 - Hypothesis Testing: track-3-conclusions/ch7-hypothesis-testing.md
-      - Ch 8 - Power & Sample Size: track-3-conclusions/ch8-power-sample-size.md
-      - Ch 10 - Nonparametric Tests: track-3-conclusions/ch10-nonparametric.md
+      - Module 6 - Confidence Intervals: track-3-conclusions/ch6-confidence-intervals.md
+      - Module 7 - Hypothesis Testing: track-3-conclusions/ch7-hypothesis-testing.md
+      - Module 8 - Power & Sample Size: track-3-conclusions/ch8-power-sample-size.md
+      - Module 10 - Nonparametric Tests: track-3-conclusions/ch10-nonparametric.md
   - Track 4 - Real-World Research:
-      - Ch 9 - Multivariable Methods: track-4-real-world/ch9-multivariable.md
-      - Ch 11 - Survival Analysis: track-4-real-world/ch11-survival.md
+      - Module 9 - Multivariable Methods: track-4-real-world/ch9-multivariable.md
+      - Module 11 - Survival Analysis: track-4-real-world/ch11-survival.md
   - Decision Helpers:
       - Which Study Design?: decision-helpers/which-study-design.md
       - Which Summary Statistic?: decision-helpers/which-summary-stat.md
