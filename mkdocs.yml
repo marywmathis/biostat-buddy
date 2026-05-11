@@ -35,20 +35,20 @@ nav:
       - JMP Quick Reference: foundations/jmp-quick-reference.md
       - Stats Vocabulary: foundations/stats-vocabulary.md
   - Track 1 - Studies & Data:
-      - Module 2 - Study Designs: track-1-studies-and-data/ch2-study-designs.md
-      - Module 3 - Quantifying Disease: track-1-studies-and-data/ch3-disease-extent.md
-      - Module 4 - Summary Statistics: track-1-studies-and-data/ch4-summary-stats.md
-      - Module 12 - Data Visualization: track-1-studies-and-data/ch12-data-viz.md
+      - Study Designs: track-1-studies-and-data/ch2-study-designs.md
+      - Quantifying Disease: track-1-studies-and-data/ch3-disease-extent.md
+      - Summary Statistics: track-1-studies-and-data/ch4-summary-stats.md
+      - Data Visualization: track-1-studies-and-data/ch12-data-viz.md
   - Track 2 - Probability:
-      - Module 5 - Probability: track-2-probability/ch5-probability.md
+      - Probability: track-2-probability/ch5-probability.md
   - Track 3 - Drawing Conclusions:
-      - Module 6 - Confidence Intervals: track-3-conclusions/ch6-confidence-intervals.md
-      - Module 7 - Hypothesis Testing: track-3-conclusions/ch7-hypothesis-testing.md
-      - Module 8 - Power & Sample Size: track-3-conclusions/ch8-power-sample-size.md
-      - Module 10 - Nonparametric Tests: track-3-conclusions/ch10-nonparametric.md
+      - Confidence Intervals: track-3-conclusions/ch6-confidence-intervals.md
+      - Hypothesis Testing: track-3-conclusions/ch7-hypothesis-testing.md
+      - Power & Sample Size: track-3-conclusions/ch8-power-sample-size.md
+      - Nonparametric Tests: track-3-conclusions/ch10-nonparametric.md
   - Track 4 - Real-World Research:
-      - Module 9 - Multivariable Methods: track-4-real-world/ch9-multivariable.md
-      - Module 11 - Survival Analysis: track-4-real-world/ch11-survival.md
+      - Multivariable Methods: track-4-real-world/ch9-multivariable.md
+      - Survival Analysis: track-4-real-world/ch11-survival.md
   - Decision Helpers:
       - Which Study Design?: decision-helpers/which-study-design.md
       - Which Summary Statistic?: decision-helpers/which-summary-stat.md

@@ -1,4 +1,4 @@
-# Module 3 - Quantifying Disease
+# Quantifying Disease
 
 !!! abstract "What this module is really about"
     Two ideas drive almost everything in public health surveillance: **how many people have a disease right now** (prevalence) and **how fast new cases are appearing** (incidence). These sound similar. They are not the same thing — they answer different questions, and using one when you mean the other can lead to bad decisions. This module is about getting that distinction permanently clear.

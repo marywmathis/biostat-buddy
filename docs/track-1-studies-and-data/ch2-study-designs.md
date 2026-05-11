@@ -1,4 +1,4 @@
-# Module 2 - Study Designs
+# Study Designs
 
 !!! abstract "Why study designs matter more than students think they do"
     Students often dismiss study designs as "just vocabulary." They're not. The study design determines what you're allowed to conclude. A finding from a randomized trial can support a causal claim. The same finding from a cross-sectional survey usually can't. Same numbers, different design, different conclusions. If you don't understand the design, you can't interpret the result.
