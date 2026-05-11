@@ -252,7 +252,7 @@ JMP doesn't run study designs — study design is something *you* decide before 
 A few practical connections:
 
 - **Cross-sectional data** in JMP looks like a single row per person with their exposure and outcome both recorded. Standard summary statistics and contingency tables apply.
-- **Cohort data** often has time-to-event information attached. This sets you up for survival analysis in Module 11.
+- **Cohort data** often has time-to-event information attached. This sets you up for survival analysis later in Track 4.
 - **Case-control data** requires a specific analysis approach — odds ratios and conditional logistic regression — because you can't calculate incidence directly.
 - **RCT data** is usually analyzed by comparing treatment groups using a t-test, chi-square test, or regression. The randomization simplifies many things.
 
@@ -280,4 +280,4 @@ If you can identify the design, you can interpret the results appropriately. If 
 
 ---
 
-*See also: [Module 3 - Quantifying Disease](ch3-disease-extent.md) · [Stats Vocabulary](../foundations/stats-vocabulary.md) · [Parameter vs. Statistic](../foundations/parameter-vs-statistic.md)*
+*See also: [Quantifying Disease](ch3-disease-extent.md) · [Stats Vocabulary](../foundations/stats-vocabulary.md) · [Parameter vs. Statistic](../foundations/parameter-vs-statistic.md)*

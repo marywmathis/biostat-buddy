@@ -1,7 +1,7 @@
 # Quantifying Disease
 
-!!! abstract "What this module is really about"
-    Two ideas drive almost everything in public health surveillance: **how many people have a disease right now** (prevalence) and **how fast new cases are appearing** (incidence). These sound similar. They are not the same thing — they answer different questions, and using one when you mean the other can lead to bad decisions. This module is about getting that distinction permanently clear.
+!!! abstract "What the extent of disease is really about"
+    Two ideas drive almost everything in public health surveillance: **how many people have a disease right now** (prevalence) and **how fast new cases are appearing** (incidence). These sound similar. They are not the same thing — they answer different questions, and using one when you mean the other can lead to bad decisions. This is about getting that distinction permanently clear.
 
 ## As you'll see it in published research and textbooks
 
@@ -95,7 +95,7 @@ Incidence rate is a **rate** — it has a time unit in the denominator. The unit
 
 This is one of the most important distinctions in this whole course, and one of the most commonly muddled.
 
-!!! danger "If you only remember one comparison from this module, remember this"
+!!! danger "If you only remember one comparison from this topic, remember this"
     **Prevalence** answers: *"How many have it?"* (existing cases)
     **Incidence** answers: *"How many are getting it?"* (new cases over time)
 
@@ -151,14 +151,14 @@ The same idea, but using incidence rates instead of cumulative incidences. Use r
 
 ### Odds ratio (OR)
 
-A measure used especially in case-control studies, where you can't calculate true incidence. We'll meet odds ratios in more detail in [Module 9](../track-4-real-world/ch9-multivariable.md).
+A measure used especially in case-control studies, where you can't calculate true incidence. We'll meet odds ratios in more detail in [real world application](../track-4-real-world/ch9-multivariable.md).
 
 !!! tip "The 'compared to what?' habit"
     A ratio is meaningless without knowing what's being compared. When you see "the risk was 3 times higher," always ask: *3 times higher than what?* The answer should be a specific reference group (non-smokers, the placebo group, healthy controls). If a study reports a ratio without a clear comparator, treat the result with skepticism.
 
 ## ⚠️ Why students miss this
 
-Four classic traps in this module.
+Four classic traps in the extent of disease.
 
 !!! warning "Trap 1: Calling prevalence 'incidence' and vice versa"
     This is the single most common error in epidemiology — even in published papers and the news. *"The incidence of obesity has risen to 40%"* is almost always wrong — that's a prevalence statement. *"Last year, 240 people were diagnosed with this cancer in our county"* is incidence (new cases), not prevalence. Train yourself to ask which is meant whenever you see a disease frequency reported.
@@ -180,12 +180,12 @@ For **prevalence**: use **Analyze → Distribution** on the disease variable. Th
 
 For **cumulative incidence**: same thing — but make sure your dataset only includes people who were disease-free at the start of follow-up.
 
-For **incidence rate**: you'll need person-time variables. JMP can calculate person-time across a cohort using survival analysis tools (covered in [Module 11](../track-4-real-world/ch11-survival.md)).
+For **incidence rate**: you'll need person-time variables. JMP can calculate person-time across a cohort using survival analysis tools (covered in [survival analysis](../track-4-real-world/ch11-survival.md)).
 
-For **risk ratios and rate ratios**: typically calculated by hand from a 2×2 table, or using JMP's **Fit Model** platform with appropriate link functions (we'll meet these in [Module 9](../track-4-real-world/ch9-multivariable.md)).
+For **risk ratios and rate ratios**: typically calculated by hand from a 2×2 table, or using JMP's **Fit Model** platform with appropriate link functions (we'll meet these in [real world applications](../track-4-real-world/ch9-multivariable.md)).
 
 !!! tip "Most early calculations are easier by hand"
-    For this module, don't worry about getting JMP to compute these for you. The numbers are simple enough to calculate by hand from a 2×2 table, and doing them by hand reinforces what the formulas mean. JMP becomes essential later when designs and adjustments get more complex.
+    For this section, don't worry about getting JMP to compute these for you. The numbers are simple enough to calculate by hand from a 2×2 table, and doing them by hand reinforces what the formulas mean. JMP becomes essential later when designs and adjustments get more complex.
 
 ## What to do when you're stuck
 
@@ -211,4 +211,4 @@ If you can answer those four, you can interpret any disease frequency you encoun
 
 ---
 
-*See also: [Module 2 - Study Designs](ch2-study-designs.md) · [Module 4 - Summary Statistics](ch4-summary-stats.md) · [Stats Vocabulary](../foundations/stats-vocabulary.md)*
+*See also: [Study Designs](ch2-study-designs.md) · [Summary Statistics](ch4-summary-stats.md) · [Stats Vocabulary](../foundations/stats-vocabulary.md)*
