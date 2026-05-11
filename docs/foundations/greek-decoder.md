@@ -13,19 +13,19 @@ If that distinction still feels confusing, head back to [Parameter vs. Statistic
 
 ## The letters you'll see in this course
 
-Listed in roughly the order you'll meet them. The "Where you'll see it" column points to the BioStat Buddy module where the letter first matters.
+Listed in roughly the order you'll meet them. The "Where you'll see it" column points to the BioStat Buddy topic where the letter first matters.
 
 | Letter | Name | What it means | Where you'll see it |
 |---|---|---|---|
-| $\mu$ | mu | Population mean | Track 1 (Studies & Data), Module 4 onward |
+| $\mu$ | mu | Population mean | Track 1 (Studies & Data), Summary Statistics onward |
 | $\sigma$ | sigma (lowercase) | Population standard deviation | Same — paired with $\mu$ everywhere |
 | $\sigma^2$ | sigma squared | Population variance | Variance discussions, ANOVA |
-| $\pi$ | pi | Population proportion | Track 3 (Drawing Conclusions), Module 6 onward |
-| $\rho$ | rho | Population correlation | Track 4 (Real-World Research), Module 9 |
-| $\beta$ | beta | Population regression coefficient | Track 4, Modules 9 and 11 |
-| $\alpha$ | alpha | Significance threshold (a probability cutoff, like 0.05) | Track 3, Module 7 onward |
-| $\lambda$ | lambda | Rate (events per unit time) | Track 4, Module 11 (survival analysis) |
-| $\chi^2$ | chi-squared | A test statistic and its distribution | Track 3, Module 7 |
+| $\pi$ | pi | Population proportion | Track 3 (Drawing Conclusions), Confidence Intervals onward |
+| $\rho$ | rho | Population correlation | Track 4 (Real-World Research), Multivariable Methods |
+| $\beta$ | beta | Population regression coefficient | Track 4, Multivariable Methods and Survival Analysis |
+| $\alpha$ | alpha | Significance threshold (a probability cutoff, like 0.05) | Track 3, Hypothesis Testing onward |
+| $\lambda$ | lambda | Rate (events per unit time) | Track 4, Survival Analysis |
+| $\chi^2$ | chi-squared | A test statistic and its distribution | Track 3, Hypothesis Testing |
 | $\Sigma$ | sigma (uppercase) | "Sum of" — an instruction, not a parameter | Anywhere with a summation formula |
 
 !!! warning "Do NOT confuse $\sigma$ and $\Sigma$"
