@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 320">
+<text x="113" y="30" font-family="sans-serif" font-size="14" font-weight="500" text-anchor="middle" fill="#3D3D3A">Symmetric</text>
+<rect x="40" y="170" width="15" height="40" fill="#85B7EB" stroke="#185FA5" stroke-width="0.5"/>
+<rect x="58" y="140" width="15" height="70" fill="#85B7EB" stroke="#185FA5" stroke-width="0.5"/>
+<rect x="76" y="110" width="15" height="100" fill="#85B7EB" stroke="#185FA5" stroke-width="0.5"/>
+<rect x="94" y="80" width="15" height="130" fill="#85B7EB" stroke="#185FA5" stroke-width="0.5"/>
+<rect x="112" y="60" width="15" height="150" fill="#85B7EB" stroke="#185FA5" stroke-width="0.5"/>
+<rect x="130" y="80" width="15" height="130" fill="#85B7EB" stroke="#185FA5" stroke-width="0.5"/>
+<rect x="148" y="110" width="15" height="100" fill="#85B7EB" stroke="#185FA5" stroke-width="0.5"/>
+<rect x="166" y="140" width="15" height="70" fill="#85B7EB" stroke="#185FA5" stroke-width="0.5"/>
+<rect x="184" y="170" width="15" height="40" fill="#85B7EB" stroke="#185FA5" stroke-width="0.5"/>
+<line x1="40" y1="210" x2="200" y2="210" stroke="#3D3D3A" stroke-width="0.5"/>
+<line x1="119" y1="50" x2="119" y2="215" stroke="#993C1D" stroke-width="2" stroke-dasharray="5 3"/>
+<text x="119" y="245" font-family="sans-serif" font-size="12" text-anchor="middle" fill="#73726c">Mean ≈ Median</text>
+
+<text x="338" y="30" font-family="sans-serif" font-size="14" font-weight="500" text-anchor="middle" fill="#3D3D3A">Right-skewed</text>
+<rect x="265" y="100" width="15" height="110" fill="#85B7EB" stroke="#185FA5" stroke-width="0.5"/>
+<rect x="283" y="60" width="15" height="150" fill="#85B7EB" stroke="#185FA5" stroke-width="0.5"/>
+<rect x="301" y="80" width="15" height="130" fill="#85B7EB" stroke="#185FA5" stroke-width="0.5"/>
+<rect x="319" y="120" width="15" height="90" fill="#85B7EB" stroke="#185FA5" stroke-width="0.5"/>
+<rect x="337" y="150" width="15" height="60" fill="#85B7EB" stroke="#185FA5" stroke-width="0.5"/>
+<rect x="355" y="170" width="15" height="40" fill="#85B7EB" stroke="#185FA5" stroke-width="0.5"/>
+<rect x="373" y="180" width="15" height="30" fill="#85B7EB" stroke="#185FA5" stroke-width="0.5"/>
+<rect x="391" y="190" width="15" height="20" fill="#85B7EB" stroke="#185FA5" stroke-width="0.5"/>
+<rect x="409" y="195" width="15" height="15" fill="#85B7EB" stroke="#185FA5" stroke-width="0.5"/>
+<line x1="265" y1="210" x2="425" y2="210" stroke="#3D3D3A" stroke-width="0.5"/>
+<line x1="305" y1="50" x2="305" y2="215" stroke="#0F6E56" stroke-width="2"/>
+<text x="305" y="245" font-family="sans-serif" font-size="12" text-anchor="middle" fill="#73726c">Median</text>
+<line x1="335" y1="50" x2="335" y2="215" stroke="#993C1D" stroke-width="2" stroke-dasharray="5 3"/>
+<text x="345" y="260" font-family="sans-serif" font-size="12" text-anchor="middle" fill="#73726c">Mean</text>
+
+<text x="563" y="30" font-family="sans-serif" font-size="14" font-weight="500" text-anchor="middle" fill="#3D3D3A">Left-skewed</text>
+<rect x="490" y="195" width="15" height="15" fill="#85B7EB" stroke="#185FA5" stroke-width="0.5"/>
+<rect x="508" y="190" width="15" height="20" fill="#85B7EB" stroke="#185FA5" stroke-width="0.5"/>
+<rect x="526" y="180" width="15" height="30" fill="#85B7EB" stroke="#185FA5" stroke-width="0.5"/>
+<rect x="544" y="170" width="15" height="40" fill="#85B7EB" stroke="#185FA5" stroke-width="0.5"/>
+<rect x="562" y="150" width="15" height="60" fill="#85B7EB" stroke="#185FA5" stroke-width="0.5"/>
+<rect x="580" y="120" width="15" height="90" fill="#85B7EB" stroke="#185FA5" stroke-width="0.5"/>
+<rect x="598" y="80" width="15" height="130" fill="#85B7EB" stroke="#185FA5" stroke-width="0.5"/>
+<rect x="616" y="60" width="15" height="150" fill="#85B7EB" stroke="#185FA5" stroke-width="0.5"/>
+<rect x="634" y="100" width="15" height="110" fill="#85B7EB" stroke="#185FA5" stroke-width="0.5"/>
+<line x1="490" y1="210" x2="650" y2="210" stroke="#3D3D3A" stroke-width="0.5"/>
+<line x1="592" y1="50" x2="592" y2="215" stroke="#993C1D" stroke-width="2" stroke-dasharray="5 3"/>
+<text x="580" y="245" font-family="sans-serif" font-size="12" text-anchor="middle" fill="#73726c">Mean</text>
+<line x1="623" y1="50" x2="623" y2="215" stroke="#0F6E56" stroke-width="2"/>
+<text x="623" y="260" font-family="sans-serif" font-size="12" text-anchor="middle" fill="#73726c">Median</text>
+
+<text x="340" y="295" font-family="sans-serif" font-size="12" text-anchor="middle" fill="#73726c">The mean gets pulled toward the tail. The median stays with the bulk of the data.</text>
+</svg>

@@ -24,26 +24,36 @@ Students see Table 1 and skim past it. The actual results are further in — the
 !!! danger "Why skipping Table 1 is a serious mistake"
     A p-value without context is meaningless. *"Group A had better outcomes than Group B (p = 0.02)"* is uninterpretable unless you know who was in Group A and who was in Group B. If Group A was younger, healthier, wealthier, and had better insurance — none of which the study controlled for — then the "better outcomes" might have nothing to do with the intervention. **Summary statistics aren't preliminary to the analysis. They're part of the analysis.**
 
+## Center and spread: the two questions you have to answer
+
+When you summarize continuous data, you need to answer two questions:
+
+**Where is the data clustered?** What number does the data tend to cluster around? This is **center**. The mean and median are different ways of answering this.
+
+**How spread out is the data?** Are the values tightly bunched, or scattered widely? This is **spread**. The standard deviation, IQR, and range are different ways of measuring this.
+
+A center alone doesn't describe a dataset. *"Mean blood pressure was 130"* tells you nothing about whether everyone was right around 130, or whether half the sample had blood pressure of 90 and the other half had blood pressure of 170. The center is only half the picture. **You always need spread to go with it.**
+
 ## Why dichotomous and continuous variables are reported differently
 
-This is one of the most common student confusions in the course — and one of the most fixable.
+This is one of the most common student confusions in the course — and one of the most fixable. There are two parts to understanding it: the *reason behind the rule*, and an *analogy* to make the reason memorable.
 
-!!! important "The reason behind the rule"
-    A **dichotomous variable** is fully described by a single number (the proportion). A **continuous variable** requires two numbers (a center and a spread).
+### The reason behind the rule
 
-    This isn't arbitrary convention. It's mathematically necessary.
+A **dichotomous variable** is fully described by a single number (the proportion). A **continuous variable** requires two numbers (a center and a spread).
 
-### The light switch and the dimmer
+This isn't arbitrary convention. It's mathematically necessary. A dichotomous variable only has two states. Tell me what percentage is in one state, and the other state is automatically implied. There's nothing else to describe.
 
-Think about reporting on **whether a light switch is on**:
+A continuous variable can take many values, and those values can be clustered tightly or scattered widely. One number — the center — doesn't tell you which. You always need both pieces.
+
+### The analogy that makes this stick
+
+Think of a **light switch** vs. a **dimmer**.
 
 - A light switch is either ON or OFF. To describe it completely, you need exactly one number: *"It's on 62% of the time."* That tells you everything. The other 38% is implied (it's off). There's nothing else to report.
-
-Now think about reporting on **how bright a dimmer is**:
-
 - A dimmer can be at any brightness from 0 to 100. To describe it, one number isn't enough. *"Average brightness was 50%"* tells you nothing about whether it was always at 50%, or swinging between 0% and 100%, or rapidly flickering. You need a **center** (mean or median) AND a **spread** (standard deviation or range).
 
-Dichotomous = light switch. Continuous = dimmer. One number for the switch. Two numbers for the dimmer.
+**Dichotomous = light switch. Continuous = dimmer.** One number for the switch. Two numbers for the dimmer.
 
 ### The reporting rules — with reasons attached
 
@@ -67,9 +77,53 @@ For **continuous variables, skewed distribution**: report median and interquarti
 
 > Example: "Hospital length of stay: median 5 days, IQR 3–9."
 
+## What "symmetric" and "skewed" mean
+
+When you plot a continuous variable, the **shape** of the distribution matters. Two shapes come up constantly in this course.
+
+### Symmetric distribution
+
+The data is evenly distributed around its center. Roughly the same number of values fall above the mean as below it. The shape looks like a bell — high in the middle, falling off equally on both sides.
+
+![Symmetric distribution showing mean and median nearly aligned in the center](../images/symmetric-distribution.svg)
+
+The most famous symmetric shape is the **normal distribution** (the "bell curve"). Heights, IQ scores, and many lab values approximate a normal distribution.
+
+!!! important "Mean and median don't need to be EXACTLY equal"
+    In real data, the mean and median of a symmetric distribution are almost never *exactly* equal. Sample sizes are finite, and small differences happen by chance. What matters is whether they're **close to each other**.
+
+    A mean of 24.3 and a median of 24.1? Symmetric — that small difference is normal sampling variation.
+
+    A mean of 65 and a median of 42? Not symmetric — that's a big enough difference to indicate skew.
+
+    "Close enough" is enough to call data symmetric. Don't get tripped up by tiny differences.
+
+### Skewed distribution
+
+The data is lopsided. Most values cluster on one side, with a long "tail" stretching to the other side.
+
+**Right-skewed (positively skewed):** the long tail extends to the right (toward larger values). Income is the classic example — most people earn modest amounts, but a few people earn enormously high incomes that stretch the right side of the distribution.
+
+![Right-skewed distribution showing a long tail extending to the right, with the mean pulled to the right of the median](../images/right-skewed-distribution.svg)
+
+**Left-skewed (negatively skewed):** the long tail extends to the left (toward smaller values). Less common but possible — for example, age at death in a healthy population.
+
+![Left-skewed distribution showing a long tail extending to the left, with the mean pulled to the left of the median](../images/left-skewed-distribution.svg)
+
+### Why the difference matters
+
+The **mean gets pulled toward the tail**. The **median stays with the bulk of the data**.
+
+- In a right-skewed distribution, the mean is higher than the median.
+- In a left-skewed distribution, the mean is lower than the median.
+- In a symmetric distribution, they're close to each other.
+
+![Side-by-side comparison of symmetric, right-skewed, and left-skewed distributions showing the relationship between mean and median in each](../images/distribution-shapes-comparison.svg)
+
 !!! tip "When to use mean vs. median for continuous variables"
-    - **Mean** works well when the distribution is roughly symmetric — like the normal distribution.
-    - **Median** works better when the distribution is skewed — like income or hospital length of stay, where a few very large values pull the mean upward and make it misleading.
+    **Mean** works well when the distribution is roughly symmetric.
+
+    **Median** works better when the distribution is skewed — a few extreme values can pull the mean far from what's typical.
 
     Quick test: if the mean and median are close, the data is roughly symmetric — mean is fine. If they're very different, the data is skewed — use median.
 
