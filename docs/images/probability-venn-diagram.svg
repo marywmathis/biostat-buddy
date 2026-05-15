@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 460">
+<text x="340" y="35" font-family="sans-serif" font-size="16" font-weight="600" text-anchor="middle" fill="#3D3D3A">Basic probability rules</text>
+<text x="340" y="55" font-family="sans-serif" font-size="13" text-anchor="middle" fill="#73726c">Two events A and B in a sample space S</text>
+<rect x="80" y="80" width="520" height="280" rx="6" fill="#F5F0E6" stroke="#73726c" stroke-width="0.5"/>
+<text x="100" y="105" font-family="sans-serif" font-size="13" font-weight="500" fill="#3D3D3A">Sample Space (S)</text>
+<circle cx="270" cy="225" r="105" fill="#85B7EB" fill-opacity="0.55" stroke="#185FA5" stroke-width="1.5"/>
+<circle cx="410" cy="225" r="105" fill="#E8C896" fill-opacity="0.7" stroke="#A87B3D" stroke-width="1.5"/>
+<text x="200" y="200" font-family="sans-serif" font-size="22" font-weight="600" text-anchor="middle" fill="#185FA5">A</text>
+<text x="200" y="245" font-family="sans-serif" font-size="13" text-anchor="middle" fill="#3D3D3A">P(A) = 0.40</text>
+<text x="480" y="200" font-family="sans-serif" font-size="22" font-weight="600" text-anchor="middle" fill="#A87B3D">B</text>
+<text x="480" y="245" font-family="sans-serif" font-size="13" text-anchor="middle" fill="#3D3D3A">P(B) = 0.30</text>
+<text x="340" y="218" font-family="sans-serif" font-size="14" font-weight="600" text-anchor="middle" fill="#0F6E56">A ∩ B</text>
+<text x="340" y="240" font-family="sans-serif" font-size="13" font-weight="600" text-anchor="middle" fill="#0F6E56">0.10</text>
+<text x="100" y="400" font-family="sans-serif" font-size="13" fill="#3D3D3A">P(A ∪ B) = P(A) + P(B) − P(A ∩ B) = 0.40 + 0.30 − 0.10 = <tspan font-weight="700" fill="#185FA5">0.60</tspan></text>
+<text x="100" y="430" font-family="sans-serif" font-size="13" fill="#3D3D3A">P(A′) = 1 − P(A) = <tspan font-weight="700" fill="#185FA5">0.60</tspan> (probability NOT A)</text>
+</svg>

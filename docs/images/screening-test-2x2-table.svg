@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 420">
+<text x="340" y="30" font-family="sans-serif" font-size="16" font-weight="600" text-anchor="middle" fill="#3D3D3A">2×2 table for a screening test</text>
+<text x="340" y="50" font-family="sans-serif" font-size="13" text-anchor="middle" fill="#73726c">1,000 patients screened for a disease (true prevalence = 10%)</text>
+<text x="260" y="85" font-family="sans-serif" font-size="13" font-weight="600" text-anchor="middle" fill="#3D3D3A">Disease+</text>
+<text x="390" y="85" font-family="sans-serif" font-size="13" font-weight="600" text-anchor="middle" fill="#3D3D3A">Disease−</text>
+<text x="520" y="85" font-family="sans-serif" font-size="13" font-weight="500" text-anchor="middle" fill="#73726c">Total</text>
+<rect x="100" y="100" width="120" height="60" fill="#F5F0E6" stroke="#3D3D3A" stroke-width="0.5"/>
+<rect x="200" y="100" width="120" height="60" fill="#D6F0E2" stroke="#3D3D3A" stroke-width="0.5"/>
+<rect x="320" y="100" width="140" height="60" fill="#FCE4D8" stroke="#3D3D3A" stroke-width="0.5"/>
+<rect x="460" y="100" width="120" height="60" fill="#F5F0E6" stroke="#3D3D3A" stroke-width="0.5"/>
+<text x="160" y="128" font-family="sans-serif" font-size="13" font-weight="600" text-anchor="middle" fill="#3D3D3A">Test+</text>
+<text x="160" y="148" font-family="sans-serif" font-size="11" text-anchor="middle" fill="#73726c">(positive result)</text>
+<text x="260" y="125" font-family="sans-serif" font-size="20" font-weight="700" text-anchor="middle" fill="#0F6E56">80</text>
+<text x="260" y="145" font-family="sans-serif" font-size="11" text-anchor="middle" fill="#0F6E56">True Positives</text>
+<text x="390" y="125" font-family="sans-serif" font-size="20" font-weight="700" text-anchor="middle" fill="#993C1D">180</text>
+<text x="390" y="145" font-family="sans-serif" font-size="11" text-anchor="middle" fill="#993C1D">False Positives</text>
+<text x="520" y="128" font-family="sans-serif" font-size="16" font-weight="600" text-anchor="middle" fill="#3D3D3A">260</text>
+<text x="520" y="148" font-family="sans-serif" font-size="10" text-anchor="middle" fill="#73726c">PPV = 80/260 = 31%</text>
+<rect x="100" y="160" width="120" height="60" fill="#F5F0E6" stroke="#3D3D3A" stroke-width="0.5"/>
+<rect x="200" y="160" width="120" height="60" fill="#FCE4D8" stroke="#3D3D3A" stroke-width="0.5"/>
+<rect x="320" y="160" width="140" height="60" fill="#D6F0E2" stroke="#3D3D3A" stroke-width="0.5"/>
+<rect x="460" y="160" width="120" height="60" fill="#F5F0E6" stroke="#3D3D3A" stroke-width="0.5"/>
+<text x="160" y="188" font-family="sans-serif" font-size="13" font-weight="600" text-anchor="middle" fill="#3D3D3A">Test−</text>
+<text x="160" y="208" font-family="sans-serif" font-size="11" text-anchor="middle" fill="#73726c">(negative result)</text>
+<text x="260" y="185" font-family="sans-serif" font-size="20" font-weight="700" text-anchor="middle" fill="#993C1D">20</text>
+<text x="260" y="205" font-family="sans-serif" font-size="11" text-anchor="middle" fill="#993C1D">False Negatives</text>
+<text x="390" y="185" font-family="sans-serif" font-size="20" font-weight="700" text-anchor="middle" fill="#0F6E56">720</text>
+<text x="390" y="205" font-family="sans-serif" font-size="11" text-anchor="middle" fill="#0F6E56">True Negatives</text>
+<text x="520" y="188" font-family="sans-serif" font-size="16" font-weight="600" text-anchor="middle" fill="#3D3D3A">740</text>
+<text x="520" y="208" font-family="sans-serif" font-size="10" text-anchor="middle" fill="#73726c">NPV = 720/740 = 97%</text>
+<rect x="100" y="220" width="120" height="50" fill="#F5F0E6" stroke="#3D3D3A" stroke-width="0.5"/>
+<rect x="200" y="220" width="120" height="50" fill="#F5F0E6" stroke="#3D3D3A" stroke-width="0.5"/>
+<rect x="320" y="220" width="140" height="50" fill="#F5F0E6" stroke="#3D3D3A" stroke-width="0.5"/>
+<rect x="460" y="220" width="120" height="50" fill="#E8DCC2" stroke="#3D3D3A" stroke-width="1"/>
+<text x="160" y="245" font-family="sans-serif" font-size="13" font-weight="500" text-anchor="middle" fill="#73726c">Total</text>
+<text x="260" y="245" font-family="sans-serif" font-size="16" font-weight="600" text-anchor="middle" fill="#3D3D3A">100</text>
+<text x="260" y="262" font-family="sans-serif" font-size="10" text-anchor="middle" fill="#73726c">Sens. = 80/100 = 80%</text>
+<text x="390" y="245" font-family="sans-serif" font-size="16" font-weight="600" text-anchor="middle" fill="#3D3D3A">900</text>
+<text x="390" y="262" font-family="sans-serif" font-size="10" text-anchor="middle" fill="#73726c">Spec. = 720/900 = 80%</text>
+<text x="520" y="245" font-family="sans-serif" font-size="18" font-weight="700" text-anchor="middle" fill="#3D3D3A">1,000</text>
+<text x="520" y="262" font-family="sans-serif" font-size="10" text-anchor="middle" fill="#73726c">Total screened</text>
+<text x="100" y="305" font-family="sans-serif" font-size="12" font-weight="600" fill="#0F6E56">Green cells</text>
+<text x="180" y="305" font-family="sans-serif" font-size="12" fill="#3D3D3A">= test got it right (correct diagnosis)</text>
+<text x="100" y="325" font-family="sans-serif" font-size="12" font-weight="600" fill="#993C1D">Red/peach cells</text>
+<text x="195" y="325" font-family="sans-serif" font-size="12" fill="#3D3D3A">= test got it wrong (missed or false alarm)</text>
+<text x="340" y="365" font-family="sans-serif" font-size="11" text-anchor="middle" fill="#73726c" font-style="italic">Each cell counts the number of patients in that combination of test result and true disease status.</text>
+</svg>
