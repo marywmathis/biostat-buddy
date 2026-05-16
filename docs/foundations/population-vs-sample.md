@@ -18,6 +18,10 @@ The **sample** is the 300 students you actually surveyed across five campuses. T
 !!! important "The whole point of statistics, in one sentence"
     The whole point of statistics is using the 300 students you actually talked to to make honest, careful claims about the hundreds of thousands you didn't.
 
+The illustration below shows the *concept* of population vs. sample. Each dot is symbolic — the actual numbers (300 students sampled out of ~350,000 in the population) are labeled in each box.
+
+![Illustration showing the population of Georgia college students as many small dots, with the sample shown as a smaller set of highlighted dots drawn from the population](../images/population-vs-sample-illustration.svg)    
+
 ## Plain words
 
 **The population is the group you want to learn about.**
