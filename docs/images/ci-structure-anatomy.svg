@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 540">
+<text x="340" y="30" font-family="sans-serif" font-size="16" font-weight="600" text-anchor="middle" fill="#3D3D3A">Anatomy of a 95% confidence interval</text>
+<text x="340" y="52" font-family="sans-serif" font-size="13" text-anchor="middle" fill="#73726c">Every CI has the same structure: a point estimate ± a margin of error</text>
+<text x="340" y="85" font-family="sans-serif" font-size="13" font-weight="600" text-anchor="middle" fill="#3D3D3A">Hospital length-of-stay example: 95% CI for mean length of stay</text>
+<text x="372" y="115" font-family="sans-serif" font-size="11" font-weight="600" text-anchor="middle" fill="#185FA5">Point estimate</text>
+<text x="372" y="133" font-family="sans-serif" font-size="15" font-weight="700" text-anchor="middle" fill="#185FA5">5.4 days</text>
+<line x1="372" y1="140" x2="372" y2="158" stroke="#185FA5" stroke-width="1.5"/>
+<polygon points="372 165, 367 158, 377 158" fill="#185FA5"/>
+<line x1="253" y1="175" x2="490" y2="175" stroke="#185FA5" stroke-width="5"/>
+<circle cx="372" cy="175" r="8" fill="#185FA5" stroke="#FFFFFF" stroke-width="2"/>
+<line x1="253" y1="167" x2="253" y2="183" stroke="#185FA5" stroke-width="2.5"/>
+<line x1="490" y1="167" x2="490" y2="183" stroke="#185FA5" stroke-width="2.5"/>
+<text x="253" y="200" font-family="sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#185FA5">3.2</text>
+<text x="253" y="215" font-family="sans-serif" font-size="11" text-anchor="middle" fill="#3D3D3A">Lower bound</text>
+<text x="490" y="200" font-family="sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#185FA5">7.6</text>
+<text x="490" y="215" font-family="sans-serif" font-size="11" text-anchor="middle" fill="#3D3D3A">Upper bound</text>
+<line x1="262" y1="245" x2="363" y2="245" stroke="#A87B3D" stroke-width="1.5"/>
+<polygon points="255 245, 262 241, 262 249" fill="#A87B3D"/>
+<polygon points="370 245, 363 241, 363 249" fill="#A87B3D"/>
+<text x="312" y="262" font-family="sans-serif" font-size="11" font-weight="600" text-anchor="middle" fill="#A87B3D">Margin of error = 2.2</text>
+<line x1="381" y1="245" x2="482" y2="245" stroke="#A87B3D" stroke-width="1.5"/>
+<polygon points="374 245, 381 241, 381 249" fill="#A87B3D"/>
+<polygon points="489 245, 482 241, 482 249" fill="#A87B3D"/>
+<text x="431" y="262" font-family="sans-serif" font-size="11" font-weight="600" text-anchor="middle" fill="#A87B3D">Margin of error = 2.2</text>
+<line x1="80" y1="285" x2="620" y2="285" stroke="#3D3D3A" stroke-width="0.8"/>
+<line x1="80" y1="283" x2="80" y2="289" stroke="#3D3D3A" stroke-width="0.5"/>
+<line x1="134" y1="283" x2="134" y2="289" stroke="#3D3D3A" stroke-width="0.5"/>
+<line x1="188" y1="283" x2="188" y2="289" stroke="#3D3D3A" stroke-width="0.5"/>
+<line x1="242" y1="283" x2="242" y2="289" stroke="#3D3D3A" stroke-width="0.5"/>
+<line x1="296" y1="283" x2="296" y2="289" stroke="#3D3D3A" stroke-width="0.5"/>
+<line x1="350" y1="283" x2="350" y2="289" stroke="#3D3D3A" stroke-width="0.5"/>
+<line x1="404" y1="283" x2="404" y2="289" stroke="#3D3D3A" stroke-width="0.5"/>
+<line x1="458" y1="283" x2="458" y2="289" stroke="#3D3D3A" stroke-width="0.5"/>
+<line x1="512" y1="283" x2="512" y2="289" stroke="#3D3D3A" stroke-width="0.5"/>
+<line x1="566" y1="283" x2="566" y2="289" stroke="#3D3D3A" stroke-width="0.5"/>
+<line x1="620" y1="283" x2="620" y2="289" stroke="#3D3D3A" stroke-width="0.5"/>
+<text x="80" y="302" font-family="sans-serif" font-size="10" text-anchor="middle" fill="#73726c">0</text>
+<text x="134" y="302" font-family="sans-serif" font-size="10" text-anchor="middle" fill="#73726c">1</text>
+<text x="188" y="302" font-family="sans-serif" font-size="10" text-anchor="middle" fill="#73726c">2</text>
+<text x="242" y="302" font-family="sans-serif" font-size="10" text-anchor="middle" fill="#73726c">3</text>
+<text x="296" y="302" font-family="sans-serif" font-size="10" text-anchor="middle" fill="#73726c">4</text>
+<text x="350" y="302" font-family="sans-serif" font-size="10" text-anchor="middle" fill="#73726c">5</text>
+<text x="404" y="302" font-family="sans-serif" font-size="10" text-anchor="middle" fill="#73726c">6</text>
+<text x="458" y="302" font-family="sans-serif" font-size="10" text-anchor="middle" fill="#73726c">7</text>
+<text x="512" y="302" font-family="sans-serif" font-size="10" text-anchor="middle" fill="#73726c">8</text>
+<text x="566" y="302" font-family="sans-serif" font-size="10" text-anchor="middle" fill="#73726c">9</text>
+<text x="620" y="302" font-family="sans-serif" font-size="10" text-anchor="middle" fill="#73726c">10</text>
+<text x="340" y="320" font-family="sans-serif" font-size="11" font-style="italic" text-anchor="middle" fill="#3D3D3A">Length of stay (days)</text>
+<rect x="20" y="340" width="640" height="190" rx="6" fill="#F5F0E6" stroke="#73726c" stroke-width="0.5"/>
+<text x="340" y="363" font-family="sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#3D3D3A">The structure of every confidence interval</text>
+<text x="340" y="395" font-family="sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#185FA5">CI = Point Estimate ± Margin of Error</text>
+<text x="340" y="418" font-family="sans-serif" font-size="13" text-anchor="middle" fill="#3D3D3A">For our example: <tspan font-weight="600">5.4 ± 2.2 = (3.2, 7.6) days</tspan></text>
+<line x1="80" y1="440" x2="600" y2="440" stroke="#73726c" stroke-width="0.5" stroke-dasharray="3 3"/>
+<text x="340" y="462" font-family="sans-serif" font-size="12" font-weight="600" text-anchor="middle" fill="#3D3D3A">Where does the margin of error come from?</text>
+<text x="340" y="485" font-family="sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#A87B3D">Margin of Error = Critical Value × Standard Error</text>
+<text x="220" y="505" font-family="sans-serif" font-size="10" font-style="italic" text-anchor="middle" fill="#73726c">↑ from a table (e.g., 1.96 for 95% CI)</text>
+<text x="460" y="505" font-family="sans-serif" font-size="10" font-style="italic" text-anchor="middle" fill="#73726c">↑ measure of sample uncertainty</text>
+<text x="340" y="522" font-family="sans-serif" font-size="11" font-style="italic" text-anchor="middle" fill="#73726c">We'll cover both critical values and standard errors in the next sections.</text>
+</svg>

@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 540">
+<text x="340" y="30" font-family="sans-serif" font-size="16" font-weight="600" text-anchor="middle" fill="#3D3D3A">Where does 1.96 come from? Critical values on the standard normal</text>
+<text x="340" y="52" font-family="sans-serif" font-size="13" text-anchor="middle" fill="#73726c">The critical value z* = 1.96 cuts off the middle 95% of the standard normal distribution</text>
+<path d="M 60 320 C 100 320, 140 290, 164 273 L 164 320 Z" fill="#D67373" fill-opacity="0.5"/>
+<path d="M 164 320 L 164 273 C 188 256, 300 120, 340 120 C 380 120, 492 256, 516 273 L 516 320 Z" fill="#85B7EB" fill-opacity="0.55"/>
+<path d="M 516 320 L 516 273 C 540 290, 580 320, 620 320 Z" fill="#D67373" fill-opacity="0.5"/>
+<path d="M 60 320 C 100 320, 140 290, 164 273 C 188 256, 300 120, 340 120 C 380 120, 492 256, 516 273 C 540 290, 580 320, 620 320" fill="none" stroke="#185FA5" stroke-width="1.5"/>
+<line x1="164" y1="320" x2="164" y2="100" stroke="#993C1D" stroke-width="2" stroke-dasharray="5 3"/>
+<line x1="516" y1="320" x2="516" y2="100" stroke="#993C1D" stroke-width="2" stroke-dasharray="5 3"/>
+<text x="340" y="83" font-family="sans-serif" font-size="20" font-weight="700" text-anchor="middle" fill="#185FA5">95%</text>
+<text x="340" y="100" font-family="sans-serif" font-size="11" text-anchor="middle" fill="#185FA5">of values fall in here</text>
+<text x="164" y="115" font-family="sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#993C1D">z = −1.96</text>
+<text x="516" y="115" font-family="sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#993C1D">z = +1.96</text>
+<text x="110" y="305" font-family="sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#993C1D">2.5%</text>
+<text x="570" y="305" font-family="sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#993C1D">2.5%</text>
+<line x1="50" y1="320" x2="630" y2="320" stroke="#3D3D3A" stroke-width="1"/>
+<line x1="70" y1="318" x2="70" y2="324" stroke="#3D3D3A" stroke-width="0.5"/>
+<line x1="160" y1="318" x2="160" y2="324" stroke="#3D3D3A" stroke-width="0.5"/>
+<line x1="250" y1="318" x2="250" y2="324" stroke="#3D3D3A" stroke-width="0.5"/>
+<line x1="340" y1="318" x2="340" y2="324" stroke="#3D3D3A" stroke-width="1"/>
+<line x1="430" y1="318" x2="430" y2="324" stroke="#3D3D3A" stroke-width="0.5"/>
+<line x1="520" y1="318" x2="520" y2="324" stroke="#3D3D3A" stroke-width="0.5"/>
+<line x1="610" y1="318" x2="610" y2="324" stroke="#3D3D3A" stroke-width="0.5"/>
+<text x="70" y="338" font-family="sans-serif" font-size="10" text-anchor="middle" fill="#73726c">−3</text>
+<text x="160" y="338" font-family="sans-serif" font-size="10" text-anchor="middle" fill="#73726c">−2</text>
+<text x="250" y="338" font-family="sans-serif" font-size="10" text-anchor="middle" fill="#73726c">−1</text>
+<text x="340" y="338" font-family="sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#3D3D3A">0</text>
+<text x="430" y="338" font-family="sans-serif" font-size="10" text-anchor="middle" fill="#73726c">+1</text>
+<text x="520" y="338" font-family="sans-serif" font-size="10" text-anchor="middle" fill="#73726c">+2</text>
+<text x="610" y="338" font-family="sans-serif" font-size="10" text-anchor="middle" fill="#73726c">+3</text>
+<text x="340" y="358" font-family="sans-serif" font-size="11" text-anchor="middle" fill="#3D3D3A">Standardized z-values</text>
+<rect x="80" y="385" width="520" height="140" rx="6" fill="#F5F0E6" stroke="#73726c" stroke-width="0.5"/>
+<text x="340" y="405" font-family="sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#3D3D3A">Common critical values (z*) for confidence intervals</text>
+<text x="180" y="430" font-family="sans-serif" font-size="11" font-weight="600" text-anchor="middle" fill="#3D3D3A">Confidence Level</text>
+<text x="340" y="430" font-family="sans-serif" font-size="11" font-weight="600" text-anchor="middle" fill="#3D3D3A">Tail Area (each side)</text>
+<text x="500" y="430" font-family="sans-serif" font-size="11" font-weight="600" text-anchor="middle" fill="#3D3D3A">z* (critical value)</text>
+<line x1="100" y1="438" x2="580" y2="438" stroke="#73726c" stroke-width="0.5"/>
+<text x="180" y="458" font-family="sans-serif" font-size="11" text-anchor="middle" fill="#3D3D3A">90%</text>
+<text x="340" y="458" font-family="sans-serif" font-size="11" text-anchor="middle" fill="#3D3D3A">5%</text>
+<text x="500" y="458" font-family="sans-serif" font-size="11" font-weight="600" text-anchor="middle" fill="#185FA5">1.645</text>
+<text x="180" y="478" font-family="sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#185FA5">95%</text>
+<text x="340" y="478" font-family="sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#185FA5">2.5%</text>
+<text x="500" y="478" font-family="sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#185FA5">1.96 ★</text>
+<text x="180" y="498" font-family="sans-serif" font-size="11" text-anchor="middle" fill="#3D3D3A">99%</text>
+<text x="340" y="498" font-family="sans-serif" font-size="11" text-anchor="middle" fill="#3D3D3A">0.5%</text>
+<text x="500" y="498" font-family="sans-serif" font-size="11" font-weight="600" text-anchor="middle" fill="#185FA5">2.576</text>
+<text x="340" y="518" font-family="sans-serif" font-size="11" font-style="italic" text-anchor="middle" fill="#73726c">★ 1.96 is the most-used critical value in all of statistics — worth memorizing.</text>
+</svg>
