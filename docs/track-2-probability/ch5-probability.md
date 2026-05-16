@@ -67,11 +67,19 @@ Suppose you survey 100 students in a community study and record each one's age a
 
 The three worked examples show how every probability calculation has the same underlying structure:
 
+The three worked examples show two different kinds of probability:
+
+**The first two examples (green and orange)** are unconditional probabilities — the kind we've been discussing. They follow the same structure:
+
 1. **Identify the relevant cell(s) in the table** — the favorable outcomes
 2. **Add them up** — count the favorable outcomes
-3. **Divide by the total** — convert the count to a probability
+3. **Divide by the grand total (100)** — convert the count to a probability
 
-That's the entire mechanic. Whether you're calculating an intersection (a single cell), a union of two events (two cells added), or a marginal probability (an entire row or column), you're doing the same thing: *favorable outcomes / total outcomes*.
+**The third example (purple) is a conditional probability** — and it's a different beast. Instead of asking *"what fraction of all 100 students is age 10 AND female?"* (which would be a joint probability), we're asking *"among only the female students, what fraction is age 10?"*
+
+The denominator changes. We're no longer dividing by 100 (all students). We're dividing by 52 (only females). That single change is the heart of conditional probability — **restricting the sample space to a specific subgroup.**
+
+This is exactly the concept we'll explore in detail in the next section.
 
 !!! important "Two views, one concept"
     The Venn diagram and the contingency table are two ways to look at the same probability concept. Venn diagrams are great for visualizing the *relationships* between events. Tables are great when you have *actual count data* and need to do calculations. Most real public health data starts as a table — so getting comfortable reading probabilities from tables is a foundational skill.
