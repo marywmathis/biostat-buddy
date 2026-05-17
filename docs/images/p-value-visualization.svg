@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 540">
+<defs>
+<clipPath id="leftTail"><rect x="0" y="0" width="123" height="540"/></clipPath>
+<clipPath id="rightTail"><rect x="558" y="0" width="122" height="540"/></clipPath>
+</defs>
+<text x="340" y="30" font-family="sans-serif" font-size="16" font-weight="600" text-anchor="middle" fill="#3D3D3A">What is a p-value? The shaded tail area</text>
+<text x="340" y="52" font-family="sans-serif" font-size="13" text-anchor="middle" fill="#73726c">Probability of seeing a test statistic this extreme (or more) — IF H₀ were true</text>
+<text x="340" y="80" font-family="sans-serif" font-size="12" font-weight="600" text-anchor="middle" fill="#3D3D3A">Example: observed test statistic t = 2.5 (two-tailed test, df = 9)</text>
+<path d="M 80 315 C 200 315, 305 140, 340 140 C 375 140, 480 315, 600 315 Z" fill="#993C1D" fill-opacity="0.85" stroke="#5C2410" stroke-width="1" clip-path="url(#leftTail)"/>
+<path d="M 80 315 C 200 315, 305 140, 340 140 C 375 140, 480 315, 600 315 Z" fill="#993C1D" fill-opacity="0.85" stroke="#5C2410" stroke-width="1" clip-path="url(#rightTail)"/>
+<path d="M 80 315 C 200 315, 305 140, 340 140 C 375 140, 480 315, 600 315" fill="none" stroke="#3D3D3A" stroke-width="1.5"/>
+<line x1="60" y1="315" x2="620" y2="315" stroke="#3D3D3A" stroke-width="0.8"/>
+<line x1="123" y1="315" x2="123" y2="245" stroke="#993C1D" stroke-width="2"/>
+<line x1="558" y1="315" x2="558" y2="245" stroke="#993C1D" stroke-width="2"/>
+<text x="123" y="235" font-family="sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#993C1D">t = −2.5</text>
+<text x="558" y="235" font-family="sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#993C1D">t = +2.5</text>
+<rect x="245" y="170" width="190" height="55" rx="5" fill="#FCEFE2" stroke="#993C1D" stroke-width="1.5"/>
+<text x="340" y="190" font-family="sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#3D3D3A">p-value (total shaded)</text>
+<text x="340" y="213" font-family="sans-serif" font-size="18" font-weight="700" text-anchor="middle" fill="#993C1D">= 0.034</text>
+<text x="80" y="305" font-family="sans-serif" font-size="10" text-anchor="start" fill="#73726c">left tail = 0.017</text>
+<text x="600" y="305" font-family="sans-serif" font-size="10" text-anchor="end" fill="#73726c">right tail = 0.017</text>
+<text x="340" y="340" font-family="sans-serif" font-size="11" font-style="italic" text-anchor="middle" fill="#3D3D3A">Test statistic value (t-distribution under H₀)</text>
+<rect x="20" y="360" width="640" height="165" rx="6" fill="#F5F0E6" stroke="#73726c" stroke-width="0.5"/>
+<text x="340" y="382" font-family="sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#3D3D3A">What this p-value tells us, in plain words</text>
+<text x="40" y="406" font-family="sans-serif" font-size="11" fill="#3D3D3A">Imagine repeating this study 1,000 times in a world where H₀ is actually true.</text>
+<text x="40" y="424" font-family="sans-serif" font-size="11" fill="#3D3D3A">Only about <tspan font-weight="700">34</tspan> of those studies would produce a test statistic this extreme. Our study did — which makes us doubt H₀.</text>
+<text x="40" y="452" font-family="sans-serif" font-size="12" font-weight="700" fill="#3D3D3A">Decision rule:</text>
+<text x="40" y="471" font-family="sans-serif" font-size="11" fill="#3D3D3A">If p ≤ α (chosen significance level, typically 0.05) → <tspan font-weight="700" fill="#993C1D">REJECT H₀</tspan></text>
+<text x="40" y="488" font-family="sans-serif" font-size="11" fill="#3D3D3A">If p &gt; α → <tspan font-weight="700" fill="#185FA5">FAIL TO REJECT H₀</tspan></text>
+<text x="40" y="513" font-family="sans-serif" font-size="11" font-weight="700" fill="#185FA5">For this example: p = 0.034 ≤ 0.05, so we REJECT H₀.</text>
+</svg>

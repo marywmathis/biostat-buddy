@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 540">
+<defs>
+<clipPath id="alphaClip"><rect x="300" y="0" width="40" height="540"/></clipPath>
+<clipPath id="betaClip"><rect x="230" y="0" width="70" height="540"/></clipPath>
+<clipPath id="powerClip"><rect x="300" y="0" width="210" height="540"/></clipPath>
+</defs>
+<text x="340" y="30" font-family="sans-serif" font-size="16" font-weight="600" text-anchor="middle" fill="#3D3D3A">Type I and Type II errors</text>
+<text x="340" y="52" font-family="sans-serif" font-size="13" text-anchor="middle" fill="#73726c">Two ways a hypothesis test can lead to the wrong conclusion</text>
+<path d="M 60 275 C 140 275, 180 150, 200 150 C 220 150, 260 275, 340 275 Z" fill="#993C1D" fill-opacity="0.75" clip-path="url(#alphaClip)"/>
+<path d="M 230 275 C 310 275, 350 150, 370 150 C 390 150, 430 275, 510 275 Z" fill="#C2902B" fill-opacity="0.65" clip-path="url(#betaClip)"/>
+<path d="M 230 275 C 310 275, 350 150, 370 150 C 390 150, 430 275, 510 275 Z" fill="#2D8460" fill-opacity="0.5" clip-path="url(#powerClip)"/>
+<path d="M 60 275 C 140 275, 180 150, 200 150 C 220 150, 260 275, 340 275" fill="none" stroke="#185FA5" stroke-width="2"/>
+<path d="M 230 275 C 310 275, 350 150, 370 150 C 390 150, 430 275, 510 275" fill="none" stroke="#0A4C3B" stroke-width="2"/>
+<line x1="40" y1="275" x2="540" y2="275" stroke="#3D3D3A" stroke-width="0.8"/>
+<line x1="300" y1="275" x2="300" y2="115" stroke="#3D3D3A" stroke-width="2" stroke-dasharray="5 3"/>
+<text x="300" y="92" font-family="sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#3D3D3A">Critical value</text>
+<text x="300" y="107" font-family="sans-serif" font-size="10" font-style="italic" text-anchor="middle" fill="#73726c">(reject H₀ to the right →)</text>
+<text x="200" y="132" font-family="sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#185FA5">Under H₀</text>
+<text x="200" y="146" font-family="sans-serif" font-size="10" font-style="italic" text-anchor="middle" fill="#185FA5">"if H₀ is true"</text>
+<text x="370" y="132" font-family="sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#0A4C3B">Under H₁</text>
+<text x="370" y="146" font-family="sans-serif" font-size="10" font-style="italic" text-anchor="middle" fill="#0A4C3B">"if H₁ is true"</text>
+<text x="320" y="305" font-family="sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#993C1D">α (Type I)</text>
+<line x1="320" y1="295" x2="320" y2="270" stroke="#993C1D" stroke-width="1"/>
+<text x="265" y="252" font-family="sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#73511D">β (Type II)</text>
+<text x="425" y="225" font-family="sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#0A4C3B">Power = 1 − β</text>
+<rect x="20" y="335" width="640" height="190" rx="6" fill="#F5F0E6" stroke="#73726c" stroke-width="0.5"/>
+<text x="340" y="358" font-family="sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#3D3D3A">The four possible outcomes (truth table)</text>
+<text x="40" y="385" font-family="sans-serif" font-size="11" font-weight="700" fill="#3D3D3A">What's actually true (you can never know which):</text>
+<text x="245" y="410" font-family="sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#185FA5">H₀ is actually true</text>
+<text x="520" y="410" font-family="sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#0A4C3B">H₁ is actually true</text>
+<line x1="125" y1="418" x2="640" y2="418" stroke="#73726c" stroke-width="0.5"/>
+<text x="35" y="455" font-family="sans-serif" font-size="11" font-weight="700" fill="#3D3D3A">You reject H₀:</text>
+<rect x="125" y="430" width="240" height="42" rx="3" fill="#FCEFE2" stroke="#993C1D" stroke-width="0.7"/>
+<text x="245" y="450" font-family="sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#993C1D">Type I error (α)</text>
+<text x="245" y="463" font-family="sans-serif" font-size="9" font-style="italic" text-anchor="middle" fill="#73726c">false positive</text>
+<rect x="400" y="430" width="240" height="42" rx="3" fill="#E6F3F0" stroke="#2D8460" stroke-width="0.7"/>
+<text x="520" y="450" font-family="sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#0A4C3B">Correct! (Power = 1 − β)</text>
+<text x="520" y="463" font-family="sans-serif" font-size="9" font-style="italic" text-anchor="middle" fill="#73726c">true positive</text>
+<text x="35" y="507" font-family="sans-serif" font-size="11" font-weight="700" fill="#3D3D3A">Fail to reject H₀:</text>
+<rect x="125" y="482" width="240" height="42" rx="3" fill="#E6F3F0" stroke="#2D8460" stroke-width="0.7"/>
+<text x="245" y="502" font-family="sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#0A4C3B">Correct! (1 − α)</text>
+<text x="245" y="515" font-family="sans-serif" font-size="9" font-style="italic" text-anchor="middle" fill="#73726c">true negative</text>
+<rect x="400" y="482" width="240" height="42" rx="3" fill="#FFEDD0" stroke="#C2902B" stroke-width="0.7"/>
+<text x="520" y="502" font-family="sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#73511D">Type II error (β)</text>
+<text x="520" y="515" font-family="sans-serif" font-size="9" font-style="italic" text-anchor="middle" fill="#73726c">false negative</text>
+</svg>

@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 540">
+<defs>
+<clipPath id="p1L"><rect x="0" y="0" width="73" height="540"/></clipPath>
+<clipPath id="p2L"><rect x="0" y="0" width="285" height="540"/></clipPath>
+<clipPath id="p2R"><rect x="395" y="0" width="285" height="540"/></clipPath>
+<clipPath id="p3R"><rect x="607" y="0" width="73" height="540"/></clipPath>
+</defs>
+<text x="340" y="30" font-family="sans-serif" font-size="16" font-weight="600" text-anchor="middle" fill="#3D3D3A">Three flavors of hypothesis test</text>
+<text x="340" y="52" font-family="sans-serif" font-size="13" text-anchor="middle" fill="#73726c">The shaded region is the rejection region — where the test statistic must fall to reject H₀</text>
+<rect x="20" y="72" width="200" height="238" rx="6" fill="#FCEFE2" stroke="#993C1D" stroke-width="1.2"/>
+<text x="120" y="92" font-family="sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#993C1D">Left-tailed</text>
+<text x="120" y="110" font-family="sans-serif" font-size="12" font-weight="600" text-anchor="middle" fill="#3D3D3A">H₁: μ &lt; μ₀</text>
+<path d="M 35 275 C 75 275, 100 180, 120 180 C 140 180, 165 275, 205 275 Z" fill="#D67373" fill-opacity="0.65" clip-path="url(#p1L)"/>
+<path d="M 35 275 C 75 275, 100 180, 120 180 C 140 180, 165 275, 205 275" fill="none" stroke="#3D3D3A" stroke-width="1.5"/>
+<line x1="30" y1="275" x2="210" y2="275" stroke="#3D3D3A" stroke-width="0.8"/>
+<line x1="73" y1="275" x2="73" y2="210" stroke="#993C1D" stroke-width="2" stroke-dasharray="4 3"/>
+<text x="73" y="200" font-family="sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#993C1D">z = −1.645</text>
+<text x="55" y="298" font-family="sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#993C1D">α = 0.05</text>
+<rect x="240" y="72" width="200" height="238" rx="6" fill="#EBF3FB" stroke="#185FA5" stroke-width="1.2"/>
+<text x="340" y="92" font-family="sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#185FA5">Two-tailed</text>
+<text x="340" y="110" font-family="sans-serif" font-size="12" font-weight="600" text-anchor="middle" fill="#3D3D3A">H₁: μ ≠ μ₀</text>
+<path d="M 255 275 C 295 275, 320 180, 340 180 C 360 180, 385 275, 425 275 Z" fill="#D67373" fill-opacity="0.65" clip-path="url(#p2L)"/>
+<path d="M 255 275 C 295 275, 320 180, 340 180 C 360 180, 385 275, 425 275 Z" fill="#D67373" fill-opacity="0.65" clip-path="url(#p2R)"/>
+<path d="M 255 275 C 295 275, 320 180, 340 180 C 360 180, 385 275, 425 275" fill="none" stroke="#3D3D3A" stroke-width="1.5"/>
+<line x1="250" y1="275" x2="430" y2="275" stroke="#3D3D3A" stroke-width="0.8"/>
+<line x1="285" y1="275" x2="285" y2="210" stroke="#993C1D" stroke-width="2" stroke-dasharray="4 3"/>
+<line x1="395" y1="275" x2="395" y2="210" stroke="#993C1D" stroke-width="2" stroke-dasharray="4 3"/>
+<text x="285" y="200" font-family="sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#993C1D">z = −1.96</text>
+<text x="395" y="200" font-family="sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#993C1D">z = +1.96</text>
+<text x="270" y="298" font-family="sans-serif" font-size="10" font-weight="700" text-anchor="middle" fill="#993C1D">α/2 = 0.025</text>
+<text x="410" y="298" font-family="sans-serif" font-size="10" font-weight="700" text-anchor="middle" fill="#993C1D">α/2 = 0.025</text>
+<rect x="460" y="72" width="200" height="238" rx="6" fill="#FCEFE2" stroke="#993C1D" stroke-width="1.2"/>
+<text x="560" y="92" font-family="sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#993C1D">Right-tailed</text>
+<text x="560" y="110" font-family="sans-serif" font-size="12" font-weight="600" text-anchor="middle" fill="#3D3D3A">H₁: μ &gt; μ₀</text>
+<path d="M 475 275 C 515 275, 540 180, 560 180 C 580 180, 605 275, 645 275 Z" fill="#D67373" fill-opacity="0.65" clip-path="url(#p3R)"/>
+<path d="M 475 275 C 515 275, 540 180, 560 180 C 580 180, 605 275, 645 275" fill="none" stroke="#3D3D3A" stroke-width="1.5"/>
+<line x1="470" y1="275" x2="650" y2="275" stroke="#3D3D3A" stroke-width="0.8"/>
+<line x1="607" y1="275" x2="607" y2="210" stroke="#993C1D" stroke-width="2" stroke-dasharray="4 3"/>
+<text x="607" y="200" font-family="sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#993C1D">z = +1.645</text>
+<text x="625" y="298" font-family="sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#993C1D">α = 0.05</text>
+<rect x="20" y="325" width="640" height="195" rx="6" fill="#F5F0E6" stroke="#73726c" stroke-width="0.5"/>
+<text x="340" y="347" font-family="sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#3D3D3A">Which test should you use?</text>
+<text x="40" y="375" font-family="sans-serif" font-size="12" font-weight="700" fill="#185FA5">Two-tailed (use this by default):</text>
+<text x="40" y="394" font-family="sans-serif" font-size="11" fill="#3D3D3A">"Is the mean DIFFERENT from μ₀ — in EITHER direction?"</text>
+<text x="40" y="411" font-family="sans-serif" font-size="11" fill="#3D3D3A">Use when you don't know in advance which way the effect might go.</text>
+<text x="40" y="438" font-family="sans-serif" font-size="12" font-weight="700" fill="#993C1D">One-tailed (only when justified):</text>
+<text x="40" y="457" font-family="sans-serif" font-size="11" fill="#3D3D3A">Right-tailed: "Is the mean GREATER THAN μ₀?" — H₁: μ &gt; μ₀</text>
+<text x="40" y="474" font-family="sans-serif" font-size="11" fill="#3D3D3A">Left-tailed: "Is the mean LESS THAN μ₀?" — H₁: μ &lt; μ₀</text>
+<text x="40" y="491" font-family="sans-serif" font-size="11" fill="#3D3D3A">Use when you have a strong theoretical reason to expect only ONE direction.</text>
+<text x="340" y="513" font-family="sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#993C1D">⚠ The choice must be made BEFORE looking at the data.</text>
+</svg>
