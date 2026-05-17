@@ -456,7 +456,25 @@ When you read one of these, check four things:
 4. **Did they actually enroll the planned n?** A study designed for 64 per group that only enrolls 30 per group has different (lower) power, even if the original calculation was sound.
 
 !!! danger "Post-hoc power is a stats sin"
-    After a study finishes, some researchers report "achieved power" by plugging the *observed* effect size into the power formula. This is statistically meaningless. The observed effect size is itself uncertain, and post-hoc power is mathematically tied to the p-value — a non-significant result will always have low post-hoc power, by definition. It tells you nothing the p-value didn't already.
+    Here's the move: a researcher runs a study, gets p > 0.05, and reports something like *"our post-hoc power was only 40%, so we probably just needed a bigger sample to find the effect."* That sounds reasonable. It's not.
+
+    Real power analysis is a forward-looking question: *if* an effect of size X were real, what fraction of studies like mine would catch it? The key word is *if* — you choose X based on what would matter in your field, before you collect any data. That's the whole point of the calculation.
+
+    Post-hoc power reuses your own observed effect as X. But your observed effect is the thing you just tried to test. If your p-value came back non-significant, it's *because* the observed effect was small relative to your noise. When you plug that small effect back into the power formula, you will always get a low number. Always. So "low post-hoc power" tells you exactly what "p > 0.05" already told you: the observed effect wasn't large compared to the noise. Saying it twice doesn't make it count twice.
+
+    More importantly, low post-hoc power can't distinguish between two very different worlds:
+
+    - The true effect is real but small. You missed it because your study wasn't precise enough.
+    - The true effect doesn't exist. You didn't miss anything.
+
+    Post-hoc power gives the same low number in both cases. It cannot help you tell them apart. That's the core sin: it dresses up a known limitation as if it were a new finding.
+
+    **What to do instead.** Compute a confidence interval for the effect. The interval tells you the range of true effect sizes that are still compatible with your data:
+
+    - If your 95% CI for the effect is (−0.2, +0.2), you have genuinely ruled out anything larger than 0.2. That's informative — even though the result is "null," you've learned something specific.
+    - If your 95% CI is (−3.0, +3.0), you have ruled out almost nothing, and the honest report is "we didn't have enough precision to say." That's also informative — it tells the reader your study can't answer the question, which is different from saying the effect isn't there.
+
+    That width — the size of the CI — is what people are actually reaching for when they (wrongly) ask about post-hoc power. The CI just delivers it without the sleight of hand.
 
     The legitimate alternative when a study comes back null: compute a confidence interval for the effect and report the range of effects the study can rule out. That's informative.
 
