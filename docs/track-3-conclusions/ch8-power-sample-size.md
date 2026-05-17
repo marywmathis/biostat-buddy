@@ -110,13 +110,19 @@ Here's what those actually look like:
 The takeaway from the picture: a *small* effect means the two populations look almost identical. A *large* effect means they're clearly different — but they still overlap. Effect sizes in real research are almost never "no overlap whatsoever." That's a fantasy. Real effects are subtle, and detecting them is hard.
 
 !!! warning "Don't blindly use Cohen's labels"
-    Cohen's 0.2 / 0.5 / 0.8 thresholds are guidelines, not laws. What counts as a *meaningful* effect depends on:
+    Cohen's 0.2 / 0.5 / 0.8 thresholds are pattern-recognition shortcuts, not judgments of importance. A "small" effect can be a public health victory; a "large" effect can be clinically meaningless. To decide whether an effect actually matters, you need to think about your specific context — not the label.
 
-    - the cost of the intervention (a small effect from a free intervention may matter more than a large effect from an expensive one)
-    - the severity of the outcome (a small effect on cancer survival matters; a small effect on hair shininess maybe doesn't)
-    - whether the effect scales (a tiny per-person effect that applies to 300 million people can be enormous at the public health level)
+    Four questions are worth working through every time:
 
-    Always report both the standardized d AND the raw difference in the original units. d alone is incomplete.
+    - **Who is exposed, and how many of them?** A 1% reduction in cardiovascular events across 30 million older adults prevents 300,000 events a year. The per-person effect size is tiny (d ≈ 0.1, "very small"), but at the population scale it is enormous. Public health lives in this territory — the d looks small precisely because the intervention is spread across a population that's mostly fine. The number of people who would have been harmed without it is not small.
+
+    - **What's the alternative?** Effect sizes are always implicit comparisons. A cancer drug that extends median survival by two months registers as a modest d, but the comparison is dying sooner. For the patient and the family, those two months are not modest. Pick your reference point carefully before you label an effect as big or small.
+
+    - **What does the intervention cost — in money, time, or risk?** A free intervention with a small effect can outperform an expensive one with a large effect, once you weigh benefit against cost. The same is true for harm: a small benefit doesn't justify a large side-effect profile, and a small harm doesn't disqualify a large benefit. Cohen's labels are silent on this trade.
+
+    - **Is the outcome reversible?** Small effects on permanent outcomes (death, neurological damage, organ failure, lifetime earnings) carry more weight than large effects on transient ones (a week of mild symptoms, a passing inconvenience). Permanence amplifies the stakes regardless of the d.
+
+    Always report both the standardized d AND the raw difference in the original units — and tie the discussion to at least one of these four questions. d alone is a number without a context.
 
 ---
 
