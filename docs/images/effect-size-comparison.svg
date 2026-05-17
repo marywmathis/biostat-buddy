@@ -1,0 +1,37 @@
+<svg width="100%" viewBox="0 0 680 540" xmlns="http://www.w3.org/2000/svg" role="img"><title>Effect size comparison</title>
+<text x="340" y="22" font-family="sans-serif" font-size="16" font-weight="600" text-anchor="middle" fill="#3D3D3A">What does "effect size" really mean?</text>
+<text x="340" y="44" font-family="sans-serif" font-size="12" text-anchor="middle" fill="#73726c">Cohen's d measures the distance between two population means, in units of standard deviation</text>
+
+<rect x="15" y="60" width="650" height="148" rx="6" fill="#FAFAFA" stroke="#73726c" stroke-width="0.7"/>
+<text x="340" y="80" font-family="sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#3D3D3A">Small effect — Cohen's d = 0.2</text>
+<text x="340" y="97" font-family="sans-serif" font-size="11" font-style="italic" text-anchor="middle" fill="#73726c">Populations look nearly identical — hard to detect</text>
+<path d="M 154 184 C 234 184, 314 118, 334 118 C 354 118, 434 184, 514 184 Z" fill="#B8D4ED" fill-opacity="0.55"/>
+<path d="M 166 184 C 246 184, 326 118, 346 118 C 366 118, 446 184, 526 184 Z" fill="#F4C0AE" fill-opacity="0.55"/>
+<path d="M 154 184 C 234 184, 314 118, 334 118 C 354 118, 434 184, 514 184" fill="none" stroke="#185FA5" stroke-width="1.8"/>
+<path d="M 166 184 C 246 184, 326 118, 346 118 C 366 118, 446 184, 526 184" fill="none" stroke="#993C1D" stroke-width="1.8"/>
+<line x1="334" y1="118" x2="334" y2="190" stroke="#185FA5" stroke-width="1.5" stroke-dasharray="3 2"/>
+<line x1="346" y1="118" x2="346" y2="190" stroke="#993C1D" stroke-width="1.5" stroke-dasharray="3 2"/>
+<text x="340" y="203" font-family="sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#3D3D3A">Means: 0.2σ apart (tiny gap)</text>
+
+<rect x="15" y="218" width="650" height="148" rx="6" fill="#FAFAFA" stroke="#73726c" stroke-width="0.7"/>
+<text x="340" y="238" font-family="sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#3D3D3A">Medium effect — Cohen's d = 0.5</text>
+<text x="340" y="255" font-family="sans-serif" font-size="11" font-style="italic" text-anchor="middle" fill="#73726c">Moderate difference — visible but populations still overlap</text>
+<path d="M 145 342 C 225 342, 305 276, 325 276 C 345 276, 425 342, 505 342 Z" fill="#B8D4ED" fill-opacity="0.55"/>
+<path d="M 175 342 C 255 342, 335 276, 355 276 C 375 276, 455 342, 535 342 Z" fill="#F4C0AE" fill-opacity="0.55"/>
+<path d="M 145 342 C 225 342, 305 276, 325 276 C 345 276, 425 342, 505 342" fill="none" stroke="#185FA5" stroke-width="1.8"/>
+<path d="M 175 342 C 255 342, 335 276, 355 276 C 375 276, 455 342, 535 342" fill="none" stroke="#993C1D" stroke-width="1.8"/>
+<line x1="325" y1="276" x2="325" y2="348" stroke="#185FA5" stroke-width="1.5" stroke-dasharray="3 2"/>
+<line x1="355" y1="276" x2="355" y2="348" stroke="#993C1D" stroke-width="1.5" stroke-dasharray="3 2"/>
+<text x="340" y="361" font-family="sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#3D3D3A">Means: 0.5σ apart (moderate gap)</text>
+
+<rect x="15" y="376" width="650" height="148" rx="6" fill="#FAFAFA" stroke="#73726c" stroke-width="0.7"/>
+<text x="340" y="396" font-family="sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#3D3D3A">Large effect — Cohen's d = 0.8</text>
+<text x="340" y="413" font-family="sans-serif" font-size="11" font-style="italic" text-anchor="middle" fill="#73726c">Substantial difference — populations clearly distinguishable</text>
+<path d="M 136 500 C 216 500, 296 434, 316 434 C 336 434, 416 500, 496 500 Z" fill="#B8D4ED" fill-opacity="0.55"/>
+<path d="M 184 500 C 264 500, 344 434, 364 434 C 384 434, 464 500, 544 500 Z" fill="#F4C0AE" fill-opacity="0.55"/>
+<path d="M 136 500 C 216 500, 296 434, 316 434 C 336 434, 416 500, 496 500" fill="none" stroke="#185FA5" stroke-width="1.8"/>
+<path d="M 184 500 C 264 500, 344 434, 364 434 C 384 434, 464 500, 544 500" fill="none" stroke="#993C1D" stroke-width="1.8"/>
+<line x1="316" y1="434" x2="316" y2="506" stroke="#185FA5" stroke-width="1.5" stroke-dasharray="3 2"/>
+<line x1="364" y1="434" x2="364" y2="506" stroke="#993C1D" stroke-width="1.5" stroke-dasharray="3 2"/>
+<text x="340" y="519" font-family="sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#3D3D3A">Means: 0.8σ apart (substantial gap)</text>
+</svg>

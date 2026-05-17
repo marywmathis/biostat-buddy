@@ -1,0 +1,66 @@
+<svg width="100%" viewBox="0 0 700 480" xmlns="http://www.w3.org/2000/svg" role="img"><title>Power vs sample size for three effect sizes</title>
+
+<text x="350" y="22" font-family="sans-serif" font-size="16" font-weight="600" text-anchor="middle" fill="#3D3D3A">How sample size powers your study</text>
+<text x="350" y="44" font-family="sans-serif" font-size="12" text-anchor="middle" fill="#73726c">Power vs sample size, for three effect sizes (α = 0.05, two-sided, one-sample test)</text>
+
+<rect x="70" y="70" width="550" height="260" fill="#FAFAFA" stroke="#3D3D3A" stroke-width="0.5"/>
+
+<line x1="70" y1="278" x2="620" y2="278" stroke="#E8E8E5" stroke-width="0.5"/>
+<line x1="70" y1="226" x2="620" y2="226" stroke="#E8E8E5" stroke-width="0.5"/>
+<line x1="70" y1="174" x2="620" y2="174" stroke="#E8E8E5" stroke-width="0.5"/>
+<line x1="70" y1="70" x2="620" y2="70" stroke="#E8E8E5" stroke-width="0.5"/>
+<line x1="161.6" y1="70" x2="161.6" y2="330" stroke="#E8E8E5" stroke-width="0.5"/>
+<line x1="253.3" y1="70" x2="253.3" y2="330" stroke="#E8E8E5" stroke-width="0.5"/>
+<line x1="345" y1="70" x2="345" y2="330" stroke="#E8E8E5" stroke-width="0.5"/>
+<line x1="436.6" y1="70" x2="436.6" y2="330" stroke="#E8E8E5" stroke-width="0.5"/>
+<line x1="528.3" y1="70" x2="528.3" y2="330" stroke="#E8E8E5" stroke-width="0.5"/>
+
+<text x="62" y="334" font-family="sans-serif" font-size="10" text-anchor="end" fill="#3D3D3A">0</text>
+<text x="62" y="282" font-family="sans-serif" font-size="10" text-anchor="end" fill="#3D3D3A">0.2</text>
+<text x="62" y="230" font-family="sans-serif" font-size="10" text-anchor="end" fill="#3D3D3A">0.4</text>
+<text x="62" y="178" font-family="sans-serif" font-size="10" text-anchor="end" fill="#3D3D3A">0.6</text>
+<text x="62" y="126" font-family="sans-serif" font-size="10" text-anchor="end" fill="#3D3D3A">0.8</text>
+<text x="62" y="74" font-family="sans-serif" font-size="10" text-anchor="end" fill="#3D3D3A">1.0</text>
+
+<text x="22" y="200" font-family="sans-serif" font-size="12" font-weight="600" text-anchor="middle" fill="#3D3D3A" transform="rotate(-90, 22, 200)">Power (chance of catching the effect)</text>
+
+<text x="70" y="346" font-family="sans-serif" font-size="10" text-anchor="middle" fill="#3D3D3A">0</text>
+<text x="161.6" y="346" font-family="sans-serif" font-size="10" text-anchor="middle" fill="#3D3D3A">50</text>
+<text x="253.3" y="346" font-family="sans-serif" font-size="10" text-anchor="middle" fill="#3D3D3A">100</text>
+<text x="345" y="346" font-family="sans-serif" font-size="10" text-anchor="middle" fill="#3D3D3A">150</text>
+<text x="436.6" y="346" font-family="sans-serif" font-size="10" text-anchor="middle" fill="#3D3D3A">200</text>
+<text x="528.3" y="346" font-family="sans-serif" font-size="10" text-anchor="middle" fill="#3D3D3A">250</text>
+<text x="620" y="346" font-family="sans-serif" font-size="10" text-anchor="middle" fill="#3D3D3A">300</text>
+
+<text x="345" y="368" font-family="sans-serif" font-size="12" font-weight="600" text-anchor="middle" fill="#3D3D3A">Sample size (n)</text>
+
+<line x1="70" y1="122" x2="620" y2="122" stroke="#A87B3D" stroke-width="1.5" stroke-dasharray="5 3"/>
+<text x="617" y="118" font-family="sans-serif" font-size="10" font-weight="600" text-anchor="end" fill="#A87B3D">80% power target</text>
+
+<path d="M 70 324 L 88 307 L 116 288 L 162 255 L 208 223 L 253 195 L 299 171 L 345 151 L 391 135 L 437 119 L 528 99 L 620 88" fill="none" stroke="#185FA5" stroke-width="2.5"/>
+<path d="M 70 324 L 79 278 L 88 239 L 97 203 L 107 172 L 116 145 L 125 127 L 134 112 L 143 99 L 162 85 L 208 73 L 253 70 L 620 70" fill="none" stroke="#993C1D" stroke-width="2.5"/>
+<path d="M 70 324 L 76 252 L 79 218 L 85 169 L 88 143 L 92 124 L 98 104 L 107 83 L 116 75 L 125 73 L 162 70 L 620 70" fill="none" stroke="#2D8460" stroke-width="2.5"/>
+
+<circle cx="94" cy="122" r="4.5" fill="#2D8460" stroke="#0A4C3B" stroke-width="1"/>
+<circle cx="132" cy="122" r="4.5" fill="#993C1D" stroke="#5C2410" stroke-width="1"/>
+<circle cx="435" cy="122" r="4.5" fill="#185FA5" stroke="#0A2B4A" stroke-width="1"/>
+
+<text x="101" y="110" font-family="sans-serif" font-size="10" font-weight="700" fill="#0A4C3B">n=13</text>
+<text x="139" y="146" font-family="sans-serif" font-size="10" font-weight="700" fill="#5C2410">n=34</text>
+<text x="442" y="110" font-family="sans-serif" font-size="10" font-weight="700" fill="#0A2B4A">n=199</text>
+
+<rect x="440" y="234" width="172" height="68" fill="#FFFFFF" stroke="#73726c" stroke-width="0.5" rx="3"/>
+<text x="526" y="251" font-family="sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#3D3D3A">Effect size</text>
+<line x1="450" y1="266" x2="475" y2="266" stroke="#2D8460" stroke-width="2.5"/>
+<text x="480" y="270" font-family="sans-serif" font-size="10" fill="#3D3D3A">d = 0.8 (large effect)</text>
+<line x1="450" y1="282" x2="475" y2="282" stroke="#993C1D" stroke-width="2.5"/>
+<text x="480" y="286" font-family="sans-serif" font-size="10" fill="#3D3D3A">d = 0.5 (medium effect)</text>
+<line x1="450" y1="298" x2="475" y2="298" stroke="#185FA5" stroke-width="2.5"/>
+<text x="480" y="302" font-family="sans-serif" font-size="10" fill="#3D3D3A">d = 0.2 (small effect)</text>
+
+<rect x="40" y="386" width="620" height="84" rx="6" fill="#F5F0E6" stroke="#A87B3D" stroke-width="1"/>
+<text x="350" y="404" font-family="sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#3D3D3A">The takeaway</text>
+<text x="60" y="424" font-family="sans-serif" font-size="11" fill="#0A4C3B"><tspan font-weight="700">Large effect (d=0.8):</tspan> only ~13 subjects needed for 80% power</text>
+<text x="60" y="441" font-family="sans-serif" font-size="11" fill="#5C2410"><tspan font-weight="700">Medium effect (d=0.5):</tspan> ~34 subjects needed</text>
+<text x="60" y="458" font-family="sans-serif" font-size="11" fill="#0A2B4A"><tspan font-weight="700">Small effect (d=0.2):</tspan> ~199 subjects needed — about 15× more than for a large effect</text>
+</svg>
