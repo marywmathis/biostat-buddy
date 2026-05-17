@@ -437,8 +437,63 @@ Right-click on the test output table → **Copy Graph**. Paste into your documen
 
 A running list of where students lose points on hypothesis testing questions:
 
-!!! danger "Picking one-tailed AFTER looking at the data"
-    The choice of one-tailed vs two-tailed MUST be made before seeing your results, based on your research question. Looking at your data and then picking the test that gives you significance is academic dishonesty.
+## Why everything has to be decided beforehand (a priori)
+
+You'll see this phrase a lot: **"a priori"** (Latin for "from before"). It means decided BEFORE looking at the data. Every choice in a hypothesis test — your α level, your test direction (one-tailed vs two-tailed), your specific hypothesized value μ₀ — has to be made a priori. The reason isn't stuffy formality. It's that picking these AFTER seeing the data literally breaks the math of the p-value.
+
+### Why this matters: the p-value depends on what you committed to in advance
+
+When we say "p = 0.034 means 3.4% chance of seeing data this extreme under H₀," we're making a specific claim about long-run behavior:
+
+> Out of many studies done with the **exact procedure you committed to**, only 3.4% would yield a result this extreme by chance alone.
+
+That number only holds if you committed to the procedure beforehand. If you change the procedure AFTER seeing the data, you've changed the math, and your "p-value" isn't actually a p-value anymore. It's a number that looks like one but doesn't carry the same meaning.
+
+### The most common ways students (and researchers) cheat
+
+#### 1. Picking the direction of a one-tailed test after looking at the data
+
+Suppose you run a study and observe that the sample mean is GREATER than μ₀. You think: "I'll do a right-tailed test, since the data already suggests μ > μ₀." Your p-value comes out to 0.04 — significant!
+
+But here's what really happened: you implicitly checked BOTH directions. You looked at the data, and IF the mean had been LESS than μ₀ you would have done a left-tailed test instead. By doing this, your true Type I error rate is more like 10%, not 5% — because you were giving yourself two shots at significance. **The "p = 0.04" you reported is not a real p-value.** It's a number that's been inflated by your post-hoc choice.
+
+Default to **two-tailed**. It's the honest version of "I'm not sure which direction the effect goes."
+
+#### 2. Changing α after seeing the data
+
+You committed to α = 0.05. Your p-value comes out to 0.08. You think: "Well, 0.08 is close to 0.05. Let me just say α = 0.10 was my threshold all along." Now p = 0.08 is "significant."
+
+That's not how it works. **α is your threshold of evidence committed to in advance.** Changing it after the fact isn't analysis — it's storytelling.
+
+#### 3. Running multiple tests and reporting only the significant ones
+
+You run 20 tests on the same dataset, each with α = 0.05. Just by chance, you'd expect about 1 of them to come up "significant" even if none of the effects are real (because 1 in 20 = 5%). If you only report the one that "worked," you're not being honest about the procedure that generated it.
+
+This is called **p-hacking**, and it's responsible for a huge amount of misleading research in the social sciences. The fix: when running multiple tests, you have to **adjust your α downward** (e.g., Bonferroni correction: α/k where k is the number of tests).
+
+#### 4. Adding/dropping subjects until you get significance
+
+Some researchers continue collecting data, peeking at the p-value as they go, and stop when p crosses below 0.05. Or they drop "outlier" subjects to nudge p below the threshold. Both are forms of cheating. The p-value math assumes a fixed sample size committed to in advance.
+
+### The plain-language version
+
+It's the same as picking the rules of a coin-flip bet AFTER seeing the flip.
+
+- "I'll pay you $10 if heads." (committed beforehand) → fair game, 50/50 outcome.
+- "I'll pay you $10 if... [looks at coin] ... uh, if tails." → not a real bet. You've cheated.
+
+The p-value is meaningful BECAUSE you committed to the procedure beforehand. If you didn't, the number doesn't mean what we say it means. It's been corrupted by your knowledge of the data.
+
+### How honest researchers handle this
+
+- **Pre-register your study.** Submit your hypotheses, α, sample size, and analysis plan to a public registry (like OSF.io or ClinicalTrials.gov) BEFORE collecting data. Then everyone knows you committed in advance.
+- **Default to two-tailed** unless you have a documented theoretical reason for one-tailed.
+- **Report ALL the tests you ran**, not just the significant ones.
+- **Decide sample size in advance** using power analysis (covered in the next card).
+- **Be explicit** in your methods section about what was planned a priori vs. what was exploratory.
+
+!!! tip "What if you do exploratory analysis?"
+    Exploratory analysis is fine — and important — but it has to be labeled honestly. If you ran 20 tests and found one "significant" relationship, that's an interesting hypothesis to test in a *future* study with proper a priori planning. It is NOT a confirmed finding. The phrase that goes with exploratory results is "hypothesis-generating," not "hypothesis-confirming."
 
 !!! danger "Misinterpreting the p-value"
     The p-value is NOT the probability that H₀ is true. It's the probability of seeing data this extreme IF H₀ were true. Different question. Different answer.
