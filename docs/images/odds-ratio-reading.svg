@@ -1,0 +1,68 @@
+<svg width="100%" viewBox="0 0 700 440" xmlns="http://www.w3.org/2000/svg" role="img"><title>Reading odds ratios</title>
+
+<text x="350" y="22" font-family="sans-serif" font-size="16" font-weight="600" text-anchor="middle" fill="#3D3D3A">Reading odds ratios</text>
+<text x="350" y="44" font-family="sans-serif" font-size="12" text-anchor="middle" fill="#73726c">What an OR actually tells you about exposure and outcome</text>
+
+<text x="180" y="72" font-family="sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#185FA5">← Lower odds (protective)</text>
+<text x="350" y="72" font-family="sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#A87B3D">OR = 1: no effect</text>
+<text x="520" y="72" font-family="sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#993C1D">Higher odds (risk) →</text>
+
+<rect x="80" y="92" width="270" height="55" fill="#EBF3FB" rx="4"/>
+<rect x="350" y="92" width="270" height="55" fill="#FAECE7" rx="4"/>
+
+<line x1="80" y1="120" x2="620" y2="120" stroke="#3D3D3A" stroke-width="1.5"/>
+
+<line x1="350" y1="86" x2="350" y2="153" stroke="#A87B3D" stroke-width="2.5"/>
+
+<line x1="80" y1="115" x2="80" y2="125" stroke="#3D3D3A" stroke-width="1.5"/>
+<line x1="188" y1="113" x2="188" y2="127" stroke="#3D3D3A" stroke-width="1.5"/>
+<line x1="269" y1="113" x2="269" y2="127" stroke="#3D3D3A" stroke-width="1.5"/>
+<line x1="350" y1="110" x2="350" y2="130" stroke="#3D3D3A" stroke-width="2"/>
+<line x1="431" y1="113" x2="431" y2="127" stroke="#3D3D3A" stroke-width="1.5"/>
+<line x1="513" y1="113" x2="513" y2="127" stroke="#3D3D3A" stroke-width="1.5"/>
+<line x1="620" y1="115" x2="620" y2="125" stroke="#3D3D3A" stroke-width="1.5"/>
+
+<text x="80" y="107" font-family="sans-serif" font-size="10" font-weight="700" text-anchor="middle" fill="#3D3D3A">0.1</text>
+<text x="188" y="107" font-family="sans-serif" font-size="10" font-weight="700" text-anchor="middle" fill="#3D3D3A">0.25</text>
+<text x="269" y="107" font-family="sans-serif" font-size="10" font-weight="700" text-anchor="middle" fill="#3D3D3A">0.5</text>
+<text x="350" y="105" font-family="sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#A87B3D">1</text>
+<text x="431" y="107" font-family="sans-serif" font-size="10" font-weight="700" text-anchor="middle" fill="#3D3D3A">2</text>
+<text x="513" y="107" font-family="sans-serif" font-size="10" font-weight="700" text-anchor="middle" fill="#3D3D3A">4</text>
+<text x="620" y="107" font-family="sans-serif" font-size="10" font-weight="700" text-anchor="middle" fill="#3D3D3A">10</text>
+
+<text x="80" y="143" font-family="sans-serif" font-size="9" text-anchor="middle" fill="#73726c">× 0.1</text>
+<text x="188" y="143" font-family="sans-serif" font-size="9" text-anchor="middle" fill="#73726c">× 0.25</text>
+<text x="269" y="143" font-family="sans-serif" font-size="9" text-anchor="middle" fill="#73726c">× 0.5</text>
+<text x="350" y="143" font-family="sans-serif" font-size="9" font-weight="700" text-anchor="middle" fill="#A87B3D">unchanged</text>
+<text x="431" y="143" font-family="sans-serif" font-size="9" text-anchor="middle" fill="#73726c">× 2</text>
+<text x="513" y="143" font-family="sans-serif" font-size="9" text-anchor="middle" fill="#73726c">× 4</text>
+<text x="620" y="143" font-family="sans-serif" font-size="9" text-anchor="middle" fill="#73726c">× 10</text>
+
+<text x="350" y="172" font-family="sans-serif" font-size="10" font-style="italic" text-anchor="middle" fill="#5F5E5A">log-spaced — OR = 0.5 and OR = 2 are equal-magnitude effects in opposite directions</text>
+
+<text x="30" y="200" font-family="sans-serif" font-size="12" font-weight="700" fill="#3D3D3A">What these mean in practice</text>
+
+<rect x="20" y="210" width="660" height="30" rx="3" fill="#EBF3FB" fill-opacity="0.6"/>
+<text x="40" y="230" font-family="monospace" font-size="13" font-weight="700" fill="#185FA5">OR = 0.25</text>
+<text x="150" y="230" font-family="sans-serif" font-size="11" fill="#3D3D3A">The exposed group has <tspan font-weight="700">one-quarter the odds</tspan> of the outcome (75% lower odds).</text>
+
+<rect x="20" y="244" width="660" height="30" rx="3" fill="#EBF3FB" fill-opacity="0.4"/>
+<text x="40" y="264" font-family="monospace" font-size="13" font-weight="700" fill="#185FA5">OR = 0.5</text>
+<text x="150" y="264" font-family="sans-serif" font-size="11" fill="#3D3D3A">The exposed group has <tspan font-weight="700">half the odds</tspan> of the outcome (50% lower odds).</text>
+
+<rect x="20" y="278" width="660" height="30" rx="3" fill="#F5F0E6" fill-opacity="0.7"/>
+<text x="40" y="298" font-family="monospace" font-size="13" font-weight="700" fill="#A87B3D">OR = 1</text>
+<text x="150" y="298" font-family="sans-serif" font-size="11" fill="#3D3D3A"><tspan font-weight="700">No association.</tspan> Equal odds in both groups. CI crossing 1 means the result is inconclusive.</text>
+
+<rect x="20" y="312" width="660" height="30" rx="3" fill="#FAECE7" fill-opacity="0.4"/>
+<text x="40" y="332" font-family="monospace" font-size="13" font-weight="700" fill="#993C1D">OR = 2</text>
+<text x="150" y="332" font-family="sans-serif" font-size="11" fill="#3D3D3A">The exposed group has <tspan font-weight="700">twice the odds</tspan> of the outcome (100% higher odds).</text>
+
+<rect x="20" y="346" width="660" height="30" rx="3" fill="#FAECE7" fill-opacity="0.6"/>
+<text x="40" y="366" font-family="monospace" font-size="13" font-weight="700" fill="#993C1D">OR = 4</text>
+<text x="150" y="366" font-family="sans-serif" font-size="11" fill="#3D3D3A">The exposed group has <tspan font-weight="700">four times the odds</tspan> (300% higher odds).</text>
+
+<rect x="20" y="386" width="660" height="44" rx="4" fill="#F5F0E6" stroke="#A87B3D" stroke-width="0.8"/>
+<text x="350" y="403" font-family="sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#3D3D3A">OR is NOT the same as risk ratio (RR) or "twice the chance"</text>
+<text x="350" y="421" font-family="sans-serif" font-size="10" text-anchor="middle" fill="#3D3D3A">For rare outcomes (&lt; 10%), OR ≈ RR. For common outcomes, OR overstates the risk effect — be careful translating.</text>
+</svg>

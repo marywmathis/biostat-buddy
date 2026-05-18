@@ -1,0 +1,92 @@
+<svg width="100%" viewBox="0 0 700 460" xmlns="http://www.w3.org/2000/svg" role="img"><title>Why adjusting for confounders matters</title>
+
+<text x="350" y="22" font-family="sans-serif" font-size="16" font-weight="600" text-anchor="middle" fill="#3D3D3A">Why we adjust for confounders</text>
+<text x="350" y="44" font-family="sans-serif" font-size="12" text-anchor="middle" fill="#73726c">What "adjusted for age" actually reveals</text>
+
+<rect x="15" y="60" width="325" height="345" rx="6" fill="#FFFFFF" stroke="#73726c" stroke-width="0.7"/>
+<text x="177" y="80" font-family="sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#3D3D3A">Unadjusted view</text>
+<text x="177" y="98" font-family="sans-serif" font-size="10" font-style="italic" text-anchor="middle" fill="#5F5E5A">all data, no group info</text>
+
+<rect x="55" y="120" width="270" height="200" fill="#FAFAFA" stroke="#D3D1C7" stroke-width="0.4"/>
+<line x1="55" y1="220" x2="325" y2="220" stroke="#E8E8E5" stroke-width="0.5"/>
+<line x1="55" y1="170" x2="325" y2="170" stroke="#E8E8E5" stroke-width="0.5"/>
+<line x1="55" y1="270" x2="325" y2="270" stroke="#E8E8E5" stroke-width="0.5"/>
+<line x1="145" y1="120" x2="145" y2="320" stroke="#E8E8E5" stroke-width="0.5"/>
+<line x1="235" y1="120" x2="235" y2="320" stroke="#E8E8E5" stroke-width="0.5"/>
+
+<text x="45" y="324" font-family="sans-serif" font-size="9" text-anchor="end" fill="#5F5E5A">50</text>
+<text x="45" y="224" font-family="sans-serif" font-size="9" text-anchor="end" fill="#5F5E5A">75</text>
+<text x="45" y="124" font-family="sans-serif" font-size="9" text-anchor="end" fill="#5F5E5A">100</text>
+<text x="55" y="335" font-family="sans-serif" font-size="9" text-anchor="middle" fill="#5F5E5A">0</text>
+<text x="145" y="335" font-family="sans-serif" font-size="9" text-anchor="middle" fill="#5F5E5A">2</text>
+<text x="235" y="335" font-family="sans-serif" font-size="9" text-anchor="middle" fill="#5F5E5A">4</text>
+<text x="325" y="335" font-family="sans-serif" font-size="9" text-anchor="middle" fill="#5F5E5A">6</text>
+
+<text x="190" y="358" font-family="sans-serif" font-size="11" font-weight="600" text-anchor="middle" fill="#3D3D3A">Screen time (hours/day)</text>
+<text x="25" y="220" font-family="sans-serif" font-size="11" font-weight="600" text-anchor="middle" fill="#3D3D3A" transform="rotate(-90, 25, 220)">Academic score</text>
+
+<line x1="58" y1="298" x2="322" y2="158" stroke="#5C2410" stroke-width="2" stroke-dasharray="6 3"/>
+
+<circle cx="77.5" cy="280" r="4" fill="#5F5E5A"/>
+<circle cx="100" cy="260" r="4" fill="#5F5E5A"/>
+<circle cx="122.5" cy="272" r="4" fill="#5F5E5A"/>
+<circle cx="145" cy="280" r="4" fill="#5F5E5A"/>
+<circle cx="167.5" cy="288" r="4" fill="#5F5E5A"/>
+<circle cx="190" cy="168" r="4" fill="#5F5E5A"/>
+<circle cx="212.5" cy="184" r="4" fill="#5F5E5A"/>
+<circle cx="235" cy="176" r="4" fill="#5F5E5A"/>
+<circle cx="257.5" cy="200" r="4" fill="#5F5E5A"/>
+<circle cx="280" cy="208" r="4" fill="#5F5E5A"/>
+
+<text x="177" y="385" font-family="sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#5C2410">"More screen time → higher scores"</text>
+<text x="177" y="399" font-family="sans-serif" font-size="10" font-style="italic" text-anchor="middle" fill="#73726c">(this conclusion is wrong)</text>
+
+<rect x="360" y="60" width="325" height="345" rx="6" fill="#FFFFFF" stroke="#73726c" stroke-width="0.7"/>
+<text x="522" y="80" font-family="sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#3D3D3A">Adjusted for age (stratified)</text>
+<text x="522" y="98" font-family="sans-serif" font-size="10" font-style="italic" text-anchor="middle" fill="#5F5E5A">same data, colored by age group</text>
+
+<rect x="400" y="120" width="270" height="200" fill="#FAFAFA" stroke="#D3D1C7" stroke-width="0.4"/>
+<line x1="400" y1="220" x2="670" y2="220" stroke="#E8E8E5" stroke-width="0.5"/>
+<line x1="400" y1="170" x2="670" y2="170" stroke="#E8E8E5" stroke-width="0.5"/>
+<line x1="400" y1="270" x2="670" y2="270" stroke="#E8E8E5" stroke-width="0.5"/>
+<line x1="490" y1="120" x2="490" y2="320" stroke="#E8E8E5" stroke-width="0.5"/>
+<line x1="580" y1="120" x2="580" y2="320" stroke="#E8E8E5" stroke-width="0.5"/>
+
+<text x="390" y="324" font-family="sans-serif" font-size="9" text-anchor="end" fill="#5F5E5A">50</text>
+<text x="390" y="224" font-family="sans-serif" font-size="9" text-anchor="end" fill="#5F5E5A">75</text>
+<text x="390" y="124" font-family="sans-serif" font-size="9" text-anchor="end" fill="#5F5E5A">100</text>
+<text x="400" y="335" font-family="sans-serif" font-size="9" text-anchor="middle" fill="#5F5E5A">0</text>
+<text x="490" y="335" font-family="sans-serif" font-size="9" text-anchor="middle" fill="#5F5E5A">2</text>
+<text x="580" y="335" font-family="sans-serif" font-size="9" text-anchor="middle" fill="#5F5E5A">4</text>
+<text x="670" y="335" font-family="sans-serif" font-size="9" text-anchor="middle" fill="#5F5E5A">6</text>
+
+<text x="535" y="358" font-family="sans-serif" font-size="11" font-weight="600" text-anchor="middle" fill="#3D3D3A">Screen time (hours/day)</text>
+<text x="370" y="220" font-family="sans-serif" font-size="11" font-weight="600" text-anchor="middle" fill="#3D3D3A" transform="rotate(-90, 370, 220)">Academic score</text>
+
+<rect x="408" y="128" width="120" height="36" fill="#FFFFFF" stroke="#D3D1C7" stroke-width="0.4" rx="3"/>
+<circle cx="418" cy="139" r="3.5" fill="#185FA5"/>
+<text x="427" y="142" font-family="sans-serif" font-size="10" fill="#3D3D3A">Younger kids</text>
+<circle cx="418" cy="155" r="3.5" fill="#993C1D"/>
+<text x="427" y="158" font-family="sans-serif" font-size="10" fill="#3D3D3A">Older kids</text>
+
+<line x1="412" y1="268" x2="520" y2="286" stroke="#185FA5" stroke-width="2" stroke-dasharray="5 2"/>
+<line x1="525" y1="165" x2="633" y2="203" stroke="#993C1D" stroke-width="2" stroke-dasharray="5 2"/>
+
+<circle cx="422.5" cy="280" r="4" fill="#185FA5"/>
+<circle cx="445" cy="260" r="4" fill="#185FA5"/>
+<circle cx="467.5" cy="272" r="4" fill="#185FA5"/>
+<circle cx="490" cy="280" r="4" fill="#185FA5"/>
+<circle cx="512.5" cy="288" r="4" fill="#185FA5"/>
+<circle cx="535" cy="168" r="4" fill="#993C1D"/>
+<circle cx="557.5" cy="184" r="4" fill="#993C1D"/>
+<circle cx="580" cy="176" r="4" fill="#993C1D"/>
+<circle cx="602.5" cy="200" r="4" fill="#993C1D"/>
+<circle cx="625" cy="208" r="4" fill="#993C1D"/>
+
+<text x="522" y="385" font-family="sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#0A4C3B">Within each group, screen time → LOWER scores</text>
+<text x="522" y="399" font-family="sans-serif" font-size="10" font-style="italic" text-anchor="middle" fill="#73726c">(the actual relationship)</text>
+
+<rect x="20" y="416" width="660" height="38" rx="4" fill="#F5F0E6" stroke="#A87B3D" stroke-width="0.8"/>
+<text x="350" y="433" font-family="sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#3D3D3A">Age is a confounder: older kids both watch more screens AND score higher overall.</text>
+<text x="350" y="448" font-family="sans-serif" font-size="11" text-anchor="middle" fill="#3D3D3A">Without adjusting for it, the marginal trend flips direction. Adjustment reveals what's actually happening.</text>
+</svg>
