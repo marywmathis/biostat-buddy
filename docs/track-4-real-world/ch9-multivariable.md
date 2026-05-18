@@ -45,23 +45,52 @@ Multiple regression fits:
 Y = β₀ + β₁X₁ + β₂X₂ + β₃X₃ + ... + ε
 ```
 
-Each X is a predictor. Each β (beta) is the coefficient telling you how much Y changes per one-unit change in that predictor. The β₀ is the intercept — what Y would be if every predictor were zero (often not meaningful in practice, just a math anchor).
+If the equation looks intimidating, here's the plain version: **a regression model is a recipe.** It takes in a few facts about someone and gives back a predicted outcome. The Greek letters are placeholders for "how much each ingredient contributes."
 
-A concrete example. Suppose you're trying to predict hospital length-of-stay (LOS) from three things:
+Translating the symbols:
 
-- Age (in years)
-- Severity score (0-10 scale)
-- Diabetes (1 if yes, 0 if no)
+- **Y** is what we're trying to predict — the outcome. In our example, length of stay in days.
+- **β₀** (beta-zero) is the starting point — the prediction when every variable is zero. Like a base price before any add-ons.
+- **β₁, β₂, β₃, ...** are the weights — how much each variable contributes to the prediction. Each one is a number the regression calculates *from the data*.
+- **X₁, X₂, X₃, ...** are the actual values for a given patient — their age, their severity score, whether they have diabetes.
+- **ε** (epsilon) is the error term — the random variation the model can't explain. We rarely write about this directly; it's just there to acknowledge that real data isn't perfectly predictable.
 
-Your fitted model might look like:
+### A worked example
+
+Suppose your fitted model for hospital length-of-stay is:
 
 ```
 LOS = 1.2 + 0.04(age) + 0.75(severity) + 1.8(diabetes)
 ```
 
-Reading the coefficients:
+Think of this as a checklist:
 
-- **Intercept (1.2):** the model's predicted LOS for a hypothetical patient with age = 0, severity = 0, no diabetes. Not realistic — just an anchor.
+- **Every patient starts at 1.2 days.** That's the intercept — a baseline before any factors are added.
+- **Add 0.04 days for each year of age.** A 60-year-old contributes 0.04 × 60 = 2.4 days.
+- **Add 0.75 days for each severity point.** A patient at severity 5 contributes 0.75 × 5 = 3.75 days.
+- **Add 1.8 days if the patient has diabetes** (diabetes is coded 1 for yes, 0 for no). A diabetic contributes 1.8 × 1 = 1.8 days; a non-diabetic contributes 1.8 × 0 = 0.
+
+Now plug in a specific patient. A 60-year-old with severity 5 and diabetes:
+
+```
+LOS = 1.2 + 0.04(60) + 0.75(5) + 1.8(1)
+    = 1.2 + 2.4 + 3.75 + 1.8
+    = 9.15 days
+```
+
+Compare to a younger, healthier, non-diabetic patient — age 30, severity 2, no diabetes:
+
+```
+LOS = 1.2 + 0.04(30) + 0.75(2) + 1.8(0)
+    = 1.2 + 1.2 + 1.5 + 0
+    = 3.9 days
+```
+
+The model predicts the second patient stays about 5 days less than the first. That difference is the result of *all* the differences between them being added up — older AND sicker AND diabetic.
+
+### Reading the coefficients
+
+- **Intercept (1.2):** the model's predicted LOS for a hypothetical patient with age = 0, severity = 0, no diabetes. Not realistic — just an anchor that makes the math work.
 - **β_age = 0.04:** each additional year of age is associated with about 0.04 more days of stay, *holding severity and diabetes constant*.
 - **β_severity = 0.75:** each additional severity point is associated with 0.75 more days of stay, holding age and diabetes constant.
 - **β_diabetes = 1.8:** diabetic patients stay 1.8 days longer than non-diabetic patients, holding age and severity constant.
