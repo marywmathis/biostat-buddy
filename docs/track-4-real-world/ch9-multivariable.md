@@ -138,9 +138,17 @@ The model is:
 log(p / (1−p)) = β₀ + β₁X₁ + β₂X₂ + ...
 ```
 
-The left side is the **log-odds** (also called the **logit**) of the outcome. It looks weird, but the idea is straightforward: the *log-odds* can go from negative infinity to positive infinity, while the *probability* p is locked between 0 and 1. By modeling the log-odds linearly, we get a linear-looking math problem that produces probability predictions in the right range.
+Compare this to the linear regression equation. The right side is exactly the same recipe structure — a baseline plus a weighted contribution from each variable. What changed is the LEFT side: instead of predicting Y directly, logistic regression predicts the **log-odds** of the outcome.
 
-You don't really care about log-odds when you're reading results. What you care about is what the coefficients MEAN — and they translate into odds ratios.
+Why the weird transformation? Because probabilities have a problem.
+
+When the outcome is binary, what we really want to predict is the *probability* that the outcome equals 1 (readmitted, infected, dead — whatever yes/no question you started with). Probabilities are bounded: they can only live between 0 and 1. But the recipe on the right side could in principle add up to anything — 5, −2, 100, −0.3. If we tried to predict probability directly, the model would happily output a "predicted probability" of 1.4, which is nonsense.
+
+The log-odds transformation fixes this. Log-odds can be any number, from negative infinity to positive infinity. So the linear recipe and the log-odds scale match up perfectly: the equation can produce any number, and that number is always a valid log-odds. After the model is fit, we can always translate back from log-odds to a sensible 0-to-1 probability — software does this for us when it draws the S-curve.
+
+**You don't actually work with log-odds when reading results.** When you exponentiate a logistic regression coefficient (raise the number *e* to that power), you get an **odds ratio** — the multiplicative change in the odds of the outcome per one-unit increase in that variable. That's the number you'll see in published papers, the number you'll quote in a report, and the number that actually answers the practical question:  *"How much does diabetes change the odds of readmission, holding age and severity constant?"*
+
+The log-odds equation is the engine. The odds ratios are the dashboard you actually read.
 
 ---
 
