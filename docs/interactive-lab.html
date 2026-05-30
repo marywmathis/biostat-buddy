@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Interactive Lab — BioStat Buddy</title>
+<script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script src="https://unpkg.com/recharts@2.12.0/umd/Recharts.js"></script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --navy:#185FA5;--navy-l:#E6F1FB;
+  --amber:#BA7517;--amber-l:#FAEEDA;--amber-mid:#EF9F27;
+  --teal:#1D9E75;--teal-l:#E1F5EE;
+  --coral:#D85A30;--coral-l:#FAECE7;
+  --purple:#7F77DD;--purple-l:#EEEDFE;
+  --gray:#888780;
+  --bg:#ffffff;--bg2:#f6f6f4;--bg3:#f0ede8;
+  --text:#1a1a1a;--text2:#555550;--text3:#888780;
+  --border:rgba(0,0,0,0.1);--border2:rgba(0,0,0,0.18);
+  --r:10px;--rs:7px;
+  --font:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  --mono:"SFMono-Regular",Consolas,monospace;
+  --serif:Georgia,"Times New Roman",serif;
+}
+@media(prefers-color-scheme:dark){
+  :root{
+    --bg:#1a1a1a;--bg2:#242424;--bg3:#2e2e2e;
+    --text:#e8e8e4;--text2:#aaa9a4;--text3:#666660;
+    --border:rgba(255,255,255,0.1);--border2:rgba(255,255,255,0.18);
+    --navy:#5b9fd4;--navy-l:#0d2a42;
+    --amber:#d4933e;--amber-l:#2a1e08;--amber-mid:#d4933e;
+    --teal:#34c491;--teal-l:#0a2b1f;
+    --coral:#e87050;--coral-l:#2e1208;
+    --purple:#a09aea;--purple-l:#1e1c3a;
+  }
+}
+body{font-family:var(--font);background:var(--bg);color:var(--text);line-height:1.6;}
+#root{max-width:900px;margin:0 auto;padding:0 1rem 3rem;}
+
+/* Header */
+.site-header{padding:1.5rem 0 1rem;border-bottom:1px solid var(--border);margin-bottom:1.5rem;}
+.breadcrumb{font-size:12px;color:var(--text3);margin-bottom:6px;}
+.breadcrumb a{color:var(--amber);text-decoration:none;}
+.breadcrumb a:hover{text-decoration:underline;}
+.site-title{font-family:var(--serif);font-size:26px;font-weight:700;color:var(--navy);margin-bottom:5px;}
+.site-sub{font-size:14px;color:var(--text2);}
+
+/* Tabs */
+.tab-nav{display:flex;gap:4px;flex-wrap:wrap;background:var(--bg2);border-radius:var(--r);padding:5px;margin-bottom:1.25rem;border:1px solid var(--border);}
+.tab-btn{flex:1;min-width:100px;padding:8px 12px;border:none;border-radius:var(--rs);background:transparent;color:var(--text2);cursor:pointer;font-family:var(--font);font-size:13.5px;transition:all .15s;white-space:nowrap;}
+.tab-btn:hover{background:var(--bg3);color:var(--text);}
+.tab-btn.active{background:var(--navy);color:#fff;font-weight:500;}
+.tab-desc{font-size:13px;color:var(--text2);margin-bottom:1.25rem;padding-bottom:1rem;border-bottom:1px solid var(--border);}
+
+/* Cards */
+.card{background:var(--bg);border:1px solid var(--border);border-radius:var(--r);padding:1.25rem 1.5rem;margin-bottom:1.5rem;}
+.card-title{font-family:var(--serif);font-size:17px;font-weight:600;color:var(--navy);margin-bottom:14px;}
+.card-intro{font-size:13.5px;color:var(--text2);margin-bottom:14px;line-height:1.6;}
+
+/* Teach box */
+.teach{border:1px solid var(--amber-mid);border-radius:var(--rs);margin-top:14px;overflow:hidden;}
+.teach-hd{width:100%;background:var(--amber-l);border:none;padding:9px 14px;display:flex;justify-content:space-between;align-items:center;cursor:pointer;font-family:var(--font);font-size:13.5px;color:var(--amber);font-weight:500;text-align:left;}
+.teach-bd{padding:14px 16px;font-size:13.5px;color:var(--text2);line-height:1.7;}
+.teach-bd strong{color:var(--text);}
+.teach-bd em{font-style:italic;}
+
+/* Definition rows inside teach boxes */
+.def-row{display:grid;grid-template-columns:auto 1fr;gap:6px 14px;align-items:start;padding:4px 0;}
+.def-term{font-weight:600;color:var(--amber);font-size:13px;white-space:nowrap;}
+.def-body{font-size:13px;color:var(--text2);line-height:1.6;}
+.def-row+.def-row{border-top:1px solid var(--border);}
+
+/* Bullet list with colored dots */
+.dot-list{list-style:none;margin-top:8px;}
+.dot-list li{display:flex;align-items:baseline;gap:8px;padding:3px 0;font-size:13px;color:var(--text2);line-height:1.55;}
+.dot{width:9px;height:9px;border-radius:50%;flex-shrink:0;margin-top:4px;}
+
+/* Formula */
+.formula{background:var(--bg2);border:1px solid var(--border);border-radius:var(--rs);padding:9px 14px;font-family:var(--mono);font-size:12.5px;color:var(--text);margin:8px 0;line-height:1.6;}
+
+/* Stat rows */
+.stat-row{display:flex;justify-content:space-between;align-items:center;padding:5px 0;border-bottom:1px solid var(--border);font-size:13.5px;}
+.stat-row:last-child{border-bottom:none;}
+.stat-lbl{color:var(--text2);}
+
+/* Sliders */
+.sl-row{margin-bottom:10px;}
+.sl-top{display:flex;justify-content:space-between;font-size:13px;color:var(--text2);margin-bottom:4px;}
+.sl-top span:last-child{font-weight:500;color:var(--text);}
+input[type=range]{width:100%;accent-color:var(--navy);cursor:pointer;}
+input[type=number]{width:60px;text-align:center;padding:4px;border:1px solid var(--border2);border-radius:5px;background:var(--bg);color:var(--text);font-family:var(--font);font-size:13px;}
+input[type=number]:focus{outline:none;border-color:var(--navy);}
+
+/* Result boxes */
+.res-box{border-radius:var(--rs);padding:10px 14px;}
+.res-lbl{font-size:11px;margin-bottom:2px;}
+.res-val{font-size:20px;font-weight:700;}
+.res-sub{font-size:11px;color:var(--text2);margin-top:2px;}
+
+/* Buttons */
+.btn{padding:7px 16px;border-radius:var(--rs);border:1px solid var(--navy);background:transparent;color:var(--navy);cursor:pointer;font-family:var(--font);font-size:13px;transition:all .15s;}
+.btn:hover{background:var(--navy-l);}
+.btn.pri{background:var(--navy);color:#fff;}
+.lv-btn{flex:1;padding:5px 0;border-radius:var(--rs);border:1px solid var(--navy);background:transparent;color:var(--navy);cursor:pointer;font-size:12px;font-family:var(--font);transition:all .15s;}
+.lv-btn.active{background:var(--navy);color:#fff;}
+
+/* Layout helpers */
+.fp{display:flex;gap:1.5rem;flex-wrap:wrap;}
+.fp>*{flex:1 1 200px;min-width:0;}
+.fp>.wide{flex:2 1 260px;}
+
+/* Tables */
+.tbl-2x2{border-collapse:collapse;font-size:13px;}
+.tbl-2x2 th,.tbl-2x2 td{padding:7px 10px;}
+.tbl-2x2 thead th{border-bottom:2px solid var(--border2);}
+.td-d{background:#fff8ee;}
+.td-n{background:#eef8f4;}
+@media(prefers-color-scheme:dark){.td-d{background:#2a1c08;}.td-n{background:#0a1e16;}}
+
+/* Metric stat bar */
+.metric-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:12px 0;}
+.metric{border-radius:var(--rs);padding:9px 12px;border:1px solid var(--border);}
+.metric .m-lbl{font-size:11px;color:var(--text3);margin-bottom:2px;}
+.metric .m-val{font-size:18px;font-weight:700;}
+
+/* SIR */
+.r0-box{border-radius:var(--rs);padding:10px 14px;margin-top:8px;}
+.legend{display:flex;gap:14px;justify-content:center;font-size:12px;color:var(--text2);margin-top:4px;flex-wrap:wrap;}
+.swatch{width:16px;height:3px;border-radius:2px;display:inline-block;vertical-align:middle;margin-right:4px;}
+
+/* Callout tip */
+.tip{font-size:13px;color:var(--amber);margin-top:8px;font-style:italic;}
+
+/* Footnote */
+.footnote{font-size:12px;color:var(--text3);margin-top:1rem;padding-top:1rem;border-top:1px solid var(--border);}
+
+@media(max-width:600px){
+  .tab-btn{font-size:12px;padding:7px 8px;}
+  .card{padding:1rem;}
+  .metric-grid{grid-template-columns:1fr 1fr;}
+}
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel">
+const {useState,useEffect,useRef,useCallback}=React;
+const {BarChart,Bar,XAxis,YAxis,Tooltip,ResponsiveContainer,LineChart,Line,
+       AreaChart,Area,ReferenceLine,Cell}=Recharts;
+
+const NAVY="#185FA5",NAVY_L="#E6F1FB",AMBER="#BA7517",AMBER_L="#FAEEDA",
+      TEAL="#1D9E75",TEAL_L="#E1F5EE",CORAL="#D85A30",CORAL_L="#FAECE7",
+      PURPLE="#7F77DD",PURPLE_L="#EEEDFE",GRAY="#888780";
+
+/* ── math helpers ── */
+function fact(n){if(n<=1)return 1;let r=1;for(let i=2;i<=n;i++)r*=i;return r;}
+function binom(n,k,p){if(k<0||k>n)return 0;let c=1;for(let i=0;i<k;i++)c=c*(n-i)/(i+1);return c*Math.pow(p,k)*Math.pow(1-p,n-k);}
+function poisson(l,k){return Math.exp(-l)*Math.pow(l,k)/fact(Math.min(k,170));}
+function npdf(x,m=0,s=1){return Math.exp(-0.5*((x-m)/s)**2)/(s*Math.sqrt(2*Math.PI));}
+function erf(x){const t=1/(1+0.3275911*Math.abs(x));const p=t*(0.254829592+t*(-0.284496736+t*(1.421413741+t*(-1.453152027+t*1.061405429))));const r=1-p*Math.exp(-x*x);return x>=0?r:-r;}
+function ncdf(x,m=0,s=1){return 0.5*(1+erf((x-m)/(s*Math.sqrt(2))));}
+function pct(v,d=1){return(v*100).toFixed(d)+"%";}
+function fmt2(v){return v.toFixed(3);}
+
+/* ── shared components ── */
+function TeachBox({title,children,defaultOpen=false}){
+  const [o,setO]=useState(defaultOpen);
+  return(
+    <div className="teach">
+      <button className="teach-hd" onClick={()=>setO(v=>!v)}>
+        <span>⑦ {title}</span>
+        <span style={{fontSize:18,transform:o?"rotate(180deg)":"none",transition:"transform .2s",marginLeft:8}}>∧</span>
+      </button>
+      {o&&<div className="teach-bd">{children}</div>}
+    </div>
+  );
+}
+function Formula({children}){return <div className="formula">{children}</div>;}
+function StatRow({lbl,val,color}){return(
+  <div className="stat-row"><span className="stat-lbl">{lbl}</span>
+  <span style={{fontWeight:500,color:color||"var(--text)"}}>{val}</span></div>
+);}
+function Slider({label,value,min,max,step=0.01,onChange,fmt}){return(
+  <div className="sl-row">
+    <div className="sl-top"><span>{label}</span><span>{fmt?fmt(value):value}</span></div>
+    <input type="range" min={min} max={max} step={step} value={value} onChange={e=>onChange(parseFloat(e.target.value))}/>
+  </div>
+);}
+function Card({title,intro,children}){return(
+  <div className="card">
+    <div className="card-title">{title}</div>
+    {intro&&<p className="card-intro">{intro}</p>}
+    {children}
+  </div>
+);}
+
+/* ════════════════════════════════════════════════════════
+   FOUNDATIONS
+════════════════════════════════════════════════════════ */
+
+function BasicProb(){
+  const [pA,setPa]=useState(0.4);
+  const [pB,setPb]=useState(0.3);
+  const [pAB,setPab]=useState(0.1);
+  const sAB=Math.min(pAB,pA,pB);
+  const union=pA+pB-sAB;
+  const compA=1-pA, compB=1-pB, compUnion=1-union;
+
+  return(
+    <Card title="Basic Probability Rules" intro="Visualizing P(A ∪ B) = P(A) + P(B) − P(A ∩ B)">
+      <div className="fp">
+        <div>
+          <Slider label="P(A)" value={pA} min={0} max={1} onChange={setPa} fmt={v=>(v*100).toFixed(0)+"%"}/>
+          <Slider label="P(B)" value={pB} min={0} max={1} onChange={setPb} fmt={v=>(v*100).toFixed(0)+"%"}/>
+          <Slider label="P(A ∩ B)" value={pAB} min={0} max={Math.min(pA,pB)} step={0.01} onChange={setPab} fmt={v=>(v*100).toFixed(0)+"%"}/>
+          <div style={{marginTop:12,padding:"10px 12px",background:NAVY_L,borderRadius:8}}>
+            <div style={{fontSize:14,color:NAVY,fontWeight:600,marginBottom:3}}>
+              P(A ∪ B) = {(union*100).toFixed(1)}%
+            </div>
+            <div style={{fontSize:12,color:"var(--text2)"}}>
+              = {(pA*100).toFixed(0)}% + {(pB*100).toFixed(0)}% − {(sAB*100).toFixed(0)}% = {(union*100).toFixed(1)}%
+            </div>
+          </div>
+        </div>
+        <div style={{display:"flex",alignItems:"center",justifyContent:"center"}}>
+          <svg viewBox="0 0 220 150" width={210} height={140}>
+            <ellipse cx="82" cy="75" rx="66" ry="52" fill={NAVY} fillOpacity={0.15} stroke={NAVY} strokeWidth={1.5}/>
+            <ellipse cx="138" cy="75" rx="66" ry="52" fill={AMBER} fillOpacity={0.15} stroke={AMBER} strokeWidth={1.5}/>
+            <text x="58" y="79" textAnchor="middle" fontSize="14" fill={NAVY} fontWeight="700">A</text>
+            <text x="162" y="79" textAnchor="middle" fontSize="14" fill={AMBER} fontWeight="700">B</text>
+            <text x="110" y="79" textAnchor="middle" fontSize="10" fill="#555" fontWeight="500">A∩B</text>
+            <text x="110" y="138" textAnchor="middle" fontSize="10" fill="var(--text3)">Sample Space</text>
+          </svg>
+        </div>
+      </div>
+
+      {/* Rich teach box 1 */}
+      <TeachBox title="Why do we subtract P(A ∩ B)?" defaultOpen={false}>
+        <Formula>P(A ∪ B) = P(A) + P(B) − P(A ∩ B)</Formula>
+        <p>This is the <strong>Addition Rule</strong>. If you just add P(A) + P(B), patients who have <em>both</em> conditions get counted twice — once in circle A, once in circle B. Subtracting P(A ∩ B) corrects for that double-counting.</p>
+        <p style={{marginTop:8}}>With your current values: {(pA*100).toFixed(0)}% + {(pB*100).toFixed(0)}% = {((pA+pB)*100).toFixed(0)}%, but the true probability of A or B is {(union*100).toFixed(1)}% because {(sAB*100).toFixed(0)}% was counted in both.</p>
+      </TeachBox>
+
+      {/* Rich teach box 2 */}
+      <TeachBox title="What do the calculated values mean?" defaultOpen={false}>
+        <div className="def-row">
+          <span className="def-term">P(A ∪ B) = {fmt2(union)}</span>
+          <span className="def-body">The probability of A <em>or</em> B (or both). In our example: the chance a patient has hypertension, diabetes, or both. This is the total shaded area in the diagram.</span>
+        </div>
+        <div className="def-row">
+          <span className="def-term">P(A') = {fmt2(compA)}</span>
+          <span className="def-body">The <strong>complement</strong> of A — the probability that A does <em>not</em> happen. In our example: the chance a patient does NOT have hypertension. Always equals 1 − P(A).</span>
+        </div>
+        <div className="def-row">
+          <span className="def-term">P(B') = {fmt2(compB)}</span>
+          <span className="def-body">The complement of B — the chance a patient does NOT have diabetes.</span>
+        </div>
+        <div className="def-row">
+          <span className="def-term">P(A ∪ B)' = {fmt2(compUnion)}</span>
+          <span className="def-body">The chance a patient has NEITHER condition — the area outside both circles. This is 1 − P(A ∪ B).</span>
+        </div>
+        <p style={{marginTop:10,fontSize:12,fontStyle:"italic",color:"var(--text3)"}}>Example: Probability a patient has hypertension OR diabetes in a screened population.</p>
+      </TeachBox>
+    </Card>
+  );
+}
+
+/* ── Conditional Probability ── */
+function CondProb(){
+  const [a,setA]=useState(80),[b,setB]=useState(180),[c,setC]=useState(20),[d,setD]=useState(720);
+  const tpos=a+b, tneg=c+d, total=a+b+c+d;
+  const pdgtp=tpos>0?a/tpos:0;
+  const pdgtn=tneg>0?c/tneg:0;
+  const CI=({v,sv})=><input type="number" min={0} value={v} onChange={e=>sv(parseInt(e.target.value)||0)}/>;
+
+  return(
+    <Card title="Conditional Probability" intro="Given something happened, how likely is something else?">
+      {/* Results up top */}
+      <div className="fp" style={{gap:10,marginBottom:14}}>
+        <div style={{padding:"10px 14px",background:"var(--bg2)",borderRadius:8,border:"1px solid var(--border)"}}>
+          <span style={{fontSize:13,color:"var(--text2)"}}>P(Disease | Test+) = </span>
+          <span style={{fontSize:16,fontWeight:700,color:AMBER}}>{pdgtp.toFixed(3)}</span>
+        </div>
+        <div style={{padding:"10px 14px",background:"var(--bg2)",borderRadius:8,border:"1px solid var(--border)"}}>
+          <span style={{fontSize:13,color:"var(--text2)"}}>P(Disease | Test−) = </span>
+          <span style={{fontSize:16,fontWeight:700,color:"var(--text2)"}}>{pdgtn.toFixed(3)}</span>
+        </div>
+      </div>
+
+      {/* 2x2 table */}
+      <div style={{overflowX:"auto",marginBottom:14}}>
+        <table className="tbl-2x2">
+          <thead><tr>
+            <th></th>
+            <th style={{color:CORAL}}>Disease +</th>
+            <th style={{color:TEAL}}>Disease −</th>
+            <th style={{color:GRAY}}>Total</th>
+          </tr></thead>
+          <tbody>
+            <tr>
+              <td style={{fontWeight:500}}>Test +</td>
+              <td className="td-d"><CI v={a} sv={setA}/></td>
+              <td className="td-n"><CI v={b} sv={setB}/></td>
+              <td style={{color:GRAY,textAlign:"center"}}>{tpos}</td>
+            </tr>
+            <tr>
+              <td style={{fontWeight:500}}>Test −</td>
+              <td className="td-d"><CI v={c} sv={setC}/></td>
+              <td className="td-n"><CI v={d} sv={setD}/></td>
+              <td style={{color:GRAY,textAlign:"center"}}>{tneg}</td>
+            </tr>
+            <tr>
+              <td style={{color:GRAY}}>Total</td>
+              <td style={{textAlign:"center",fontWeight:500,color:CORAL}}>{a+c}</td>
+              <td style={{textAlign:"center",fontWeight:500,color:TEAL}}>{b+d}</td>
+              <td style={{textAlign:"center",fontWeight:500}}>{total}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      {/* Rich teach box */}
+      <TeachBox title="How to read this table" defaultOpen={false}>
+        <p style={{marginBottom:10}}>This is a <strong>2×2 contingency table</strong> — the workhorse of epidemiology. Each cell counts people:</p>
+        <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:10,marginBottom:12}}>
+          <div style={{padding:"8px 10px",borderRadius:6,border:`1px solid ${AMBER}`,background:AMBER_L}}>
+            <div style={{fontSize:11,fontWeight:600,color:AMBER,marginBottom:3}}>Top-left (cells.a = {a})</div>
+            <div style={{fontSize:12,color:"var(--text2)"}}>True positives — sick AND tested positive. The test got it right.</div>
+          </div>
+          <div style={{padding:"8px 10px",borderRadius:6,border:`1px solid ${CORAL}`,background:CORAL_L}}>
+            <div style={{fontSize:11,fontWeight:600,color:CORAL,marginBottom:3}}>Top-right (cells.b = {b})</div>
+            <div style={{fontSize:12,color:"var(--text2)"}}>False positives — healthy BUT tested positive. A false alarm.</div>
+          </div>
+          <div style={{padding:"8px 10px",borderRadius:6,border:`1px solid ${PURPLE}`,background:PURPLE_L}}>
+            <div style={{fontSize:11,fontWeight:600,color:PURPLE,marginBottom:3}}>Bottom-left (cells.c = {c})</div>
+            <div style={{fontSize:12,color:"var(--text2)"}}>False negatives — sick BUT tested negative. A missed case.</div>
+          </div>
+          <div style={{padding:"8px 10px",borderRadius:6,border:`1px solid ${TEAL}`,background:TEAL_L}}>
+            <div style={{fontSize:11,fontWeight:600,color:TEAL,marginBottom:3}}>Bottom-right (cells.d = {d})</div>
+            <div style={{fontSize:12,color:"var(--text2)"}}>True negatives — healthy AND tested negative. Correctly cleared.</div>
+          </div>
+        </div>
+        <Formula>P(Disease | Test+) = True Positives ÷ All Positives = {a} ÷ {tpos} = {pdgtp.toFixed(3)}</Formula>
+        <p style={{marginTop:8}}>So of the {tpos} people who tested positive, only {a} ({pct(pdgtp,1)}) actually have the disease. The other {b} are false alarms. Try editing the numbers to see how changing each cell affects the result.</p>
+        <p style={{marginTop:8,fontSize:12,fontStyle:"italic",color:"var(--text3)"}}>Example: Of {total} screened patients, {a} true positives and {b} false positives were identified.</p>
+      </TeachBox>
+    </Card>
+  );
+}
+
+/* ── Bayes' Theorem ── */
+function Bayes(){
+  const [prev,setPrev]=useState(0.01),[sens,setSens]=useState(0.9),[spec,setSpec]=useState(0.95);
+  const tp=prev*sens,fp=(1-prev)*(1-spec),fn=prev*(1-sens),tn=(1-prev)*spec;
+  const ppv=tp/(tp+fp),npv=tn/(tn+fn);
+  const bars=[{n:"PPV",v:+(ppv*100).toFixed(1)},{n:"NPV",v:+(npv*100).toFixed(1)},{n:"Sens",v:+(sens*100).toFixed(1)},{n:"Spec",v:+(spec*100).toFixed(1)}];
+  const cols=[CORAL,TEAL,NAVY,AMBER];
+  return(
+    <Card title="Bayes' Theorem Calculator" intro="Given a positive test, what's the probability the patient truly has the disease?">
+      <div className="fp">
+        <div>
+          <Slider label="Prevalence" value={prev} min={0.001} max={0.5} step={0.001} onChange={setPrev} fmt={v=>(v*100).toFixed(1)+"%"}/>
+          <Slider label="Sensitivity" value={sens} min={0.01} max={1} onChange={setSens} fmt={v=>(v*100).toFixed(0)+"%"}/>
+          <Slider label="Specificity" value={spec} min={0.01} max={1} onChange={setSpec} fmt={v=>(v*100).toFixed(0)+"%"}/>
+          <Formula>PPV = (Sens × Prev) / [(Sens × Prev) + (1−Spec)(1−Prev)]</Formula>
+          <div className="fp" style={{gap:8,marginTop:8}}>
+            <div className="res-box" style={{background:CORAL_L}}>
+              <div className="res-lbl" style={{color:CORAL}}>PPV</div>
+              <div className="res-val" style={{color:CORAL}}>{(ppv*100).toFixed(1)}%</div>
+            </div>
+            <div className="res-box" style={{background:TEAL_L}}>
+              <div className="res-lbl" style={{color:TEAL}}>NPV</div>
+              <div className="res-val" style={{color:TEAL}}>{(npv*100).toFixed(1)}%</div>
+            </div>
+          </div>
+        </div>
+        <div className="wide" style={{height:195}}>
+          <ResponsiveContainer width="100%" height="100%">
+            <BarChart data={bars} margin={{top:5,right:5,bottom:5,left:-15}}>
+              <XAxis dataKey="n" tick={{fontSize:11}}/>
+              <YAxis domain={[0,100]} tick={{fontSize:11}} unit="%"/>
+              <Tooltip formatter={v=>v+"%"}/>
+              <Bar dataKey="v" radius={[4,4,0,0]}>{bars.map((_,i)=><Cell key={i} fill={cols[i]}/>)}</Bar>
+            </BarChart>
+          </ResponsiveContainer>
+        </div>
+      </div>
+      <TeachBox title="Why does PPV depend on prevalence?" defaultOpen={false}>
+        <p>Set prevalence to 1% with 90% sensitivity and 95% specificity — PPV drops to ~15%. <strong>Most positive tests are false positives</strong> when the disease is rare.</p>
+        <p style={{marginTop:8}}>Intuition: in a population of 10,000 with 1% prevalence, there are 100 truly sick people. A 90% sensitive test catches 90 of them. But a 5% false-positive rate among the 9,900 healthy people generates 495 false alarms — swamping the true positives.</p>
+        <p style={{marginTop:8}}>This is why screening programs target high-risk groups: higher prevalence → higher PPV → fewer false alarms per true case found.</p>
+      </TeachBox>
+    </Card>
+  );
+}
+
+/* ── Sensitivity & Specificity ── */
+function SensSpec(){
+  const [thresh,setThresh]=useState(5);
+  const mu1=4,mu2=7,sig1=0.8,sig2=0.9;
+  const pts=[];
+  for(let x=0;x<=12;x+=0.05){
+    pts.push({x:+x.toFixed(2),h:+npdf(x,mu1,sig1).toFixed(4),d:+npdf(x,mu2,sig2).toFixed(4)});
+  }
+  const tpR=1-ncdf(thresh,mu2,sig2);
+  const fpR=1-ncdf(thresh,mu1,sig1);
+  const tnR=ncdf(thresh,mu1,sig1);
+  const fnR=ncdf(thresh,mu2,sig2);
+
+  return(
+    <Card title="Sensitivity & Specificity" intro="Move the threshold to see the trade-off between catching true disease and generating false alarms.">
+      {/* Chart */}
+      <div style={{height:190}}>
+        <ResponsiveContainer width="100%" height="100%">
+          <AreaChart data={pts} margin={{top:5,right:10,bottom:5,left:-20}}>
+            <XAxis dataKey="x" tick={{fontSize:10}} tickCount={7}/>
+            <YAxis tick={{fontSize:10}}/>
+            <Tooltip formatter={(v,n)=>[v.toFixed(3),n]}/>
+            <Area type="monotone" dataKey="h" fill={TEAL} stroke={TEAL} fillOpacity={0.45} name="Healthy"/>
+            <Area type="monotone" dataKey="d" fill={CORAL} stroke={CORAL} fillOpacity={0.45} name="Diseased"/>
+            <ReferenceLine x={thresh} stroke={AMBER} strokeWidth={2.5} label={{value:"Threshold",position:"top",fontSize:10,fill:AMBER}}/>
+          </AreaChart>
+        </ResponsiveContainer>
+      </div>
+
+      {/* Slider */}
+      <Slider label={`Diagnostic Threshold`} value={thresh} min={1} max={11} step={0.1} onChange={setThresh} fmt={v=>v.toFixed(1)}/>
+
+      {/* 4-metric grid */}
+      <div className="metric-grid">
+        <div className="metric">
+          <div className="m-lbl" style={{color:TEAL}}>● Sensitivity</div>
+          <div className="m-val" style={{color:TEAL}}>{(tpR*100).toFixed(1)}%</div>
+        </div>
+        <div className="metric">
+          <div className="m-lbl" style={{color:NAVY}}>● Specificity</div>
+          <div className="m-val" style={{color:NAVY}}>{(tnR*100).toFixed(1)}%</div>
+        </div>
+        <div className="metric">
+          <div className="m-lbl" style={{color:CORAL}}>● FP rate</div>
+          <div className="m-val" style={{color:CORAL}}>{(fpR*100).toFixed(1)}%</div>
+        </div>
+        <div className="metric">
+          <div className="m-lbl" style={{color:PURPLE}}>● FN rate</div>
+          <div className="m-val" style={{color:PURPLE}}>{(fnR*100).toFixed(1)}%</div>
+        </div>
+      </div>
+
+      {/* Rich teach box 1 */}
+      <TeachBox title="The sensitivity-specificity trade-off" defaultOpen={false}>
+        <p style={{marginBottom:10}}>Moving the threshold changes the balance between two types of errors:</p>
+        <div className="def-row">
+          <span className="def-term">Move threshold LEFT (lower):</span>
+          <span className="def-body">You catch more sick people (sensitivity ↑) but also flag more healthy people incorrectly (specificity ↓, more false positives). Good when <strong>missing a case is dangerous</strong> — e.g., cancer screening.</span>
+        </div>
+        <div className="def-row">
+          <span className="def-term">Move threshold RIGHT (higher):</span>
+          <span className="def-body">You have fewer false alarms (specificity ↑) but miss more sick people (sensitivity ↓, more false negatives). Good when <strong>false alarms are costly</strong> — e.g., invasive surgery decisions.</span>
+        </div>
+        <p style={{marginTop:10}}>There is no "perfect" threshold — the right choice depends on which kind of mistake is worse in your clinical context. This trade-off is why public health professionals must think carefully about screening program design.</p>
+        <p className="tip">↑ Try dragging the threshold to the far left or far right to see how one metric improves while the other suffers.</p>
+      </TeachBox>
+
+      {/* Rich teach box 2 */}
+      <TeachBox title="What are the four shaded regions?" defaultOpen={false}>
+        <ul className="dot-list">
+          <li><span className="dot" style={{background:TEAL}}/><span><strong>True Positives (TP):</strong> Diseased people above the threshold — correctly identified as positive.</span></li>
+          <li><span className="dot" style={{background:NAVY}}/><span><strong>True Negatives (TN):</strong> Healthy people below the threshold — correctly cleared.</span></li>
+          <li><span className="dot" style={{background:CORAL}}/><span><strong>False Positives (FP):</strong> Healthy people above the threshold — false alarms.</span></li>
+          <li><span className="dot" style={{background:PURPLE}}/><span><strong>False Negatives (FN):</strong> Diseased people below the threshold — missed cases.</span></li>
+        </ul>
+      </TeachBox>
+    </Card>
+  );
+}
+
+/* ════════════════════════════════════════════════════════
+   DISTRIBUTIONS
+════════════════════════════════════════════════════════ */
+function Binomial(){
+  const [n,setN]=useState(20),[p,setP]=useState(0.3);
+  const data=[];for(let k=0;k<=n;k++)data.push({k,v:+binom(n,k,p).toFixed(5)});
+  return(
+    <Card title="Binomial Distribution" intro="Number of successes in n independent trials, each with probability p.">
+      <div className="fp">
+        <div>
+          <Slider label="n (trials)" value={n} min={1} max={50} step={1} onChange={setN} fmt={v=>v}/>
+          <Slider label="p (success probability)" value={p} min={0.01} max={0.99} step={0.01} onChange={setP} fmt={v=>v.toFixed(2)}/>
+          <Formula>P(X=k) = C(n,k) · pᵏ · (1−p)ⁿ⁻ᵏ</Formula>
+          <StatRow lbl="Mean (μ = np)" val={(n*p).toFixed(2)} color={NAVY}/>
+          <StatRow lbl="Std dev" val={Math.sqrt(n*p*(1-p)).toFixed(2)} color={AMBER}/>
+        </div>
+        <div className="wide" style={{height:200}}>
+          <ResponsiveContainer width="100%" height="100%">
+            <BarChart data={data} margin={{top:5,right:5,bottom:5,left:-20}}>
+              <XAxis dataKey="k" tick={{fontSize:10}}/>
+              <YAxis tick={{fontSize:10}}/>
+              <Tooltip formatter={v=>(v*100).toFixed(2)+"%"} labelFormatter={l=>"k = "+l}/>
+              <Bar dataKey="v" fill={NAVY} radius={[2,2,0,0]}/>
+            </BarChart>
+          </ResponsiveContainer>
+        </div>
+      </div>
+      <TeachBox title="Public health applications" defaultOpen={false}>
+        <p>Classic uses: number of patients who respond to treatment out of n enrolled; number of people who develop antibodies after vaccination; number of positive rapid tests in a sample.</p>
+        <p style={{marginTop:8}}>Key assumptions: each trial is independent; every trial has the same probability p; you're counting <em>how many</em> successes, not <em>when</em> they occur. When n is large and p is small, the Poisson distribution approximates the binomial.</p>
+      </TeachBox>
+    </Card>
+  );
+}
+
+function Normal(){
+  const [mu,setMu]=useState(0),[sig,setSig]=useState(1),[showZ,setShowZ]=useState(false);
+  const lo=mu-4*sig,hi=mu+4*sig,step=(hi-lo)/200;
+  const pts=[];
+  for(let x=lo;x<=hi;x+=step){
+    const xr=+x.toFixed(3);
+    pts.push({x:xr,
+      s1:Math.abs(xr-mu)<=sig?+npdf(xr,mu,sig).toFixed(5):0,
+      s2:Math.abs(xr-mu)<=2*sig&&Math.abs(xr-mu)>sig?+npdf(xr,mu,sig).toFixed(5):0,
+      s3:Math.abs(xr-mu)<=3*sig&&Math.abs(xr-mu)>2*sig?+npdf(xr,mu,sig).toFixed(5):0,
+      pdf:+npdf(xr,mu,sig).toFixed(5)});
+  }
+  const zt=[["0.0",".5000"],["0.5",".6915"],["1.0",".8413"],["1.5",".9332"],["1.65",".9505"],["1.96",".9750"],["2.0",".9772"],["2.33",".9901"],["2.58",".9951"],["3.0",".9987"]];
+  return(
+    <Card title="Normal Distribution" intro="The bell curve — characterized by mean (μ) and standard deviation (σ).">
+      <div className="fp">
+        <div>
+          <Slider label={`μ (mean) = ${mu.toFixed(1)}`} value={mu} min={-3} max={3} step={0.1} onChange={setMu} fmt={v=>v.toFixed(1)}/>
+          <Slider label={`σ (std dev) = ${sig.toFixed(1)}`} value={sig} min={0.2} max={3} step={0.1} onChange={setSig} fmt={v=>v.toFixed(1)}/>
+          <StatRow lbl="±1σ covers" val="68.3%" color={NAVY}/>
+          <StatRow lbl="±2σ covers" val="95.4%" color={AMBER}/>
+          <StatRow lbl="±3σ covers" val="99.7%" color={CORAL}/>
+          <button className="btn" style={{marginTop:10,fontSize:12}} onClick={()=>setShowZ(z=>!z)}>
+            {showZ?"Hide":"Show"} z-score table
+          </button>
+        </div>
+        <div className="wide" style={{height:200}}>
+          <ResponsiveContainer width="100%" height="100%">
+            <AreaChart data={pts} margin={{top:5,right:5,bottom:5,left:-10}}>
+              <XAxis dataKey="x" tick={{fontSize:10}} tickCount={7}/>
+              <YAxis tick={{fontSize:10}}/>
+              <Tooltip formatter={v=>v.toFixed(4)}/>
+              <Area type="monotone" dataKey="s1" fill={NAVY} stroke="none" fillOpacity={0.7} stackId="a" name="±1σ"/>
+              <Area type="monotone" dataKey="s2" fill={AMBER} stroke="none" fillOpacity={0.5} stackId="a" name="±2σ"/>
+              <Area type="monotone" dataKey="s3" fill={CORAL} stroke="none" fillOpacity={0.4} stackId="a" name="±3σ"/>
+              <Area type="monotone" dataKey="pdf" stroke={NAVY} fill="none" strokeWidth={2} name="PDF"/>
+              <ReferenceLine x={mu} stroke={GRAY} strokeDasharray="4 2"/>
+            </AreaChart>
+          </ResponsiveContainer>
+        </div>
+      </div>
+      {showZ&&<div style={{display:"flex",flexWrap:"wrap",gap:6,marginTop:12}}>
+        {zt.map(([z,v])=>(
+          <div key={z} style={{background:"var(--bg2)",borderRadius:6,padding:"4px 9px",fontSize:12,border:"1px solid var(--border)"}}>
+            <span style={{color:NAVY,fontWeight:500}}>z={z}</span>
+            <span style={{color:"var(--text2)",marginLeft:4}}>{v}</span>
+          </div>
+        ))}
+      </div>}
+      <TeachBox title="Why this matters in public health" defaultOpen={false}>
+        <p>Blood pressure, cholesterol, height, and many lab values are approximately normally distributed in populations. The 68-95-99.7 rule lets you quickly estimate what fraction of a population falls within 1, 2, or 3 SDs of the mean.</p>
+        <p style={{marginTop:8}}>This is how clinical "normal ranges" are set: a lab value outside ±2σ of the population mean is flagged as abnormal — even though ~5% of perfectly healthy people will be outside that range by chance.</p>
+      </TeachBox>
+    </Card>
+  );
+}
+
+function Poisson(){
+  const [lam,setLam]=useState(3),[cumul,setCumul]=useState(false);
+  const maxK=Math.min(Math.ceil(lam*4),40);
+  const data=[];let cum=0;
+  for(let k=0;k<=maxK;k++){const p=poisson(lam,k);cum+=p;data.push({k,prob:+p.toFixed(5),cumul:+cum.toFixed(5)});}
+  return(
+    <Card title="Poisson Distribution" intro="Models the number of rare events occurring in a fixed interval of time or space.">
+      <div className="fp">
+        <div>
+          <Slider label={`λ (rate) = ${lam.toFixed(1)}`} value={lam} min={0.1} max={15} step={0.1} onChange={setLam} fmt={v=>v.toFixed(1)}/>
+          <Formula>P(X=k) = e⁻λ · λᵏ / k!</Formula>
+          <StatRow lbl="Mean = Variance = λ" val={lam.toFixed(1)} color={NAVY}/>
+          <StatRow lbl="Std dev = √λ" val={Math.sqrt(lam).toFixed(2)} color={AMBER}/>
+          <button className="btn" style={{marginTop:10,fontSize:12}} onClick={()=>setCumul(c=>!c)}>
+            {cumul?"Hide":"Show"} cumulative probability
+          </button>
+        </div>
+        <div className="wide" style={{height:200}}>
+          <ResponsiveContainer width="100%" height="100%">
+            <BarChart data={data} margin={{top:5,right:5,bottom:5,left:-20}}>
+              <XAxis dataKey="k" tick={{fontSize:10}}/>
+              <YAxis tick={{fontSize:10}}/>
+              <Tooltip formatter={(v,n)=>[(v*100).toFixed(2)+"%",n]}/>
+              <Bar dataKey={cumul?"cumul":"prob"} fill={TEAL} radius={[2,2,0,0]} name={cumul?"Cumul. P":"P(X=k)"}/>
+            </BarChart>
+          </ResponsiveContainer>
+        </div>
+      </div>
+      <TeachBox title="Epidemiology applications" defaultOpen={false}>
+        <p>Disease outbreaks, hospital admissions per hour, car crashes per mile of road, calls to a poison control center per day. The key assumption: events are independent and rare relative to opportunity.</p>
+        <p style={{marginTop:8}}>When λ is large (&gt;30), the Poisson converges to a normal distribution — a useful approximation for large count data.</p>
+      </TeachBox>
+    </Card>
+  );
+}
+
+/* ════════════════════════════════════════════════════════
+   EPI STATS
+════════════════════════════════════════════════════════ */
+function RR(){
+  const [a,setA]=useState(40),[b,setB]=useState(160),[c,setC]=useState(10),[d,setD]=useState(190);
+  const rE=a/(a+b)||0,rU=c/(c+d)||0;
+  const rr=rU>0?rE/rU:Infinity,or=b>0&&c>0?(a*d)/(b*c):Infinity;
+  const ar=rE-rU,nnt=Math.abs(ar)>0?1/Math.abs(ar):Infinity;
+  const bars=[{n:"Exposed",r:+(rE*100).toFixed(1)},{n:"Unexposed",r:+(rU*100).toFixed(1)}];
+  const CI=({v,sv})=><input type="number" min={0} value={v} onChange={e=>sv(parseInt(e.target.value)||0)}/>;
+  return(
+    <Card title="Relative Risk & Odds Ratios" intro="Core measures of association between exposure and disease in a cohort study.">
+      <div className="fp">
+        <div>
+          <table className="tbl-2x2" style={{marginBottom:12}}>
+            <thead><tr><th></th><th style={{color:CORAL}}>Disease +</th><th style={{color:TEAL}}>Disease −</th></tr></thead>
+            <tbody>
+              <tr><td style={{fontWeight:500}}>Exposed</td><td className="td-d"><CI v={a} sv={setA}/></td><td className="td-n"><CI v={b} sv={setB}/></td></tr>
+              <tr><td style={{fontWeight:500}}>Unexposed</td><td className="td-d"><CI v={c} sv={setC}/></td><td className="td-n"><CI v={d} sv={setD}/></td></tr>
+            </tbody>
+          </table>
+          <StatRow lbl="RR (Relative Risk)" val={isFinite(rr)?rr.toFixed(2):"∞"} color={CORAL}/>
+          <StatRow lbl="OR (Odds Ratio)" val={isFinite(or)?or.toFixed(2):"∞"} color={AMBER}/>
+          <StatRow lbl="AR (Attributable Risk)" val={(ar*100).toFixed(1)+"%"} color={NAVY}/>
+          <StatRow lbl="NNT" val={isFinite(nnt)?nnt.toFixed(1):"∞"} color={TEAL}/>
+        </div>
+        <div style={{height:180}} className="wide">
+          <div style={{fontSize:12,color:"var(--text2)",marginBottom:4}}>Disease rate</div>
+          <ResponsiveContainer width="100%" height="90%">
+            <BarChart data={bars} margin={{top:5,right:5,bottom:5,left:-10}}>
+              <XAxis dataKey="n" tick={{fontSize:12}}/>
+              <YAxis tick={{fontSize:10}} unit="%" domain={[0,100]}/>
+              <Tooltip formatter={v=>v+"%"}/>
+              <Bar dataKey="r" radius={[4,4,0,0]}><Cell fill={CORAL}/><Cell fill={TEAL}/></Bar>
+            </BarChart>
+          </ResponsiveContainer>
+        </div>
+      </div>
+      <TeachBox title="RR vs OR — when does it matter?" defaultOpen={false}>
+        <div className="def-row">
+          <span className="def-term">RR</span>
+          <span className="def-body">Intuitive — the exposed group is X times as likely to develop disease. Used in cohort studies where you can calculate incidence in both groups.</span>
+        </div>
+        <div className="def-row">
+          <span className="def-term">OR</span>
+          <span className="def-body">Used in case-control studies where RR can't be directly calculated. Approximates RR when disease is rare (&lt;10%).</span>
+        </div>
+        <div className="def-row">
+          <span className="def-term">NNT</span>
+          <span className="def-body">Number needed to treat — how many people need the intervention to prevent one bad outcome. NNT = 1/AR. Lower is better.</span>
+        </div>
+      </TeachBox>
+    </Card>
+  );
+}
+
+function CIWidget(){
+  const [n,setN]=useState(100),[prop,setProp]=useState(0.35),[lev,setLev]=useState(0.95);
+  const zv={0.90:1.645,0.95:1.96,0.99:2.576};
+  const z=zv[lev],se=Math.sqrt(prop*(1-prop)/n);
+  const lo=Math.max(0,prop-z*se),hi=Math.min(1,prop+z*se);
+  const pts=[];
+  for(let x=-4;x<=4;x+=0.1){
+    const v=npdf(x);
+    pts.push({x:+x.toFixed(2),pdf:+v.toFixed(5),rej:Math.abs(x)>=z?+v.toFixed(5):0});
+  }
+  return(
+    <Card title="Confidence Intervals & P-values" intro="A CI gives a range of plausible values for a population parameter based on sample data.">
+      <div className="fp">
+        <div>
+          <Slider label={`Sample size n = ${n}`} value={n} min={10} max={500} step={5} onChange={setN} fmt={v=>v}/>
+          <Slider label={`Proportion = ${(prop*100).toFixed(0)}%`} value={prop} min={0.01} max={0.99} step={0.01} onChange={setProp} fmt={v=>(v*100).toFixed(0)+"%"}/>
+          <div style={{marginBottom:10}}>
+            <div style={{fontSize:13,color:"var(--text2)",marginBottom:5}}>Confidence level</div>
+            <div style={{display:"flex",gap:6}}>
+              {[0.90,0.95,0.99].map(l=>(
+                <button key={l} className={`lv-btn${lev===l?" active":""}`} onClick={()=>setLev(l)}>
+                  {(l*100).toFixed(0)}%
+                </button>
+              ))}
+            </div>
+          </div>
+          <div style={{background:"var(--bg2)",borderRadius:8,padding:"10px 12px",border:"1px solid var(--border)"}}>
+            <div style={{fontSize:12,color:NAVY,marginBottom:3}}>{(lev*100).toFixed(0)}% CI</div>
+            <div style={{fontSize:19,fontWeight:700,color:NAVY}}>({(lo*100).toFixed(1)}%, {(hi*100).toFixed(1)}%)</div>
+            <div style={{fontSize:11,color:"var(--text2)",marginTop:2}}>Width: {((hi-lo)*100).toFixed(1)}pp · SE: {(se*100).toFixed(2)}%</div>
+          </div>
+        </div>
+        <div className="wide" style={{height:200}}>
+          <div style={{fontSize:12,color:"var(--text2)",marginBottom:4}}>Rejection regions (α = {(1-lev).toFixed(2)})</div>
+          <ResponsiveContainer width="100%" height="90%">
+            <AreaChart data={pts} margin={{top:5,right:5,bottom:5,left:-20}}>
+              <XAxis dataKey="x" tick={{fontSize:10}}/>
+              <YAxis tick={{fontSize:10}}/>
+              <Tooltip formatter={v=>v.toFixed(4)}/>
+              <Area type="monotone" dataKey="pdf" stroke={NAVY} fill={NAVY} fillOpacity={0.1} name="Normal"/>
+              <Area type="monotone" dataKey="rej" fill={CORAL} stroke={CORAL} fillOpacity={0.6} name="Reject H₀"/>
+              <ReferenceLine x={z} stroke={CORAL} strokeDasharray="3 2"/>
+              <ReferenceLine x={-z} stroke={CORAL} strokeDasharray="3 2"/>
+            </AreaChart>
+          </ResponsiveContainer>
+        </div>
+      </div>
+      <TeachBox title="What does '95% confidence' actually mean?" defaultOpen={false}>
+        <p>It does <strong>not</strong> mean there's a 95% chance the true value is in this interval. It means: if we repeated this study many times and computed a CI each time, 95% of those intervals would contain the true parameter.</p>
+        <p style={{marginTop:8}}>Wider CIs = less precision. Shrink them by increasing sample size (n). The CI width scales as 1/√n — quadrupling n halves the width.</p>
+      </TeachBox>
+    </Card>
+  );
+}
+
+/* ════════════════════════════════════════════════════════
+   OUTBREAK / SIR
+════════════════════════════════════════════════════════ */
+function SIR(){
+  const [beta,setBeta]=useState(0.3),[gamma,setGamma]=useState(0.1);
+  const [playing,setPlaying]=useState(false),[step,setStep]=useState(999);
+  const ref=useRef(null);
+  const sim=useCallback(()=>{
+    const days=[];let S=999,I=1,R=0;
+    for(let t=0;t<=200;t++){
+      days.push({t,S:Math.round(S),I:Math.round(I),R:Math.round(R)});
+      const dS=-beta*S*I/1000,dR=gamma*I,dI=-dS-dR;
+      S+=dS;I+=dI;R+=dR;if(I<0.5)break;
+    }
+    return days;
+  },[beta,gamma]);
+  const all=sim();
+  const show=all.slice(0,step+1);
+  const R0=beta/gamma,herd=(1-1/R0)*100;
+  useEffect(()=>{setStep(all.length-1);},[beta,gamma]);
+  useEffect(()=>{
+    if(playing){
+      setStep(0);let s=0;
+      ref.current=setInterval(()=>{s++;setStep(s);if(s>=all.length-1){clearInterval(ref.current);setPlaying(false);}},30);
+    }else clearInterval(ref.current);
+    return()=>clearInterval(ref.current);
+  },[playing]);
+  return(
+    <Card title="SIR Model Simulation" intro="Tracks Susceptible → Infectious → Recovered individuals through an epidemic.">
+      <div className="fp">
+        <div>
+          <Slider label={`β (transmission rate) = ${beta.toFixed(2)}`} value={beta} min={0.05} max={1} step={0.01} onChange={v=>{setBeta(v);setPlaying(false);}} fmt={v=>v.toFixed(2)}/>
+          <Slider label={`γ (recovery rate) = ${gamma.toFixed(2)}`} value={gamma} min={0.01} max={0.5} step={0.01} onChange={v=>{setGamma(v);setPlaying(false);}} fmt={v=>v.toFixed(2)}/>
+          <div className="r0-box" style={{background:R0>1?CORAL_L:TEAL_L}}>
+            <div style={{fontSize:12,color:R0>1?CORAL:TEAL}}>R₀ = β / γ</div>
+            <div style={{fontSize:26,fontWeight:700,color:R0>1?CORAL:TEAL}}>{R0.toFixed(2)}</div>
+            <div style={{fontSize:11,color:"var(--text2)"}}>{R0>1?"Epidemic grows":"Epidemic fades"}</div>
+          </div>
+          {R0>1&&<div style={{background:"var(--bg2)",borderRadius:8,padding:"8px 12px",marginTop:8,fontSize:12,color:NAVY,border:"1px solid var(--border)"}}>
+            Herd immunity threshold: <strong>{herd.toFixed(1)}%</strong>
+          </div>}
+          <div style={{display:"flex",gap:8,marginTop:12}}>
+            <button className={`btn${playing?" pri":""}`} onClick={()=>setPlaying(p=>!p)} style={{flex:1}}>{playing?"⏸ Pause":"▶ Play"}</button>
+            <button className="btn" onClick={()=>{setPlaying(false);setStep(all.length-1);}}>Reset</button>
+          </div>
+        </div>
+        <div className="wide" style={{height:240}}>
+          <ResponsiveContainer width="100%" height="90%">
+            <LineChart data={show} margin={{top:5,right:10,bottom:15,left:-10}}>
+              <XAxis dataKey="t" tick={{fontSize:10}} label={{value:"Days",position:"insideBottom",offset:-5,fontSize:10}}/>
+              <YAxis tick={{fontSize:10}}/>
+              <Tooltip formatter={(v,n)=>[v,n]} labelFormatter={l=>"Day "+l}/>
+              <Line type="monotone" dataKey="S" stroke={NAVY} strokeWidth={2} dot={false} name="Susceptible"/>
+              <Line type="monotone" dataKey="I" stroke={CORAL} strokeWidth={2} dot={false} name="Infectious"/>
+              <Line type="monotone" dataKey="R" stroke={TEAL} strokeWidth={2} dot={false} name="Recovered"/>
+            </LineChart>
+          </ResponsiveContainer>
+          <div className="legend">
+            {[["Susceptible",NAVY],["Infectious",CORAL],["Recovered",TEAL]].map(([name,color])=>(
+              <span key={name}><span className="swatch" style={{background:color}}/>{name}</span>
+            ))}
+          </div>
+        </div>
+      </div>
+      <TeachBox title="How does R₀ drive epidemic dynamics?" defaultOpen={false}>
+        <p>R₀ is the average number of people one infected person spreads to in a fully susceptible population. R₀ = β/γ. When R₀ &gt; 1, each case produces more than one new case — exponential growth.</p>
+        <p style={{marginTop:8}}>Herd immunity requires enough immune individuals so the <em>effective</em> reproduction number Rₑ drops below 1. The threshold is 1 − 1/R₀. For measles (R₀ ≈ 15), that's ~93%. For COVID-19 original strain (R₀ ≈ 2.5), that's ~60%.</p>
+      </TeachBox>
+    </Card>
+  );
+}
+
+/* ════════════════════════════════════════════════════════
+   MAIN APP
+════════════════════════════════════════════════════════ */
+const TABS=[
+  {id:"foundations",label:"Foundations",desc:"Core probability rules and diagnostic testing concepts — the toolkit for interpreting clinical tests and epi measures."},
+  {id:"distributions",label:"Distributions",desc:"Key probability distributions used to model health events and population data."},
+  {id:"epi-stats",label:"Epi Stats",desc:"Measures of association and statistical inference used throughout public health research."},
+  {id:"outbreak",label:"Outbreak",desc:"Dynamic compartmental models for infectious disease epidemiology."},
+];
+
+function App(){
+  const [tab,setTab]=useState("foundations");
+  const curr=TABS.find(t=>t.id===tab);
+  return(
+    <div>
+      <div className="site-header">
+        <div className="breadcrumb"><a href="../">BioStat Buddy</a> › Interactive Lab</div>
+        <div className="site-title">Interactive Lab</div>
+        <div className="site-sub">Adjust sliders, edit cells, and watch the math update in real time.</div>
+      </div>
+      <nav className="tab-nav">
+        {TABS.map(t=>(
+          <button key={t.id} className={`tab-btn${tab===t.id?" active":""}`} onClick={()=>setTab(t.id)}>{t.label}</button>
+        ))}
+      </nav>
+      <p className="tab-desc">{curr.desc}</p>
+      {tab==="foundations"&&<><BasicProb/><CondProb/><Bayes/><SensSpec/></>}
+      {tab==="distributions"&&<><Binomial/><Normal/><Poisson/></>}
+      {tab==="epi-stats"&&<><RR/><CIWidget/></>}
+      {tab==="outbreak"&&<><SIR/></>}
+      <p className="footnote">Part of <a href="../" style={{color:"var(--amber)"}}>BioStat Buddy</a> — a free, plain-English guide to biostatistics for public health students.</p>
+    </div>
+  );
+}
+ReactDOM.createRoot(document.getElementById("root")).render(<App/>);
+</script>
+</body>
+</html>

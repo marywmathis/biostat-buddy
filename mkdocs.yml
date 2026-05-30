@@ -49,6 +49,7 @@ nav:
   - Track 4 - Real-World Research:
       - Multivariable Methods: track-4-real-world/ch9-multivariable.md
       - Survival Analysis: track-4-real-world/ch11-survival.md
+  - Interactive Lab: interactive-lab.html
   - Decision Helpers:
       - Which Study Design?: decision-helpers/which-study-design.md
       - Which Summary Statistic?: decision-helpers/which-summary-stat.md
