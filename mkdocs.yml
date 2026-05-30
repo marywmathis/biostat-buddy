@@ -1,9 +1,5 @@
 site_name: BioStat Buddy
 site_description: Biostatistics in plain English for undergraduate public health majors
-site_name: BioStat Buddy
-site_description: Biostatistics in plain English for undergraduate public health majors
-docs_dir: docs
-use_directory_urls: true
 
 theme:
   name: material
@@ -53,7 +49,6 @@ nav:
   - Track 4 - Real-World Research:
       - Multivariable Methods: track-4-real-world/ch9-multivariable.md
       - Survival Analysis: track-4-real-world/ch11-survival.md
-  - Interactive Lab: interactive-lab.html
   - Decision Helpers:
       - Which Study Design?: decision-helpers/which-study-design.md
       - Which Summary Statistic?: decision-helpers/which-summary-stat.md
