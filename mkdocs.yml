@@ -1,5 +1,9 @@
 site_name: BioStat Buddy
 site_description: Biostatistics in plain English for undergraduate public health majors
+site_name: BioStat Buddy
+site_description: Biostatistics in plain English for undergraduate public health majors
+docs_dir: docs
+use_directory_urls: true
 
 theme:
   name: material
