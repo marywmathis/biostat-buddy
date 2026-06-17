@@ -1,4 +1,4 @@
-```markdown
+
 ---
 title: Survival Analysis
 description: How long until something happens — and does it happen at the same rate in different groups?
@@ -207,4 +207,3 @@ Because survival data is right-skewed, the *mean* survival time is misleading. A
 - [Decision Helper: Which Hypothesis Test?](../decision-helpers/which-test.md) — where survival tests fit in the broader testing landscape
 - [Multivariable Methods](../track4/ch9-multivariable.md) — Cox PH is survival analysis's answer to multiple regression
 - [Quantifying Disease](../track4/ch3-disease.md) — hazard ratios connect back to relative risk and odds ratios from Ch 3
-```
