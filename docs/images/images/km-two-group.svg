@@ -1,0 +1,98 @@
+
+<svg width="100%" viewBox="0 0 680 440" role="img" xmlns="http://www.w3.org/2000/svg">
+<title>Kaplan-Meier survival curves for two groups</title>
+<desc>Two step-function survival curves showing Group A (navy, higher survival) and Group B (teal, lower survival) diverging over time, with censoring tick marks on each curve. Legend appears below the plot area.</desc>
+
+<!-- Axis lines -->
+<line x1="80" y1="40" x2="80" y2="320" stroke="#888780" stroke-width="1" opacity="0.4"/>
+<line x1="80" y1="320" x2="620" y2="320" stroke="#888780" stroke-width="1" opacity="0.4"/>
+
+<!-- Y-axis gridlines -->
+<line x1="78" y1="40"  x2="620" y2="40"  stroke="#888780" stroke-width="0.5" stroke-dasharray="3 4" opacity="0.2"/>
+<line x1="78" y1="110" x2="620" y2="110" stroke="#888780" stroke-width="0.5" stroke-dasharray="3 4" opacity="0.2"/>
+<line x1="78" y1="180" x2="620" y2="180" stroke="#888780" stroke-width="0.5" stroke-dasharray="3 4" opacity="0.2"/>
+<line x1="78" y1="250" x2="620" y2="250" stroke="#888780" stroke-width="0.5" stroke-dasharray="3 4" opacity="0.2"/>
+
+<!-- Y-axis labels -->
+<text x="70" y="44"  text-anchor="end" dominant-baseline="central" font-family="sans-serif" font-size="12" fill="#555550">1.0</text>
+<text x="70" y="110" text-anchor="end" dominant-baseline="central" font-family="sans-serif" font-size="12" fill="#555550">0.75</text>
+<text x="70" y="180" text-anchor="end" dominant-baseline="central" font-family="sans-serif" font-size="12" fill="#555550">0.50</text>
+<text x="70" y="250" text-anchor="end" dominant-baseline="central" font-family="sans-serif" font-size="12" fill="#555550">0.25</text>
+<text x="70" y="320" text-anchor="end" dominant-baseline="central" font-family="sans-serif" font-size="12" fill="#555550">0</text>
+
+<!-- X-axis tick marks and labels -->
+<line x1="80"  y1="320" x2="80"  y2="326" stroke="#888780" stroke-width="1" opacity="0.4"/>
+<line x1="186" y1="320" x2="186" y2="326" stroke="#888780" stroke-width="1" opacity="0.4"/>
+<line x1="293" y1="320" x2="293" y2="326" stroke="#888780" stroke-width="1" opacity="0.4"/>
+<line x1="400" y1="320" x2="400" y2="326" stroke="#888780" stroke-width="1" opacity="0.4"/>
+<line x1="507" y1="320" x2="507" y2="326" stroke="#888780" stroke-width="1" opacity="0.4"/>
+<line x1="614" y1="320" x2="614" y2="326" stroke="#888780" stroke-width="1" opacity="0.4"/>
+<text x="80"  y="338" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#555550">0</text>
+<text x="186" y="338" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#555550">6</text>
+<text x="293" y="338" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#555550">12</text>
+<text x="400" y="338" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#555550">18</text>
+<text x="507" y="338" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#555550">24</text>
+<text x="614" y="338" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#555550">30</text>
+
+<!-- Axis titles -->
+<text x="350" y="356" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#555550">Time (months)</text>
+<text x="22" y="180" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#555550" transform="rotate(-90,22,180)">Survival probability S(t)</text>
+
+<!-- GROUP A (Navy) — higher survival -->
+<line x1="80"  y1="40"  x2="133" y2="40"  stroke="#185FA5" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="133" y1="40"  x2="133" y2="58"  stroke="#185FA5" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="133" y1="58"  x2="186" y2="58"  stroke="#185FA5" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="168" y1="51"  x2="168" y2="65"  stroke="#185FA5" stroke-width="1.5" stroke-linecap="round"/>
+<line x1="186" y1="58"  x2="186" y2="82"  stroke="#185FA5" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="186" y1="82"  x2="240" y2="82"  stroke="#185FA5" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="222" y1="75"  x2="222" y2="89"  stroke="#185FA5" stroke-width="1.5" stroke-linecap="round"/>
+<line x1="240" y1="82"  x2="240" y2="108" stroke="#185FA5" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="240" y1="108" x2="293" y2="108" stroke="#185FA5" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="293" y1="108" x2="293" y2="136" stroke="#185FA5" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="293" y1="136" x2="365" y2="136" stroke="#185FA5" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="329" y1="129" x2="329" y2="143" stroke="#185FA5" stroke-width="1.5" stroke-linecap="round"/>
+<line x1="365" y1="136" x2="365" y2="158" stroke="#185FA5" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="365" y1="158" x2="507" y2="158" stroke="#185FA5" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="507" y1="158" x2="507" y2="176" stroke="#185FA5" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="507" y1="176" x2="614" y2="176" stroke="#185FA5" stroke-width="2.5" stroke-linecap="round"/>
+<text x="618" y="176" dominant-baseline="central" font-family="sans-serif" font-size="12" font-weight="500" fill="#185FA5">A</text>
+
+<!-- GROUP B (Teal) — lower survival -->
+<line x1="80"  y1="40"  x2="115" y2="40"  stroke="#1D9E75" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="115" y1="40"  x2="115" y2="74"  stroke="#1D9E75" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="115" y1="74"  x2="168" y2="74"  stroke="#1D9E75" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="150" y1="67"  x2="150" y2="81"  stroke="#1D9E75" stroke-width="1.5" stroke-linecap="round"/>
+<line x1="168" y1="74"  x2="168" y2="116" stroke="#1D9E75" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="168" y1="116" x2="222" y2="116" stroke="#1D9E75" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="222" y1="116" x2="222" y2="154" stroke="#1D9E75" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="222" y1="154" x2="275" y2="154" stroke="#1D9E75" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="257" y1="147" x2="257" y2="161" stroke="#1D9E75" stroke-width="1.5" stroke-linecap="round"/>
+<line x1="275" y1="154" x2="275" y2="198" stroke="#1D9E75" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="275" y1="198" x2="365" y2="198" stroke="#1D9E75" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="365" y1="198" x2="365" y2="228" stroke="#1D9E75" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="365" y1="228" x2="454" y2="228" stroke="#1D9E75" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="418" y1="221" x2="418" y2="235" stroke="#1D9E75" stroke-width="1.5" stroke-linecap="round"/>
+<line x1="454" y1="228" x2="454" y2="264" stroke="#1D9E75" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="454" y1="264" x2="614" y2="264" stroke="#1D9E75" stroke-width="2.5" stroke-linecap="round"/>
+<text x="618" y="264" dominant-baseline="central" font-family="sans-serif" font-size="12" font-weight="500" fill="#1D9E75">B</text>
+
+<!-- Divergence annotation -->
+<line x1="222" y1="82" x2="222" y2="116" stroke="#D85A30" stroke-width="1" stroke-dasharray="3 3" opacity="0.7"/>
+<text x="228" y="94"  font-family="sans-serif" font-size="12" fill="#D85A30" opacity="0.9">curves</text>
+<text x="228" y="108" font-family="sans-serif" font-size="12" fill="#D85A30" opacity="0.9">diverge</text>
+
+<!-- Median survival reference line -->
+<line x1="78" y1="180" x2="620" y2="180" stroke="#888780" stroke-width="0.5" stroke-dasharray="4 3" opacity="0.35"/>
+
+<!-- Legend below chart -->
+<line x1="110" y1="390" x2="140" y2="390" stroke="#185FA5" stroke-width="2.5" stroke-linecap="round"/>
+<text x="148" y="390" dominant-baseline="central" font-family="sans-serif" font-size="12" fill="#555550">Group A — higher survival</text>
+
+<line x1="340" y1="390" x2="370" y2="390" stroke="#1D9E75" stroke-width="2.5" stroke-linecap="round"/>
+<text x="378" y="390" dominant-baseline="central" font-family="sans-serif" font-size="12" fill="#555550">Group B — lower survival</text>
+
+<line x1="110" y1="412" x2="140" y2="412" stroke="#888780" stroke-width="2.5" stroke-linecap="round" opacity="0.4"/>
+<line x1="125" y1="405" x2="125" y2="419" stroke="#888780" stroke-width="1.5" stroke-linecap="round"/>
+<text x="148" y="412" dominant-baseline="central" font-family="sans-serif" font-size="12" fill="#555550">Censored observation (participant still event-free at last contact)</text>
+
+</svg>
