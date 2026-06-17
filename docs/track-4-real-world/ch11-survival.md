@@ -58,8 +58,7 @@ $$\hat{S}(t_i) = \hat{S}(t_{i-1}) \times \left(1 - \frac{d_i}{n_i}\right)$$
 **Plain-language translation:** At each moment when someone experiences the event, multiply the previous survival probability by the fraction of people still at risk who *didn't* have the event. Carry that updated probability forward until the next event.
 
 **What a KM plot looks like:**
-
-![Kaplan-Meier curves for two groups](../../images/km-two-group.svg)
+![Kaplan-Meier curves for two groups](../images/km-two-group.svg)
 
 Each horizontal step = a period with no events. Each vertical drop = one or more events. Each ✚ = a censored observation.
 
