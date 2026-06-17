@@ -59,16 +59,7 @@ $$\hat{S}(t_i) = \hat{S}(t_{i-1}) \times \left(1 - \frac{d_i}{n_i}\right)$$
 
 **What a KM plot looks like:**
 
-```
-S(t)
-1.0 |████████
-    |        ██████
-0.7 |              ████
-    |                  ██████
-0.5 |                        ████───── (censored tick ✚)
-    |
-    +─────────────────────────────── time
-```
+![Kaplan-Meier curves for two groups](../images/km-two-group.svg)
 
 Each horizontal step = a period with no events. Each vertical drop = one or more events. Each ✚ = a censored observation.
 
