@@ -1,66 +1,90 @@
-<svg width="100%" viewBox="0 0 680 400" role="img" xmlns="http://www.w3.org/2000/svg">
+<svg width="100%" viewBox="0 0 680 370" role="img" xmlns="http://www.w3.org/2000/svg">
 <title>Kaplan-Meier survival curves for two groups</title>
-<desc>Two step-function KM curves. Group A stays higher throughout. Group B drops faster. Censoring tick marks appear on both curves. Curves are labeled A and B at the right edge.</desc>
-<line x1="80" y1="40" x2="80" y2="300" stroke="#888780" stroke-width="1" opacity="0.4"/>
-<line x1="80" y1="300" x2="630" y2="300" stroke="#888780" stroke-width="1" opacity="0.4"/>
-<line x1="78" y1="40"  x2="630" y2="40"  stroke="#888780" stroke-width="0.5" stroke-dasharray="3 4" opacity="0.2"/>
-<line x1="78" y1="100" x2="630" y2="100" stroke="#888780" stroke-width="0.5" stroke-dasharray="3 4" opacity="0.2"/>
-<line x1="78" y1="170" x2="630" y2="170" stroke="#888780" stroke-width="0.5" stroke-dasharray="3 4" opacity="0.2"/>
-<line x1="78" y1="235" x2="630" y2="235" stroke="#888780" stroke-width="0.5" stroke-dasharray="3 4" opacity="0.2"/>
-<text x="70" y="40"  text-anchor="end" dominant-baseline="central" font-family="sans-serif" font-size="12" fill="#555550">1.0</text>
-<text x="70" y="100" text-anchor="end" dominant-baseline="central" font-family="sans-serif" font-size="12" fill="#555550">0.75</text>
-<text x="70" y="170" text-anchor="end" dominant-baseline="central" font-family="sans-serif" font-size="12" fill="#555550">0.50</text>
-<text x="70" y="235" text-anchor="end" dominant-baseline="central" font-family="sans-serif" font-size="12" fill="#555550">0.25</text>
-<text x="70" y="300" text-anchor="end" dominant-baseline="central" font-family="sans-serif" font-size="12" fill="#555550">0</text>
-<line x1="80"  y1="300" x2="80"  y2="306" stroke="#888780" stroke-width="1" opacity="0.4"/>
-<line x1="183" y1="300" x2="183" y2="306" stroke="#888780" stroke-width="1" opacity="0.4"/>
-<line x1="286" y1="300" x2="286" y2="306" stroke="#888780" stroke-width="1" opacity="0.4"/>
-<line x1="389" y1="300" x2="389" y2="306" stroke="#888780" stroke-width="1" opacity="0.4"/>
-<line x1="492" y1="300" x2="492" y2="306" stroke="#888780" stroke-width="1" opacity="0.4"/>
-<line x1="595" y1="300" x2="595" y2="306" stroke="#888780" stroke-width="1" opacity="0.4"/>
-<text x="80"  y="318" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#555550">0</text>
-<text x="183" y="318" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#555550">6</text>
-<text x="286" y="318" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#555550">12</text>
-<text x="389" y="318" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#555550">18</text>
-<text x="492" y="318" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#555550">24</text>
-<text x="595" y="318" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#555550">30</text>
-<text x="350" y="338" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#555550">Time (months)</text>
-<text x="22" y="170" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#555550" transform="rotate(-90,22,170)">Survival probability S(t)</text>
-<line x1="80"  y1="40"  x2="130" y2="40"  stroke="#185FA5" stroke-width="2.5" stroke-linecap="round"/>
-<line x1="130" y1="40"  x2="130" y2="57"  stroke="#185FA5" stroke-width="2.5" stroke-linecap="round"/>
-<line x1="130" y1="57"  x2="183" y2="57"  stroke="#185FA5" stroke-width="2.5" stroke-linecap="round"/>
-<line x1="183" y1="57"  x2="183" y2="80"  stroke="#185FA5" stroke-width="2.5" stroke-linecap="round"/>
-<line x1="183" y1="80"  x2="235" y2="80"  stroke="#185FA5" stroke-width="2.5" stroke-linecap="round"/>
-<line x1="235" y1="80"  x2="235" y2="105" stroke="#185FA5" stroke-width="2.5" stroke-linecap="round"/>
-<line x1="235" y1="105" x2="286" y2="105" stroke="#185FA5" stroke-width="2.5" stroke-linecap="round"/>
-<line x1="286" y1="105" x2="286" y2="132" stroke="#185FA5" stroke-width="2.5" stroke-linecap="round"/>
-<line x1="286" y1="132" x2="355" y2="132" stroke="#185FA5" stroke-width="2.5" stroke-linecap="round"/>
-<line x1="355" y1="132" x2="355" y2="153" stroke="#185FA5" stroke-width="2.5" stroke-linecap="round"/>
-<line x1="355" y1="153" x2="492" y2="153" stroke="#185FA5" stroke-width="2.5" stroke-linecap="round"/>
-<line x1="492" y1="153" x2="492" y2="170" stroke="#185FA5" stroke-width="2.5" stroke-linecap="round"/>
-<line x1="492" y1="170" x2="595" y2="170" stroke="#185FA5" stroke-width="2.5" stroke-linecap="round"/>
-<line x1="163" y1="48"  x2="163" y2="66"  stroke="#185FA5" stroke-width="2" stroke-linecap="round"/>
-<line x1="218" y1="71"  x2="218" y2="89"  stroke="#185FA5" stroke-width="2" stroke-linecap="round"/>
-<line x1="322" y1="123" x2="322" y2="141" stroke="#185FA5" stroke-width="2" stroke-linecap="round"/>
-<text x="602" y="170" dominant-baseline="central" font-family="sans-serif" font-size="13" font-weight="600" fill="#185FA5">Group A</text>
-<line x1="80"  y1="40"  x2="112" y2="40"  stroke="#1D9E75" stroke-width="2.5" stroke-linecap="round"/>
-<line x1="112" y1="40"  x2="112" y2="72"  stroke="#1D9E75" stroke-width="2.5" stroke-linecap="round"/>
-<line x1="112" y1="72"  x2="163" y2="72"  stroke="#1D9E75" stroke-width="2.5" stroke-linecap="round"/>
-<line x1="163" y1="72"  x2="163" y2="113" stroke="#1D9E75" stroke-width="2.5" stroke-linecap="round"/>
-<line x1="163" y1="113" x2="218" y2="113" stroke="#1D9E75" stroke-width="2.5" stroke-linecap="round"/>
-<line x1="218" y1="113" x2="218" y2="150" stroke="#1D9E75" stroke-width="2.5" stroke-linecap="round"/>
-<line x1="218" y1="150" x2="270" y2="150" stroke="#1D9E75" stroke-width="2.5" stroke-linecap="round"/>
-<line x1="270" y1="150" x2="270" y2="192" stroke="#1D9E75" stroke-width="2.5" stroke-linecap="round"/>
-<line x1="270" y1="192" x2="355" y2="192" stroke="#1D9E75" stroke-width="2.5" stroke-linecap="round"/>
-<line x1="355" y1="192" x2="355" y2="222" stroke="#1D9E75" stroke-width="2.5" stroke-linecap="round"/>
-<line x1="355" y1="222" x2="441" y2="222" stroke="#1D9E75" stroke-width="2.5" stroke-linecap="round"/>
-<line x1="441" y1="222" x2="441" y2="258" stroke="#1D9E75" stroke-width="2.5" stroke-linecap="round"/>
-<line x1="441" y1="258" x2="595" y2="258" stroke="#1D9E75" stroke-width="2.5" stroke-linecap="round"/>
-<line x1="143" y1="63"  x2="143" y2="81"  stroke="#1D9E75" stroke-width="2" stroke-linecap="round"/>
-<line x1="248" y1="141" x2="248" y2="159" stroke="#1D9E75" stroke-width="2" stroke-linecap="round"/>
-<line x1="408" y1="213" x2="408" y2="231" stroke="#1D9E75" stroke-width="2" stroke-linecap="round"/>
-<text x="602" y="258" dominant-baseline="central" font-family="sans-serif" font-size="13" font-weight="600" fill="#1D9E75">Group B</text>
-<line x1="100" y1="372" x2="130" y2="372" stroke="#888780" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
-<line x1="115" y1="363" x2="115" y2="381" stroke="#888780" stroke-width="2" stroke-linecap="round"/>
-<text x="140" y="372" dominant-baseline="central" font-family="sans-serif" font-size="12" fill="#555550">Censored observation — participant event-free at last contact</text>
+<desc>Two Kaplan-Meier step-function curves showing survival probability over 20 months. Group A (care coordination, terracotta) stays higher throughout follow-up. Group B (usual care, teal dashed) drops more steeply. Censoring tick marks appear on both curves.</desc>
+
+<!-- Axes -->
+<line x1="80" y1="40" x2="80" y2="290" stroke="#888780" stroke-width="0.75"/>
+<line x1="80" y1="290" x2="620" y2="290" stroke="#888780" stroke-width="0.75"/>
+
+<!-- Y-axis label -->
+<text font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif" font-size="12" fill="#888780" x="20" y="168" text-anchor="middle" transform="rotate(-90,20,168)">Survival probability S(t)</text>
+
+<!-- X-axis label -->
+<text font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif" font-size="12" fill="#888780" x="350" y="330" text-anchor="middle">Months since discharge</text>
+
+<!-- Gridlines and Y ticks -->
+<line x1="75" y1="290" x2="80" y2="290" stroke="#888780" stroke-width="0.75"/>
+<text font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif" font-size="11" fill="#888780" x="68" y="294" text-anchor="end">0.0</text>
+
+<line x1="75" y1="228" x2="620" y2="228" stroke="#888780" stroke-width="0.4" stroke-dasharray="3 4"/>
+<text font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif" font-size="11" fill="#888780" x="68" y="232" text-anchor="end">0.25</text>
+
+<line x1="75" y1="165" x2="620" y2="165" stroke="#888780" stroke-width="0.4" stroke-dasharray="3 4"/>
+<text font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif" font-size="11" fill="#888780" x="68" y="169" text-anchor="end">0.50</text>
+
+<line x1="75" y1="103" x2="620" y2="103" stroke="#888780" stroke-width="0.4" stroke-dasharray="3 4"/>
+<text font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif" font-size="11" fill="#888780" x="68" y="107" text-anchor="end">0.75</text>
+
+<line x1="75" y1="40" x2="80" y2="40" stroke="#888780" stroke-width="0.75"/>
+<text font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif" font-size="11" fill="#888780" x="68" y="44" text-anchor="end">1.0</text>
+
+<!-- X ticks -->
+<line x1="80" y1="290" x2="80" y2="296" stroke="#888780" stroke-width="0.75"/>
+<text font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif" font-size="11" fill="#888780" x="80" y="308" text-anchor="middle">0</text>
+
+<line x1="192" y1="290" x2="192" y2="296" stroke="#888780" stroke-width="0.75"/>
+<text font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif" font-size="11" fill="#888780" x="192" y="308" text-anchor="middle">4</text>
+
+<line x1="304" y1="290" x2="304" y2="296" stroke="#888780" stroke-width="0.75"/>
+<text font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif" font-size="11" fill="#888780" x="304" y="308" text-anchor="middle">8</text>
+
+<line x1="416" y1="290" x2="416" y2="296" stroke="#888780" stroke-width="0.75"/>
+<text font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif" font-size="11" fill="#888780" x="416" y="308" text-anchor="middle">12</text>
+
+<line x1="528" y1="290" x2="528" y2="296" stroke="#888780" stroke-width="0.75"/>
+<text font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif" font-size="11" fill="#888780" x="528" y="308" text-anchor="middle">16</text>
+
+<line x1="610" y1="290" x2="610" y2="296" stroke="#888780" stroke-width="0.75"/>
+<text font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif" font-size="11" fill="#888780" x="610" y="308" text-anchor="middle">20</text>
+
+<!-- GROUP A: care coordination — terracotta #B85C38 -->
+<polyline fill="none" stroke="#B85C38" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+  points="80,40 136,40 136,60 220,60 220,80 304,80 304,95 388,95 388,110 472,110 472,120 556,120 556,127 610,127"/>
+
+<!-- Group A censoring ticks -->
+<line x1="168" y1="48" x2="168" y2="60" stroke="#B85C38" stroke-width="1.2"/>
+<line x1="262" y1="68" x2="262" y2="80" stroke="#B85C38" stroke-width="1.2"/>
+<line x1="346" y1="83" x2="346" y2="95" stroke="#B85C38" stroke-width="1.2"/>
+<line x1="430" y1="98" x2="430" y2="110" stroke="#B85C38" stroke-width="1.2"/>
+<line x1="514" y1="113" x2="514" y2="122" stroke="#B85C38" stroke-width="1.2"/>
+<line x1="585" y1="122" x2="585" y2="129" stroke="#B85C38" stroke-width="1.2"/>
+
+<!-- GROUP B: usual care — teal #2D7A6A dashed -->
+<polyline fill="none" stroke="#2D7A6A" stroke-width="2" stroke-dasharray="7 3" stroke-linecap="round" stroke-linejoin="round"
+  points="80,40 136,40 136,77 192,77 192,115 248,115 248,145 332,145 332,175 416,175 416,200 528,200 528,220 610,220"/>
+
+<!-- Group B censoring ticks -->
+<line x1="160" y1="50" x2="160" y2="77" stroke="#2D7A6A" stroke-width="1.2"/>
+<line x1="216" y1="90" x2="216" y2="115" stroke="#2D7A6A" stroke-width="1.2"/>
+<line x1="290" y1="133" x2="290" y2="145" stroke="#2D7A6A" stroke-width="1.2"/>
+<line x1="374" y1="163" x2="374" y2="175" stroke="#2D7A6A" stroke-width="1.2"/>
+<line x1="470" y1="188" x2="470" y2="200" stroke="#2D7A6A" stroke-width="1.2"/>
+<line x1="570" y1="210" x2="570" y2="220" stroke="#2D7A6A" stroke-width="1.2"/>
+
+<!-- Median reference lines for Group B (S=0.50 at y=165, x≈332) -->
+<line x1="80" y1="165" x2="332" y2="165" stroke="#8B3A1F" stroke-width="0.8" stroke-dasharray="2 3" opacity="0.5"/>
+<line x1="332" y1="165" x2="332" y2="290" stroke="#8B3A1F" stroke-width="0.8" stroke-dasharray="2 3" opacity="0.5"/>
+<text font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif" font-size="11" fill="#8B3A1F" opacity="0.8" x="338" y="299">≈ month 8</text>
+<text font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif" font-size="11" fill="#8B3A1F" opacity="0.8" x="84" y="162">Median (Group B)</text>
+
+<!-- Legend box -->
+<rect x="420" y="48" width="188" height="68" rx="6" fill="#FDF1E2" stroke="#D4933E" stroke-width="0.75"/>
+<line x1="434" y1="72" x2="464" y2="72" stroke="#B85C38" stroke-width="2.2"/>
+<text font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif" font-size="11" fill="#2D2018" x="472" y="76">Group A — care coordination</text>
+<line x1="434" y1="97" x2="464" y2="97" stroke="#2D7A6A" stroke-width="2" stroke-dasharray="6 3"/>
+<text font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif" font-size="11" fill="#2D2018" x="472" y="101">Group B — usual care</text>
+
+<!-- Censoring tick label -->
+<line x1="434" y1="57" x2="434" y2="68" stroke="#888780" stroke-width="1.2"/>
+<text font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif" font-size="11" fill="#888780" x="442" y="64">= censored observation</text>
 </svg>
