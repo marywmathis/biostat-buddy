@@ -1,4 +1,3 @@
-
 ---
 title: Survival Analysis
 description: How long until something happens — and does it happen at the same rate in different groups?
@@ -58,11 +57,25 @@ $$\hat{S}(t_i) = \hat{S}(t_{i-1}) \times \left(1 - \frac{d_i}{n_i}\right)$$
 **Plain-language translation:** At each moment when someone experiences the event, multiply the previous survival probability by the fraction of people still at risk who *didn't* have the event. Carry that updated probability forward until the next event.
 
 **What a KM plot looks like:**
+
 ![Kaplan-Meier curves for two groups](../images/km-two-group.svg)
 
-Each horizontal step = a period with no events. Each vertical drop = one or more events. Each ✚ = a censored observation.
+Imagine you're tracking two groups of people to see how long they go before something happens — such as developing a disease, relapsing, or dying.
 
-**Two-group comparison:** Plot KM curves for both groups on the same axes. If the curves separate early and stay apart, that's evidence of a difference in survival experience. To test whether that separation is statistically significant, use the log-rank test.
+The curve starts at 100% because everyone is event-free at the beginning. Every time someone experiences the event, the curve steps downward. If nothing happens for a while, the line stays flat. That's why Kaplan-Meier curves look like staircases instead of smooth lines.
+
+The little tick marks show people who stopped being observed before the study ended. Maybe they moved away, dropped out, or the study ended before anything happened to them. They still contribute information up until the point we last heard from them.
+
+For the figure shown:
+
+- Group A stays higher throughout follow-up.
+- Group B drops more quickly.
+- Because Group A's curve stays above Group B's curve, Group A has better survival — or remains event-free longer.
+- The widening gap between the curves suggests the groups are having different experiences over time.
+
+In simple terms: the higher the curve, the better the outcome. The farther apart the curves, the bigger the difference between the groups.
+
+**Two-group comparison:** To test whether the separation between curves is statistically significant, use the log-rank test.
 
 ---
 
@@ -195,5 +208,5 @@ Because survival data is right-skewed, the *mean* survival time is misleading. A
 ## What's Next
 
 - [Decision Helper: Which Hypothesis Test?](../decision-helpers/which-test.md) — where survival tests fit in the broader testing landscape
-- [Multivariable Methods](../track4/ch9-multivariable.md) — Cox PH is survival analysis's answer to multiple regression
-- [Quantifying Disease](../track4/ch3-disease.md) — hazard ratios connect back to relative risk and odds ratios from Ch 3
+- [Multivariable Methods](../track-4-real-world/ch9-multivariable.md) — Cox PH is survival analysis's answer to multiple regression
+- [Quantifying Disease](../track-4-real-world/ch3-disease.md) — hazard ratios connect back to relative risk and odds ratios from Ch 3
