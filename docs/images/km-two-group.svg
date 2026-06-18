@@ -12,7 +12,7 @@
 <!-- X-axis label -->
 <text font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif" font-size="12" fill="#888780" x="350" y="330" text-anchor="middle">Months since discharge</text>
 
-<!-- Gridlines and Y ticks -->
+<!-- Y gridlines and ticks -->
 <line x1="75" y1="290" x2="80" y2="290" stroke="#888780" stroke-width="0.75"/>
 <text font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif" font-size="11" fill="#888780" x="68" y="294" text-anchor="end">0.0</text>
 
@@ -77,14 +77,12 @@
 <text font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif" font-size="11" fill="#8B3A1F" opacity="0.8" x="338" y="299">≈ month 8</text>
 <text font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif" font-size="11" fill="#8B3A1F" opacity="0.8" x="84" y="162">Median (Group B)</text>
 
-<!-- Legend box -->
-<rect x="420" y="48" width="188" height="68" rx="6" fill="#FDF1E2" stroke="#D4933E" stroke-width="0.75"/>
-<line x1="434" y1="72" x2="464" y2="72" stroke="#B85C38" stroke-width="2.2"/>
-<text font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif" font-size="11" fill="#2D2018" x="472" y="76">Group A — care coordination</text>
-<line x1="434" y1="97" x2="464" y2="97" stroke="#2D7A6A" stroke-width="2" stroke-dasharray="6 3"/>
-<text font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif" font-size="11" fill="#2D2018" x="472" y="101">Group B — usual care</text>
-
-<!-- Censoring tick label -->
+<!-- Legend box — bottom right, below both curves -->
+<rect x="390" y="230" width="218" height="52" rx="6" fill="#FDF1E2" stroke="#D4933E" stroke-width="0.75"/>
 <line x1="434" y1="57" x2="434" y2="68" stroke="#888780" stroke-width="1.2"/>
-<text font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif" font-size="11" fill="#888780" x="442" y="64">= censored observation</text>
+<text font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif" font-size="11" fill="#888780" x="404" y="246">| = censored observation</text>
+<line x1="404" y1="261" x2="430" y2="261" stroke="#B85C38" stroke-width="2.2"/>
+<text font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif" font-size="11" fill="#2D2018" x="436" y="265">Group A — care coordination</text>
+<line x1="404" y1="275" x2="430" y2="275" stroke="#2D7A6A" stroke-width="2" stroke-dasharray="6 3"/>
+<text font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif" font-size="11" fill="#2D2018" x="436" y="279">Group B — usual care</text>
 </svg>
